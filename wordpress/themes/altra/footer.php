@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package EDGEEMPOWER
+ * @package altra
  */
 
 ?>
@@ -41,7 +41,7 @@
           <?php if(get_field('search_enabled', 'option')): ?>
             <div class="l-wrap mt-2 mb-8">
               <form action="/" method="get" class="relative">
-                <input type="text" class="form-input pl-11" placeholder="<?php esc_html_e( 'Search...', 'edgeempower' ); ?>" name="s" id="search" value="<?php the_search_query(); ?>" />
+                <input type="text" class="form-input pl-11" placeholder="<?php esc_html_e( 'Search...', 'altra' ); ?>" name="s" id="search" value="<?php the_search_query(); ?>" />
                 <svg class="absolute left-0 top-0 w-6 h-6 text-brand ml-3 mt-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>

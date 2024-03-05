@@ -1,10 +1,10 @@
 <?php
 /**
- * EDGEEMPOWER functions and definitions.
+ * altra functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package EDGEEMPOWER
+ * @package altra
  */
 
 // Inline Font Awesome SVG files instead of Webfont (performance improvement)

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package EDGEEMPOWER
+ * @package altra
  */
 
 get_header(); ?>
@@ -22,7 +22,7 @@ get_header(); ?>
             </div>
             <div class="mt-6 sm:mt-8 mini:flex mini:space-x-3 sm:border-l sm:border-transparent sm:pl-6 text-left">
               <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="c-btn c-btn--small inline-flex items-center mb-2">
-                <?php esc_html_e( 'Back to homepage', 'edgeempower' ); ?>
+                <?php esc_html_e( 'Back to homepage', 'altra' ); ?>
               </a>
 
               <?php

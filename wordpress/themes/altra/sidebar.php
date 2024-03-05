@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package EDGEEMPOWER
+ * @package altra
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {

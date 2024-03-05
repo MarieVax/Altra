@@ -1,6 +1,6 @@
 <?php
 
-if ( ! function_exists( 'edgeempower_setup' ) ) :
+if ( ! function_exists( 'altra_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -8,14 +8,14 @@ if ( ! function_exists( 'edgeempower_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function edgeempower_setup() {
+function altra_setup() {
   /*
    * Make theme available for translation.
    * Translations can be filed in the /languages/ directory.
-   * If you're building a theme based on EDGEEMPOWER, use a find and replace
-   * to change 'edgeempower' to the name of your theme in all the template files.
+   * If you're building a theme based on altra, use a find and replace
+   * to change 'altra' to the name of your theme in all the template files.
    */
-  load_theme_textdomain( 'edgeempower', get_template_directory() . '/languages' );
+  load_theme_textdomain( 'altra', get_template_directory() . '/languages' );
 
   // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
@@ -59,4 +59,4 @@ function edgeempower_setup() {
 
 }
 endif;
-add_action( 'after_setup_theme', 'edgeempower_setup' );
+add_action( 'after_setup_theme', 'altra_setup' );

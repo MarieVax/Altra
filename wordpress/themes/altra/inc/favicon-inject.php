@@ -11,7 +11,7 @@ function site_favicon() { ?>
 <link rel="apple-touch-icon" sizes="152x152" href="<?php echo bloginfo('stylesheet_directory') ?>/assets/img/favicon/apple-touch-icon-152x152.png" />
 <link rel="icon" type="image/png" href="<?php echo bloginfo('stylesheet_directory') ?>/assets/img/favicon/favicon-32x32.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="<?php echo bloginfo('stylesheet_directory') ?>/assets/img/favicon/favicon-16x16.png" sizes="16x16" />
-<meta name="application-name" content="EDGEEMPOWER"/>
+<meta name="application-name" content="altra"/>
 <meta name="msapplication-TileColor" content="#fff" />
 <meta name="msapplication-TileImage" content="<?php echo bloginfo('stylesheet_directory') ?>/assets/img/favicon/mstile-144x144.png" />
 <?php }

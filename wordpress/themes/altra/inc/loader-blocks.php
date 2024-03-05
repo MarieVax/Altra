@@ -7,7 +7,7 @@ function custom_block_categories( $categories, $post ) {
         array(
             array(
                 'slug' => 'project',
-                'title' => __( 'EDGEEMPOWER', 'css-gutenberg-blocks' ),
+                'title' => __( 'altra', 'css-gutenberg-blocks' ),
             ),
         )
     );

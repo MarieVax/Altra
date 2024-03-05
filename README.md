@@ -20,21 +20,21 @@ Starter for your next website based on WordPress.
 1. Create new empty repository for your new project.
 2. Copy repository to your computer.
 3. Copy all files from Starter repository (this one) to the new repository for your project (you can bypass `.gitlab-ci.yml` file if you are using custom deployment method).
-4. Change the name of theme folder in `/wordpress/themes/` from `edgeempower` to your custom name.
+4. Change the name of theme folder in `/wordpress/themes/` from `altra` to your custom name.
 5. Run `Search and replace` on the whole project with `Case sensitive` and `Whole word` options enabled. Here is the list of required replaces:
 
-- Replace `EDGEEMPOWER`
+- Replace `altra`
 - Replace `WHAT.DIGITAL`
 - Replace `1.0`
 - Replace `WHAT.DIGITAL_URL`
 - Replace `PROJECT_DATE`
 - Replace `PROJECT_DESCRIPTION`
-- Replace `edgeempower` (lowercase with underscores instead of spaces or dashes)
-- Replace `edgeempower` (your custom theme directory name)
+- Replace `altra` (lowercase with underscores instead of spaces or dashes)
+- Replace `altra` (your custom theme directory name)
 
 Run another `Search and replace` on the whole project with `Case sensitive` option enabled only.
 
-- Replace `edgeempower_` (lowercase with underscores instead of spaces or dashes which must end with `_`)
+- Replace `altra_` (lowercase with underscores instead of spaces or dashes which must end with `_`)
 
 6. Commit everything to your new repository
 7. Install WordPress on your computer ([Local app](https://localwp.com/) recommended)

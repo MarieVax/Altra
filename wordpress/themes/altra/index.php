@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package EDGEEMPOWER
+ * @package altra
  */
 
 get_header(); ?>
@@ -42,7 +42,7 @@ get_header(); ?>
       ?>
 
       <div class="text-center mb-2">
-        <button class="c-btn js-load-more" data-mode="auto"><span><?php esc_html_e( 'Load more', 'edgeempower' ); ?></span></button>
+        <button class="c-btn js-load-more" data-mode="auto"><span><?php esc_html_e( 'Load more', 'altra' ); ?></span></button>
       </div>
 
       <?php

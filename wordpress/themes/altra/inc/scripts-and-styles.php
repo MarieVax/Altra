@@ -1,15 +1,15 @@
 <?php
 
 // Frontend Assets
-function edgeempower_scripts() {
+function altra_scripts() {
 
   global $wp_query;
 
   // Styles
 
-  wp_enqueue_style( 'edgeempower-fonts', get_template_directory_uri() . '/assets/css/fonts.css', false, filemtime(get_template_directory() . '/assets/css/fonts.css') );
+  wp_enqueue_style( 'altra-fonts', get_template_directory_uri() . '/assets/css/fonts.css', false, filemtime(get_template_directory() . '/assets/css/fonts.css') );
 
-  wp_enqueue_style( 'edgeempower-main-style', get_template_directory_uri() . '/assets/css/main.css', false, filemtime(get_template_directory() . '/assets/css/main.css') );
+  wp_enqueue_style( 'altra-main-style', get_template_directory_uri() . '/assets/css/main.css', false, filemtime(get_template_directory() . '/assets/css/main.css') );
 
   wp_enqueue_style( 'aos', get_template_directory_uri() . '/assets/css/vendor/aos.css', false, filemtime(get_template_directory() . '/assets/css/vendor/aos.css') );
 
@@ -30,9 +30,9 @@ function edgeempower_scripts() {
 
   wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/assets/js/vendor/fitvids.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/vendor/fitvids.js'), true );
 
-  wp_enqueue_script( 'edgeempower-onload', get_template_directory_uri() . '/assets/js/onload.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/onload.js'), true );
+  wp_enqueue_script( 'altra-onload', get_template_directory_uri() . '/assets/js/onload.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/onload.js'), true );
 
-  wp_enqueue_script( 'edgeempower-script', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/main.js'), true );
+  wp_enqueue_script( 'altra-script', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/main.js'), true );
 
   if(!get_field('default_wordpress_block_styles', 'option')) {
     wp_dequeue_style( 'wp-block-library' );
@@ -57,18 +57,18 @@ function edgeempower_scripts() {
     'home_dir' => esc_url( home_url('/')),
     'template_dir' => get_template_directory_uri(),
     'ajaxurl' => admin_url( 'admin-ajax.php'),
-    'noposts'  => esc_html__('No older posts found', 'edgeempower'),
-    'loadmore' => esc_html__('Load more', 'edgeempower'),
-    'loading' => esc_html__('Loading', 'edgeempower'),
+    'noposts'  => esc_html__('No older posts found', 'altra'),
+    'loadmore' => esc_html__('Load more', 'altra'),
+    'loading' => esc_html__('Loading', 'altra'),
     'posts' => json_encode( $wp_query->query_vars ),
     'current_page' => get_query_var( 'paged' ) ? get_query_var('paged') : 1,
     'max_page' => $wp_query->max_num_pages
   );
 
-  wp_localize_script( 'edgeempower-script', 'theme_settings', $theme_settings );
+  wp_localize_script( 'altra-script', 'theme_settings', $theme_settings );
 }
 
-add_action( 'wp_enqueue_scripts', 'edgeempower_scripts' );
+add_action( 'wp_enqueue_scripts', 'altra_scripts' );
 
 // Admin assets
 function custom_editor_styles() {
