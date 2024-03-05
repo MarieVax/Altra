@@ -1,0 +1,89 @@
+@import '../../../node_modules/swiper/swiper'
+@import '../../../node_modules/swiper/modules/effect-fade/effect-fade'
+@import '../../../node_modules/swiper/modules/pagination/pagination'
+
+.swiper-lazy-preloader,
+.swiper-slide .swiper-lazy-preloader
+  width: 20px
+  height: 20px
+  margin-left: -10px
+  margin-top: -10px
+  border-color: #fafafa
+  border-top-color: transparent
+
+.swiper-lazy
+  opacity: 0
+  transition: all 0.5s ease-in-out
+
+.swiper-lazy-loaded
+  opacity: 1
+
+.swiper-pagination-bullet
+  width: 32px
+  height: 4px
+  border-radius: 0
+  background: theme('colors.brand')
+  opacity: 0.3
+  &.swiper-pagination-bullet-active
+    opacity: 1
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+  margin: 0 8px
+
+.swiper-container-horizontal > .swiper-pagination-bullets
+  padding: 0
+  display: flex
+  justify-content: center
+  bottom: 32px
+  @screen sm
+    bottom: 31px
+  @screen lg
+    bottom: 23px
+
+.swiper-button-prev,
+.swiper-button-next
+  width: 21px
+  height: 76px
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  transition: all 0.7s ease-in-out
+  display: none
+  @screen xl
+    display: block
+  &:focus
+    outline: none
+  &.swiper-button-disabled
+    opacity: 0.2
+
+.swiper-button-prev
+  background: url(../../img/slider-left.svg)
+
+.swiper-button-next
+  background: url(../../img/slider-right.svg)
+
+.swiper-button-prev
+  left: -50px
+  @screen sm
+    left: -35px
+  @screen lg
+    left: -50px
+
+.swiper-button-next
+  right: -50px
+  @screen sm
+    right: -35px
+  @screen lg
+    right: -50px
+
+.is-admin .js-image-slider-wrap
+  &::before
+    display: block
+    content: ""
+    top: 0
+    left: 0
+    right: 0
+    bottom: 40px
+    position: absolute
+    z-index: 9
+    cursor: pointer

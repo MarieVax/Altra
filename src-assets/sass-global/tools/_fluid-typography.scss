@@ -1,0 +1,19 @@
+// It allows to define minimum and maximum font size for the element
+// Mixin will dynamically change font size according to screen size
+
+$screen-min:                     375;
+$screen-max:                     1200;
+
+@mixin fluid-type($font-min, $font-max) {
+  font-size: #{$font-min}px;
+
+  @media only screen and (min-width: #{$screen-min}px) {
+    font-size: calc(
+      #{$font-min}px + #{($font-max - $font-min)} * (100vw - #{$screen-min}px) / (#{$screen-max} - #{$screen-min})
+    );
+  }
+
+  @media only screen and (min-width: #{$screen-max}px) {
+    font-size: #{$font-max}px;
+  }
+}

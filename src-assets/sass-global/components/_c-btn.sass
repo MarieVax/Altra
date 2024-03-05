@@ -1,0 +1,44 @@
+.c-btn
+  +fluid-type(16, 18)
+  font-family: theme('fontFamily.sans')
+  font-weight: normal
+  display: inline-block
+  background: theme('colors.brand')
+  padding: 0.4em 1em
+  color: #fff
+  border: 0
+  text-decoration: none
+  cursor: pointer
+  border-radius: 5px
+  white-space: nowrap
+  vertical-align: middle
+  user-select: none
+  &:hover,
+  &.btn--hover
+    background: color-mod(theme('colors.brand') shade(20%))
+    text-decoration: none
+    color: #fff
+  &:focus,
+  &:active,
+  &:active:focus
+    outline: none
+  &[disabled]
+    background: #ccc
+    color: #000
+
+.c-btn--cookie
+  padding: 0.3em 0.8em 0.3em 0.8em
+  +fluid-type(16, 18)
+  margin: 0 5px 5px 0
+
+.c-btn--small
+  padding: 0.6em 1em
+  +fluid-type(12, 15)
+
+.c-btn--mini
+  padding: 0.1em 0.4em
+  +fluid-type(12, 13)
+
+.c-btn--large
+  +fluid-type(18, 22)
+  padding: 0.5em 1.5em

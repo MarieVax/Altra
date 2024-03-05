@@ -1,0 +1,37 @@
+// Scroll to top element
+.c-scroll-to-top
+  position: fixed
+  right: 10px
+  bottom: 10px
+  color: #fff
+  display: flex
+  align-items: center
+  justify-content: center
+  visibility: hidden
+  opacity: 0
+  transition: all 0.6s ease
+  background: theme('colors.brand')
+  color: #fff
+  text-decoration: none
+  text-align: center
+  z-index: 10
+  width: 50px
+  height: 50px
+  transform: translateY(100px)
+  transition: all 0.5s cubic-bezier(0.23, 0.3, 0.24, 1.18)
+  font-size: 30px
+  border: 2px solid #fff
+  svg
+    width: 23px
+    height: 23px
+    fill: #fff
+  &:hover
+    background: color-mod(theme('colors.brand') shade(10%))
+    color: #fff
+    text-decoration: none
+
+.c-scroll-to-top.show
+  visibility: visible
+  transform: translateY(0)
+  cursor: pointer
+  opacity: 1.0

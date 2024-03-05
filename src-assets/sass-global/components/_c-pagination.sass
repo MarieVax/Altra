@@ -1,0 +1,26 @@
+.c-pagination
+  margin-top: 20px
+  padding-bottom: 20px
+  @screen sm
+    margin-top: 50px
+    padding-bottom: 50px
+  .page-numbers
+    display: inline-block
+    border: 2px solid theme('colors.brand')
+    min-width: 40px
+    text-align: center
+    border-radius: 15px
+    line-height: 44px
+    margin-right: 6px
+    padding: 2px 14px 0
+    text-decoration: none
+    color: theme('colors.base-txt')
+    font-weight: bold
+    font-size: 20px
+    background: #fff
+    transition: all 0.2s ease-in-out
+    &:hover
+      border-color: color-mod(theme('colors.brand') shade(10%))
+    &.current
+      color: #fff
+      background: theme('colors.brand')

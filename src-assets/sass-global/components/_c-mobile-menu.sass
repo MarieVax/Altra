@@ -1,0 +1,74 @@
+ul.c-mobile-menu
+  list-style: none
+  padding: 0
+  margin: 0
+  font-size: 18px
+  & > li
+    display: block
+    position: relative
+    border-bottom: 1px solid #ECECEC
+    padding: 0.5em 0
+    &:last-child
+      border: 0
+    & > a
+      display: block
+      text-decoration: none
+      border-radius: 5px
+      color: theme('colors.base-txt')
+      position: relative
+      &:hover,
+      &:focus
+        text-decoration: none
+        // color: theme('colors.brand')
+      &.expanded::after
+        transform: rotate(-180deg)
+    .sub-menu
+      max-height: 0
+      overflow: hidden
+      transition: max-height 0.3s ease-in-out
+      &.expanded
+        max-height: 500px
+        transition: max-height 0.6s ease-in-out
+    &.menu-item-has-children
+      & > a
+        padding-right: 1.5em
+        &:after
+          content: ' '
+          position: absolute
+          right: 0px
+          top: calc(50% - 12px)
+          width: 24px
+          height: 24px
+          transition: all 0.4s ease-in-out
+          background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTkgOWwtNyA3LTctNyIgLz4KPC9zdmc+)
+          background-size: 24px 24px
+  li 
+    &.current-menu-item a,
+    &.current_page_parent a,
+    &.current-menu-parent > a,
+    &.current_page_item > a
+      color: theme('colors.brand')
+  ul
+    margin: 0
+    font-size: 16px
+    li
+      padding-left: 1.5rem
+      position: relative
+      &::before
+        content: ' '
+        position: absolute
+        left: 0
+        top: 0.7em
+        width: 13px
+        height: 2px
+        background: theme('colors.brand')
+      &:first-child
+        margin-top: 0.75rem
+      &:last-child
+        margin-bottom: 0.5rem
+    a
+      color: theme('colors.base-txt')
+      text-decoration: none
+      &:hover
+        text-decoration: none
+        color: #000

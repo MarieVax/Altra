@@ -1,0 +1,30 @@
+@import 'fonts.sass'
+  
+// Make larger sidebar on Full HD monitors
+.interface-complementary-area
+  @media (min-width: 1680px)
+    width: 450px
+
+html :where(.wp-block)
+  max-width: 1440px
+
+.acf-info
+  display: flex
+  justify-content: center
+  .acf-label
+    display: none
+  .acf-input p
+    display: inline-block
+    font-size: 10px
+    background: #F1F1F1
+    border-radius: 5px
+    padding: 3px 7px
+    margin: 0
+    font-weight: bold
+
+.acf-center
+  .acf-input
+    text-align: center
+
+.acf-hidden-field
+  display: none

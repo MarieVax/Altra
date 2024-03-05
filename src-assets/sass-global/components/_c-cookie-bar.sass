@@ -1,0 +1,24 @@
+.c-cookie-bar
+  position: fixed
+  left: 0
+  bottom: 0
+  width: 100%
+  background: #DBDDE0
+  +fluid-type(14, 16)
+  line-height: 1.3
+  padding: 0.8em 0
+  transform: translateY(100%)
+  transition: all 0.2s ease-out 0s
+  z-index: 9999
+  .c-cookie-bar--not-decided &
+    transform: translateY(0)
+    transition: all 0.2s ease-out 1s
+    box-shadow: 0 -5px 5px rgba(0,0,0,0.3)
+
+.c-cookie-bar__btns
+  text-align: center
+
+.c-cookie-bar__txt
+  margin-bottom: 10px
+  p:last-child
+    margin: 0

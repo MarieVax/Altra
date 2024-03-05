@@ -1,0 +1,93 @@
+@import '../../sass-global/tools/**/*'
+
+.block-accordion
+  .c-accordion__el
+    margin-bottom: .85em
+
+  .c-accordion__subtitle
+    margin: 0
+
+  .c-accordion__subtitle a
+    +fluid-type(17, 24)
+    @apply font-bold
+    color: #374553
+    padding: 1em 3em 0.6em 0.7em
+    font-weight: 600
+    margin-bottom: 0
+    position: relative
+    display: block
+    text-decoration: none
+    background: #fff
+    box-shadow: 2.9px 4px 5px rgba(5, 1, 7, 0.19)
+    @screen sm
+      padding: 1em 4em 0.9em 40px
+    &:hover
+      text-decoration: none
+      color: #374553
+
+  .c-accordion__text
+    padding: 20px
+    margin: 0
+    background: #F1F2F2
+    +fluid-type(16, 19)
+    line-height: 1.5
+    @screen sm
+      padding: 33px 45px 10px 43px
+    p
+      margin-bottom: 1.2em
+    strong
+      color: theme('colors.header')
+      +fluid-type(16, 20)
+    ul
+      margin: 25px 0 15px
+      padding: 0
+      list-style: none
+      @screen sm
+        margin: 23px 0 52px
+      li
+        padding-left: 19px
+        margin-bottom: 8px
+        position: relative
+        &:after
+          content: ' '
+          position: absolute
+          left: 1px
+          top: 12px
+          width: 6px
+          height: 6px
+          background: theme('colors.brand')
+          border-radius: 50%
+
+  .c-accordion__plus,
+  .c-accordion__minus
+    position: absolute
+    right: 30px
+    top: 50%
+    width: 18px
+    height: 18px
+    margin-top: -9px
+    display: block
+    padding: 0
+    transition: all 0.2s ease-in-out
+    display: flex
+    @screen sm
+      width: 28px
+      height: 28px
+      margin-top: -14px
+    svg
+      width: 18px
+      height: 18px
+      fill: theme('colors.brand')
+      @screen sm
+        width: 28px
+        height: 28px
+
+  .c-accordion__plus
+    opacity: 1
+    .c-accordion__subtitle--active &
+      opacity: 0
+
+  .c-accordion__minus
+    opacity: 0
+    .c-accordion__subtitle--active &
+      opacity: 1

@@ -1,0 +1,17 @@
+[data-aos='zoom-in']
+  transform: scale(.95)
+
+[data-aos="reveal"]
+  opacity: 0
+  transition-property: transform, opacity
+  &.aos-animate
+    opacity: 1
+  @screen sm
+    transform: translateY(20px)
+    &.aos-animate
+      transform: translateY(0)
+
+[data-aos]
+  body[data-aos-easing="reveal"] &,
+  &[data-aos][data-aos-easing="new-easing"]
+    transition-timing-function: cubic-bezier(0.6, 0.2, 0.1, 1)

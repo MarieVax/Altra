@@ -1,0 +1,32 @@
+@tailwind base
+@tailwind components
+
+// Mixins, fixes
+@import 'tools/**/*'
+
+// Basic HTML elements (links, paragraphs, inputs etc.), custom fonts, print, global styles
+@import 'generic/**/*'
+
+// Layout styles (content containers)
+@import 'layout/**/*'
+
+/* purgecss end ignore */
+
+// Components
+/* purgecss start ignore */
+  
+img
+  border-style: none
+
+.lazyload
+  opacity: 1 !important
+
+// Libraries overrides
+@import 'overrides/**/*'
+@import 'components/**/*'
+@import 'blocks/**/*'
+@import 'pages/**/*'
+@import 'utilities/**/*'
+/* purgecss end ignore */ 
+
+@tailwind utilities

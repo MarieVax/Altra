@@ -1,0 +1,26 @@
+.l-wrap,
+.l-blocks-wrap > *:not( .alignwide ):not( .alignleft ):not( .alignfull ):not(.wp-block-group):not(.block-editor-inner-blocks),
+.l-blocks-wrap > .alignwide:not(.wp-block-group),
+.blocks-container > *:not( .alignwide ):not( .alignfull ):not(.wp-block-group):not(.block-editor-inner-blocks)
+  @apply mx-auto max-w-content box-content px-4
+  @screen sm
+    @apply px-6
+  @screen lg
+    @apply px-8
+
+.l-blocks-wrap > .alignwide:not(.wp-block-group)
+  @apply max-w-content-wide
+
+.wp-block-group__inner-container > *:not( .alignwide ):not( .alignfull ):not( .l-block )
+  @apply px-4
+  @screen sm
+    @apply px-6
+  @screen lg
+    @apply px-8
+
+.l-wrap--narrow
+  @apply max-w-content-narrow
+
+.l-blocks-wrap > .alignwide,
+.wp-block-group .alignwide
+  @apply max-w-content-wide
