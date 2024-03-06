@@ -1,21 +1,31 @@
 .c-btn
   +fluid-type(16, 18)
-  font-family: theme('fontFamily.sans')
+  font-family: "Gill Sans"
   font-weight: normal
   display: inline-block
-  background: theme('colors.brand')
-  padding: 0.4em 1em
+  background: transparent
+  padding: 17px 60px 17px 23px 
   color: #fff
-  border: 0
+  border: 1px solid $color-red
   text-decoration: none
   cursor: pointer
-  border-radius: 5px
+  border-radius: 0
   white-space: nowrap
   vertical-align: middle
   user-select: none
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 24px
+    height: 24px
+    background: url('../img/btn-arrow.svg')
+    background-repeat: no-repeat
+    background-size: contain
+    right: 23px
+    top: 19px
   &:hover,
   &.btn--hover
-    background: color-mod(theme('colors.brand') shade(20%))
     text-decoration: none
     color: #fff
   &:focus,
