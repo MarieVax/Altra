@@ -266,6 +266,29 @@ function register_acf_block_types()
       wp_enqueue_style('hero-homepage', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/hero-homepage.css'));
     }
   ));
+
+  acf_register_block_type(array(
+    'name'              => 'secteurs-slider',
+    'title'             => __('Secteurs Slider'),
+    'description'       => __('Secteurs Slider block'),
+    'render_template'   => 'template-parts/blocks/secteurs-slider.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => '',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('wide'),
+      'mode'  => false,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('hero-homepage', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/secteurs-slider.css'));
+      wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/vendor/swiper.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/vendor/swiper.js'), true);
+      wp_enqueue_script('secteur-slider', get_template_directory_uri() . '/assets/js/blocks/secteur-slider.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/blocks/secteur-slider.js'), true);
+      wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/vendor/swiper.css', array(), filemtime(get_template_directory() . '/assets/css/vendor/swiper.css'));
+    }
+  ));
 }
 
 // Check if function exists and hook into setup.

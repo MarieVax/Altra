@@ -1,4 +1,5 @@
 <?php
+
 /**
  * altra functions and definitions.
  *
@@ -58,3 +59,6 @@ require get_template_directory() . '/inc/gutenberg-helper-functions.php';
 
 // Rich Snippets
 require get_template_directory() . '/inc/rich-snippets.php';
+
+// Custom Post Types
+require get_template_directory() . '/inc/custom-post-types-init.php';
