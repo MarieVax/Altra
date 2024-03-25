@@ -285,8 +285,49 @@ function register_acf_block_types()
     'enqueue_assets'   => function () {
       wp_enqueue_style('hero-homepage', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/secteurs-slider.css'));
       wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/vendor/swiper.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/vendor/swiper.js'), true);
-      wp_enqueue_script('secteur-slider', get_template_directory_uri() . '/assets/js/blocks/secteur-slider.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/blocks/secteur-slider.js'), true);
+      wp_enqueue_script('secteur-slider', get_template_directory_uri() . '/assets/js/blocks/secteurs-slider.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/blocks/secteur-slider.js'), true);
       wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/vendor/swiper.css', array(), filemtime(get_template_directory() . '/assets/css/vendor/swiper.css'));
+    }
+  ));
+
+  acf_register_block_type(array(
+    'name'              => 'expertises',
+    'title'             => __('Expertises'),
+    'description'       => __('Expertises Block'),
+    'render_template'   => 'template-parts/blocks/expertises.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => '',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('wide'),
+      'mode'  => false,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('expertises', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/expertises.css'));
+      wp_enqueue_script('expertises-script', get_template_directory_uri() . '/assets/js/blocks/expertises.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/blocks/expertises.js'), true);
+    }
+  ));
+
+  acf_register_block_type(array(
+    'name'              => 'numbers',
+    'title'             => __('Numbers'),
+    'description'       => __('Numbers block'),
+    'render_template'   => 'template-parts/blocks/numbers.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('numbers', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array());
     }
   ));
 }

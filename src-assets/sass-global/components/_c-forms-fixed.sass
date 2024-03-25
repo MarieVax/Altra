@@ -1,0 +1,188 @@
+.btn-fixed
+  position: fixed
+  right: 0
+  top: 254px
+  display: flex
+  flex-direction: column
+  z-index: 98
+
+  &-elem
+    color: #fff
+    background: $color-red
+    align-items: center
+    display: flex
+    flex-direction: column
+    padding: 13px 12px
+    @media all and (max-width: 768px)
+      padding: 8px 5px
+    margin-bottom: 5px
+
+  &-img
+    width: 44px
+    @media all and (max-width: 768px)
+      width: 34px
+    height: auto
+
+  &-txt
+    max-width: 80px
+    line-height: 14px
+    margin-top: 5px
+    @media all and (max-width: 768px)
+      display: none
+
+  
+.modal
+  position: fixed
+  z-index: 9999
+  top: 0
+  left: 0
+  height: 100vh
+  height: calc(var(--vh, 1vh) * 100)
+  overflow: auto
+  background: rgba(0, 0, 0, 0.85)
+  width: 100vw  
+  padding: 92px 80px
+  @media all and (max-width: 768px)
+    padding: 50px 15px
+  display: none
+
+  &-container 
+    background: #fff
+    padding: 50px
+    @media all and (max-width: 768px)
+      padding: 60px 25px
+    position: relative
+    .close
+      top: 31px
+      right: 32px
+      z-index: 20
+      cursor: pointer
+      @media all and (max-width: 768px)
+        top: 20px
+        right: 20px
+    &--heading
+      text-align: center
+      max-width: 564px
+      margin: auto
+      font-family: 'Prata', serif
+      margin-bottom: 50px
+      font-size: 56px
+      line-height: 72px
+      @media all and (max-width: 768px)
+        font-size: 36px
+        line-height: 52px
+
+    &-forms
+      position: relative
+      z-index: 20
+
+      &-row
+        display: flex
+        justify-content: center
+        margin-bottom: 50px
+        @media all and (max-width: 768px)
+          flex-direction: column
+      
+        button
+          display: flex
+          align-items: center
+          position: relative
+          background-color: #fff
+          color: $color-red
+          padding: 13px 30px
+          transition: all 0.3s
+          font-size: 24px
+          @media all and (max-width: 768px)
+            font-size: 16px
+            padding: 13px
+          border: 1px solid $color-red
+          .img-white
+            display: none
+            opacity: 0
+            transition: all 0.3s
+            margin-left: 20px
+
+          .img-red
+              display: block
+              opacity: 1
+              transition: all 0.3s
+              margin-left: 20px
+          &.active
+            background-color: $color-red
+            color: #fff
+            .img-white
+              display: block
+              opacity: 1
+            .img-red
+              display: none
+              opacity: 1
+
+      &-tab
+        transition: all 0.3s
+        opacity: 0
+        display: none
+        &.active
+          opacity: 1
+          display: block
+          transition: all 0.3s
+        label
+          display: none !important
+        input, textarea
+          background: transparent !important
+          border: 1px solid $color-red !important
+          padding: 31px 60px  !important
+          font-size: 23px !important
+          @media all and (max-width: 768px)
+            padding: 15px  !important
+            font-size: 18px !important
+          width: 100%
+
+          &::placeholder
+            color: rgba(26, 32, 44, 0.60) !important
+
+        button.forminator-button-submit
+          background: $color-dark-blue
+          color: #fff
+          font-family: "Gill Sans"
+          font-weight: normal
+          display: inline-block
+          background: $color-dark-blue
+          padding: 17px 60px 17px 23px 
+          color: #fff
+          border: 1px solid $color-dark-blue
+          text-decoration: none
+          cursor: pointer
+          border-radius: 0
+          white-space: nowrap
+          vertical-align: middle
+          user-select: none
+          position: relative
+          transition: all 0.3s
+          &:hover 
+            background: transparent
+            color: $color-dark-blue
+          &:after
+            content: ''
+            position: absolute
+            width: 24px
+            height: 24px
+            background: url(../img/btn-arrow-white-blue.svg)
+            background-repeat: no-repeat
+            background-size: contain
+            right: 23px
+            top: 18px
+                  
+        
+    &:after
+      content: ''
+      width: calc(100% - 22px)
+      height: calc(100% - 30px)
+      top: 15px 
+      left: 11px 
+      border: 1px solid $color-red
+      position: absolute
+      z-index: 10
+    @media all and (min-width: 768px)
+      padding: 63px 108px
+
+       

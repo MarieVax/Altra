@@ -6,6 +6,7 @@
             "key": "field_590051f378d66",
             "label": "Custom Code",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -23,6 +24,7 @@
             "key": "field_5900520778d67",
             "label": "Code in \"header\" area",
             "name": "code_in_header_area",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -42,6 +44,7 @@
             "key": "field_5900522478d68",
             "label": "Code after \"body\" opening tag",
             "name": "code_after_body_opening_tag",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -61,6 +64,7 @@
             "key": "field_5900524b78d69",
             "label": "Code before \"body\" ending tag",
             "name": "code_before_body_ending_tag",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -80,6 +84,7 @@
             "key": "field_58372a4a0ae23",
             "label": "Site Texts",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -97,6 +102,7 @@
             "key": "field_58372a5b0ae24",
             "label": "Notice for outdated browsers",
             "name": "notice_for_outdated_browsers",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 1,
@@ -117,6 +123,7 @@
             "key": "field_61e6b8af28c0d",
             "label": "Header",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -133,6 +140,7 @@
             "key": "field_61e6b8bc28c0e",
             "label": "Header behavior when scrolling down",
             "name": "header_behavior_when_scrolling_down",
+            "aria-label": "",
             "type": "button_group",
             "instructions": "",
             "required": 1,
@@ -155,6 +163,7 @@
             "key": "field_5e557ac38c442",
             "label": "Footer",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -169,9 +178,123 @@
             "endpoint": 0
         },
         {
+            "key": "field_65f8682fe1bfa",
+            "label": "Image block bottom",
+            "name": "image_block_bottom",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_65f867d17bf59",
+            "label": "Heading block bottom",
+            "name": "heading_block_bottom",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65f867ef7bf5a",
+            "label": "Text block bottom",
+            "name": "text_block_bottom",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_65f868067bf5b",
+            "label": "Link left",
+            "name": "link_left_block_bottom",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_65f868167bf5c",
+            "label": "Link right",
+            "name": "link_right_block_bottom",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_65f987fbc2edd",
+            "label": "Link newsletter",
+            "name": "link_newsletter",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
             "key": "field_5e76366b5231f",
             "label": "Copyright Text",
             "name": "copyright_text",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -192,6 +315,7 @@
             "key": "field_5fc79cf00b991",
             "label": "Company Details",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -206,9 +330,10 @@
             "endpoint": 0
         },
         {
-            "key": "field_5fc79d020b992",
-            "label": "Phone Number",
-            "name": "phone_number",
+            "key": "field_65f987cc94c04",
+            "label": "Address Paris",
+            "name": "address_paris",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -218,19 +343,19 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 2,
             "default_value": "",
+            "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "append": ""
         },
         {
-            "key": "field_5fc79d110b993",
-            "label": "Phone Number Link",
-            "name": "phone_number_link",
+            "key": "field_5fc79d020b992",
+            "label": "Phone Number Paris",
+            "name": "phone_number_paris",
+            "aria-label": "",
             "type": "text",
-            "instructions": "No spaces and special characters.",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -238,17 +363,57 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 2,
             "default_value": "",
+            "maxlength": "",
             "placeholder": "",
-            "prepend": "tel:",
-            "append": "",
-            "maxlength": ""
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65f987dd94c05",
+            "label": "Address Lille",
+            "name": "address_lille",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65f987bf94c03",
+            "label": "Phone Number Lille",
+            "name": "phone_number_lille",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_5fc79d280b994",
             "label": "Social Media profiles",
             "name": "social_media_profiles",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -263,12 +428,14 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_5fc79d450b995",
                     "label": "Icon",
                     "name": "icon",
+                    "aria-label": "",
                     "type": "font-awesome",
                     "instructions": "",
                     "required": 1,
@@ -290,12 +457,14 @@
                     "show_preview": 1,
                     "enqueue_fa": 0,
                     "fa_live_preview": "",
-                    "choices": []
+                    "choices": [],
+                    "parent_repeater": "field_5fc79d280b994"
                 },
                 {
                     "key": "field_5fc79d690b996",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 1,
@@ -307,12 +476,14 @@
                     },
                     "wpml_cf_preferences": 2,
                     "default_value": "",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "parent_repeater": "field_5fc79d280b994"
                 },
                 {
                     "key": "field_5fc79d7b0b997",
                     "label": "Open in the new window?",
                     "name": "open_in_the_new_window",
+                    "aria-label": "",
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
@@ -327,7 +498,8 @@
                     "default_value": 1,
                     "ui": 1,
                     "ui_on_text": "",
-                    "ui_off_text": ""
+                    "ui_off_text": "",
+                    "parent_repeater": "field_5fc79d280b994"
                 }
             ]
         },
@@ -335,6 +507,7 @@
             "key": "field_5fce1a1f4c555",
             "label": "Mobile Menu Settings",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -352,6 +525,7 @@
             "key": "field_601e90d1ce1b0",
             "label": "Language switcher",
             "name": "language_switcher_enabled",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -372,6 +546,7 @@
             "key": "field_5fce1a294c556",
             "label": "Search",
             "name": "search_enabled",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -392,6 +567,7 @@
             "key": "field_601e8fdb7c0d1",
             "label": "Phone Number",
             "name": "phone_number_enabled",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -412,6 +588,7 @@
             "key": "field_601e8fcb7c0d0",
             "label": "Social Media",
             "name": "social_media_enabled",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -432,6 +609,7 @@
             "key": "field_60c66a0c00739",
             "label": "Performance",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -449,6 +627,7 @@
             "key": "field_60c66a170073a",
             "label": "Default WordPress Block Styles",
             "name": "default_wordpress_block_styles",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "In most cases all the blocks used on the website are the blocks created by the developers of the theme. In rare occasions clients would like to use default blocks installed in WordPress. This option is enabling CSS styles for these default WordPress blocks. These styles make these blocks look better on the forntend.",
             "required": 0,
@@ -469,6 +648,7 @@
             "key": "field_61e6b744b28f5",
             "label": "Other Settings",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -485,6 +665,7 @@
             "key": "field_61e6b75fb28f6",
             "label": "Website creation date",
             "name": "website_creation_date",
+            "aria-label": "",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -506,6 +687,7 @@
             "key": "field_61e6c7cc2311b",
             "label": "404 Page",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -522,6 +704,7 @@
             "key": "field_61e6c7da2311c",
             "label": "404 Page Main Header",
             "name": "404_page_main_header",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -541,6 +724,7 @@
             "key": "field_61e6c7f52311d",
             "label": "404 Page Description",
             "name": "404_page_description",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -560,6 +744,7 @@
             "key": "field_61e6c8152311e",
             "label": "404 Additional Secondary Button",
             "name": "404_additional_secondary_button",
+            "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -575,6 +760,7 @@
             "key": "field_61e6c8687a690",
             "label": "404 Page - Back to homepage text",
             "name": "404_page_back_to_homepage_text",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -589,6 +775,83 @@
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_65fc29ce427c0",
+            "label": "Formulaires",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65fc29f3427c3",
+            "label": "Heading",
+            "name": "heading_forms",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Une équipe d'expert est à votre écoute",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65fc29e3427c1",
+            "label": "Shortcode formulaire 1",
+            "name": "shortcode_formulaire_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "[forminator_form id=\"211\"]",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65fc29ed427c2",
+            "label": "Shortcode formulaire 2",
+            "name": "shortcode_formulaire_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "[forminator_form id=\"216\"]",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -609,5 +872,5 @@
     "active": true,
     "description": "<strong>Global settings for the website. Very useful for the data that should be available on all or multiple pages. For example: social media profiles, phone number etc.<\/strong><br>Do not remove this group.",
     "show_in_rest": 0,
-    "modified": 1644402018
+    "modified": 1711025014
 }

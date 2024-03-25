@@ -42,13 +42,13 @@
   <div class="l-outline">
 
     <header class="fixed top-0 left-0 w-full transition-all duration-500 transform js-header not-prose header-visual-styles" data-behavior-when-scrolling-down="<?php the_field('header_behavior_when_scrolling_down', 'option'); ?>">
-      <div class="flex items-center">
+      <div class="flex items-center header-inside">
         <a class="header-logo-link" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php esc_html_e('Go to homepage', 'altra'); ?>">
           <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-altra-consulting.svg' ?>" alt="" class="site-logo">
         </a>
 
         <div class="flex items-center">
-          <div class="hidden sm:block">
+          <div class="hidden lg:block">
             <?php
             wp_nav_menu(
               array(
@@ -59,7 +59,7 @@
             );
             ?>
           </div>
-          <div class="ml-4 flex items-center sm:!hidden z-50">
+          <div class="ml-4 flex items-center lg:!hidden z-50">
             <button class="js-menu-toggle hamburger hamburger--spin focus:outline-none h-[21px]" type="button" aria-label="Menu">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>

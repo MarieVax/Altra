@@ -214,4 +214,85 @@ jQuery(document).ready(function ($) {
       });
     }
   });
+
+  /* Display Modal on click and open tab on click on buttons
+------------------------------------------------------------------------------*/
+  function openModal(tabName) {
+    $(".modal").fadeIn(); // Effet de fondu pour afficher la modal
+    openTab(tabName);
+    // Appelle la fonction openTab pour activer la tab spécifiée
+  }
+
+  // Fonction pour ouvrir la modal avec la tab1 active
+  $("#btn1").on("click", function () {
+    openModal("tab1");
+  });
+
+  $("#btn2").on("click", function () {
+    openModal("tab2");
+  });
+
+  $(document).on("click", function (event) {
+    if (
+      !$(event.target).closest(".modal-container").length ||
+      $(event.target).hasClass("close")
+    ) {
+      if (
+        $(event.target).hasClass("btn-fixed-elem") ||
+        $(event.target).hasClass("btn-fixed-img") ||
+        $(event.target).hasClass("btn-fixed-txt")
+      ) {
+        return; // Si l'élément cliqué est un des éléments spécifiques, ne faites rien
+      }
+      $(".modal").fadeOut();
+    }
+  });
+
+  function openTab(tabName) {
+    // Récupère tous les éléments avec la classe "modal-container-forms-tab" et les cache
+    $(".modal-container-forms-tab").removeClass("active");
+
+    // Récupère tous les éléments avec la classe "tablink" et supprime la classe "active"
+    $(".modal-container-forms-btn").removeClass("active");
+
+    // Affiche le contenu de l'onglet sélectionné avec un fade in progressif
+    $("#" + tabName).addClass("active");
+
+    // Ajoute la classe "active" au lien correspondant au nom de l'onglet (tabName)
+    $("#" + tabName + "-btn").addClass("active");
+  }
+
+  $("#tab1-btn").on("click", function () {
+    openTab("tab1");
+  });
+
+  $("#tab2-btn").on("click", function () {
+    openTab("tab2");
+  });
+
+  /* Remove placeholder on click on input and textarea
+------------------------------------------------------------------------------*/
+
+  // Attach a focus event handler to input and textarea elements
+  $("input, textarea").on("focus", function () {
+    // Store the current placeholder text in a data attribute
+    if (!$(this).data("original-placeholder")) {
+      $(this).data("original-placeholder", $(this).attr("placeholder"));
+    }
+
+    // Clear the placeholder text
+    $(this).attr("placeholder", "");
+  });
+
+  // Attach a blur event handler to input and textarea elements
+  $("input, textarea").on("blur", function () {
+    // Get the current value of the input
+    var currentValue = $(this).val();
+
+    // Restore the original placeholder text only if the input is empty
+    if (!currentValue) {
+      var originalPlaceholder = $(this).data("original-placeholder");
+      $(this).attr("placeholder", originalPlaceholder);
+    }
+  });
 }); // end of jQuery code

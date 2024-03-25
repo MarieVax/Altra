@@ -1,0 +1,178 @@
+.expertises
+  background: rgba(16, 34, 55, 0.03)
+  transform: rotate(-5.5deg)
+  width: 400vw
+  margin-left: -150vw
+  padding-top: 130px
+  margin-top: 120px
+  margin-bottom: 120px
+  &:before  
+    content: ''
+    width: 1192px
+    height: 1047px
+    background: url('../img/background-group.svg')
+    background-size: contain
+    position: absolute
+    background-position: center
+    top: -20px
+    right: 164vw
+    z-index: 10
+
+  
+  &--container
+    transform: rotate(5.5deg)
+    max-width: 100vw
+    margin-left: 150vw
+    position: relative
+    z-index: 20
+
+  &--list
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 39px
+    grid-auto-flow: column-reverse
+    max-width: 1005px
+    margin: auto
+    margin-top: 150px
+
+    &_item  
+      background: $color-dark-blue
+      color: #fff
+      height: 562px
+      padding: 28px 59px
+      display: flex
+      justify-content: center
+      flex-direction: column
+      padding-bottom: 20px
+      position: relative
+      overflow: hidden
+      opacity: 0
+      transition: all 0.3s ease
+      transform: translate(0, 15%)
+      
+      &.show 
+        opacity: 1
+        transform: translate(0, 0)
+
+      &-element
+        opacity: 0
+        transition: all 0.3s ease
+        transform: translate(-5%, 0)
+        
+        &.show 
+          opacity: 1
+          transform: translate(0, 0)
+
+      &:nth-child(4), &:nth-child(6)
+        margin-top: -326px
+      &:nth-child(7)
+        margin-top: -489px
+
+
+      &:after 
+        content: ''
+        width: 674px
+        height: 674px
+        background: url('../img/background-card-group.svg')
+        background-size: contain
+        position: absolute
+        background-position: center
+        bottom: -257px
+        right: -286px
+        z-index: 10
+        animation: rotateAfter 130s linear infinite
+
+      &-title
+        margin-top: 25px
+        font-size: 30px
+        font-style: normal
+        font-weight: 400
+        line-height: 130%
+        letter-spacing: 1.2px
+        position: relative
+        padding-bottom: 20px
+        margin-bottom: 36px
+        position: relative
+        z-index: 20
+        &:after
+          content:''
+          width: calc(100% + 41px)
+          height: 1px 
+          background: $color-red
+          display: block
+          position: absolute
+          left: -59px
+          bottom: 0
+          z-index: 20
+
+      &-excerpt
+        position: relative
+        z-index: 20
+
+
+      &-text
+        &-top
+          grid-row: 1
+          grid-column: 2
+          background: transparent
+          color: $color-dark-blue
+          height: 300px
+          padding: 0 50px
+          text-align: center
+          display: flex
+          justify-content: center
+          align-items: center
+          flex-direction: column
+          position: relative
+          margin-top: -87px
+          &:before
+            content: ''
+            width: 32px
+            height: 42px
+            background: url('../img/guillemet-open.svg')
+            background-size: contain
+            position: absolute
+            background-position: center
+            background-repeat: no-repeat
+            top: 0
+            left: calc(50% - 21px)
+            z-index: 10
+          &:after 
+            content: ''
+            width: 32px
+            height: 42px
+            background: url('../img/guillemet-close.svg')
+            background-size: contain
+            position: absolute
+            background-position: center
+            background-repeat: no-repeat
+            bottom: 0
+            left: calc(50% - 21px)
+            z-index: 10
+
+        &-bottom
+          grid-row: auto
+          grid-column: 2
+          background: transparent
+          color: $color-dark-blue
+          text-align: center
+          padding: 112px 50px
+          heigth: auto
+
+          a     
+            font-weight: 600
+            color: $color-red
+            text-decoration: underline
+          &:after
+            display: none 
+
+      &-link 
+        bottom: 26px 
+        right: 30px
+        
+@keyframes rotateAfter 
+  from 
+    transform: rotate(0deg)
+  
+  to 
+    transform: rotate(360deg)

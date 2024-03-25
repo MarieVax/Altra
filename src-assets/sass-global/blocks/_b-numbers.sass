@@ -1,0 +1,142 @@
+.numbers 
+  max-width: 1440px
+  margin: auto
+  padding: 0 90px
+
+  &-container
+    position: relative
+
+    .c-btn
+      position: absolute
+      bottom: 0
+      right: 305px
+      border-color: $color-dark-blue
+      color: $color-dark-blue
+
+  &-col
+    &-item
+      &--heading
+        font-family: Prata
+        font-size: 68px
+        font-style: normal
+        font-weight: 300
+        line-height: 100%
+        
+        span 
+          font-size: 33px
+
+      &--text
+        font-size: 28px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+        font-family: 'Gill Sans Light'
+        color: $color-grey
+
+        span
+          font-size: 52px
+          line-height: 150%
+  
+  &--money_retrieved
+    position: relative
+    display: inline-block
+
+    &-100
+      position: absolute
+      color: rgba(8, 32, 63, 0.05)
+      top: -53px
+    
+    &-200
+      position: absolute
+      color: rgba(8, 32, 63, 0.20)
+      top: -21px
+  
+    &_text
+      max-width: 293px
+      margin: auto
+
+  &--cab_position
+    &_txt
+      span
+        font-size: 68px
+        font-weight: 200
+        line-height: 100%
+        color: $color-dark-blue
+    &_subtxt
+      max-width: 332px
+      margin: auto
+      font-size: 14px
+
+  &--client_numbers_text 
+    span
+      font-size: 68px
+      font-weight: 200
+      line-height: 100%
+      color: $color-dark-blue
+
+  &--years_experience
+    max-width: 276px
+    margin: auto
+    overflow: hidden
+    padding-bottom: 5px
+    &-img 
+      &2
+        top: -5px
+        animation: move 3s linear infinite
+    &_text
+      font-size: 52px
+    span 
+      font-family: 'Gill Sans Light'
+      font-size: 68px
+
+  &--workers_number_text
+    font-size: 52px
+
+  &-col1
+    .numbers-col-item:first-child
+      margin-bottom: 118px
+
+  &-col2
+    margin-top: -50px
+    
+    .numbers-col-item:first-child
+      margin-bottom: 118px
+
+  &-col3
+    margin-top: -124px
+    .numbers-col-item
+      margin-bottom: 80px
+  .img-dot
+    width: 210px
+    height: 210px
+    top: -70px
+    right: 20px
+
+    &.lazyloading
+      opacity: 1
+
+    &-rotate
+      &1
+        animation: rotate-dot 10s linear infinite
+      &2
+        animation: rotate-dot 20s linear infinite
+
+
+@keyframes rotate-dot
+  from 
+    transform: rotate(0deg)
+  
+  to 
+    transform: rotate(360deg)
+
+
+@keyframes move 
+  0% 
+    transform: translateX(-100%)
+  
+  50% 
+    transform: translateX(200%)
+  
+  100% 
+    transform: translateX(200%)
+  

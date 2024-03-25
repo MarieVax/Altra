@@ -13,10 +13,31 @@
 
 .header-visual-styles
   background: transparent
-  padding: 30px 85px
+  padding: 30px 15px
+  @media all and (min-width: 1200px)
+    padding: 30px 85px
   z-index: 999
 
   .header-logo-link
     margin-right: 117px
   &.js-header--scrolled
-    @apply bg-white bg-opacity-80 py-2 sm:py-3
+    background: rgba(16, 34, 55, 0.8)
+    backdrop-filter: blur(47px)
+    @apply py-2 sm:py-3
+  &.is-active
+    background: rgba(16, 34, 55, 0.8)
+    backdrop-filter: blur(47px)
+
+.hamburger-box .hamburger-inner, .hamburger.is-active .hamburger-inner
+  background-color: #fff !important
+  &:before, &:after
+    background-color: #fff !important
+
+
+.header-inside 
+  justify-content: space-between
+  @media all and (min-width: 1200px)
+    justify-content: normal
+
+.js-nav
+  z-index: 99
