@@ -330,6 +330,28 @@ function register_acf_block_types()
       wp_enqueue_style('numbers', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array());
     }
   ));
+
+  acf_register_block_type(array(
+    'name'              => 'services',
+    'title'             => __('Services'),
+    'description'       => __('Services block'),
+    'render_template'   => 'template-parts/blocks/services.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => '',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('wide'),
+      'mode'  => false,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      // Enqueue styles
+      wp_enqueue_style('services-css', get_template_directory_uri() . '/assets/css/admin-acf-blocks.css', array());
+    }
+  ));
+
 }
 
 // Check if function exists and hook into setup.
