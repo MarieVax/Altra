@@ -283,10 +283,10 @@ function register_acf_block_types()
       'jsx' => true
     ),
     'enqueue_assets'   => function () {
-      wp_enqueue_style('hero-homepage', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/secteurs-slider.css'));
-      wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/vendor/swiper.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/vendor/swiper.js'), true);
-      wp_enqueue_script('secteur-slider', get_template_directory_uri() . '/assets/js/blocks/secteurs-slider.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/blocks/secteur-slider.js'), true);
-      wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/vendor/swiper.css', array(), filemtime(get_template_directory() . '/assets/css/vendor/swiper.css'));
+      wp_enqueue_style('hero-homepage', get_template_directory_uri() . '/assets/css/admin-acf-blocks.css', array());
+      wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/vendor/swiper.js', array('jquery'));
+      wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/vendor/swiper.css', array());
+      wp_enqueue_script('secteurs-slider', get_template_directory_uri() . '/assets/js/blocks/secteurs-slider.js', array('jquery'));
     }
   ));
 
