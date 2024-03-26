@@ -15,11 +15,12 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
   if (!empty($block['data']['block_preview_img'])) echo '<img src="' . get_template_directory_uri() . '/assets/img/block-preview/' . $block['data']['block_preview_img'] . '" alt="">';
   //Background Image
-  $bg = (get_field('background_image')) ? get_field('background_image')['url'] : '';
+  $bg = (get_field('background_image')) ? get_field('background_image')['url'] : '/wp-content/uploads/2024/03/Group.svg';
 
 ?>
 
-  <div class="secteurs-slider">
+  <div class="secteurs-slider relative">
+    <img src="<?php echo $bg; ?>" alt="" class="secteurs-slider--background-img absolute">
     <?php
     //Heading
     if ($heading = get_field('heading')) :
@@ -32,6 +33,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
       printf('<div class="secteurs-slider--subheading subheading">%s</div>', $subheading);
     endif;
     ?>
+    
     <div class="swiper-secteurs">
       <div class="swiper-wrapper">
         <?php
@@ -44,9 +46,12 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
             $secteur_link = get_the_permalink($secteur_ID);
             $secteur_excerpt = get_the_excerpt($secteur_ID); ?>
             <div class="swiper-slide">
-              <img src="<?php echo $secteur_thumbnail_url ?>" alt="" class="swiper-secteurs-image">
-              <div class="swiper-slide-title"><?php echo $secteur_title ?></div>
-              <div class="swiper-slide-excerpt"><?php echo $secteur_excerpt ?></div>
+              <img src="<?php echo $secteur_thumbnail_url ?>" alt="" class="swiper-secteurs-image object-cover h-full size-full">
+              <div class="swiper-slide--container relative">
+                <div class="swiper-slide--title size-full"><h4><?php echo $secteur_title ?></h4></div>
+                <div class="swiper-slide--excerpt"><?php echo $secteur_excerpt ?></div>
+                <div class="swiper-button-next"></div>  
+              </div>
             </div>
         <?php
           endwhile;
