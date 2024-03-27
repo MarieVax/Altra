@@ -46,6 +46,7 @@
       
       .c-btn
         width: calc(50% - 18px)
+        z-index: 40
 
         &-footer-block-left
           margin-right: 36px
@@ -53,12 +54,27 @@
           border-color: $color-dark-blue
           &:after
             background: url('../img/btn-arrow-blue.svg')
+          &:hover 
+            color: #fff
+            background: $color-dark-blue
+            &:after
+              background: url('../img/btn-arrow-white-blue.svg')
+              background-repeat: no-repeat
+              background-size: contain
 
         &-footer-block-right
           background: $color-red
           border-color: $color-red
           &:after
             background: url('../img/btn-arrow-white.svg')
+          &:hover 
+            color: $color-red
+            background: #fff
+            &:after
+              background: url('../img/btn-arrow.svg')
+              background-repeat: no-repeat
+              background-size: contain
+
         
 .footer 
   background: $color-dark-blue

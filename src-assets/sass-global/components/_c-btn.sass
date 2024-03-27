@@ -13,6 +13,7 @@
   vertical-align: middle
   user-select: none
   position: relative
+  transition: all 0.3s
   &:after
     content: ''
     position: absolute
@@ -27,6 +28,13 @@
   &.btn--hover
     text-decoration: none
     color: #fff
+    background: #fff
+    color: $color-red
+    &:after 
+      background: url(../img/btn-arrow.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      border-color: $color-red
   &:focus,
   &:active,
   &:active:focus

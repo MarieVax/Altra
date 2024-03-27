@@ -224,7 +224,7 @@ jQuery(document).ready(function ($) {
   }
 
   // Fonction pour ouvrir la modal avec la tab1 active
-  $("#btn1").on("click", function () {
+  $("#btn1, .c-btn-footer-block-right").on("click", function () {
     openModal("tab1");
   });
 
@@ -240,7 +240,8 @@ jQuery(document).ready(function ($) {
       if (
         $(event.target).hasClass("btn-fixed-elem") ||
         $(event.target).hasClass("btn-fixed-img") ||
-        $(event.target).hasClass("btn-fixed-txt")
+        $(event.target).hasClass("btn-fixed-txt") ||
+        $(event.target).hasClass("c-btn-footer-block-right")
       ) {
         return; // Si l'élément cliqué est un des éléments spécifiques, ne faites rien
       }
@@ -294,5 +295,56 @@ jQuery(document).ready(function ($) {
       var originalPlaceholder = $(this).data("original-placeholder");
       $(this).attr("placeholder", originalPlaceholder);
     }
+  });
+
+  /**
+   Footer FadeIn
+   */
+  // Create an Intersection Observer instance with a callback function
+  let observerFooter = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Element is intersecting, play animation
+
+          entry.target.classList.add("show");
+
+          const blockHeading = entry.target.querySelector(
+            ".footer-block-content-heading"
+          );
+          const blockText = entry.target.querySelector(
+            ".footer-block-content-text"
+          );
+          const blockLinks = entry.target.querySelector(
+            ".footer-block-content-links"
+          );
+
+          // Ajouter une classe pour faire apparaître les éléments avec décalage
+          setTimeout(() => {
+            blockHeading.classList.add("show");
+          }, 0); // Décalage pour l'image
+          setTimeout(() => {
+            blockText.classList.add("show");
+          }, 200); // Décalage pour le titre
+          setTimeout(() => {
+            blockLinks.classList.add("show");
+          }, 400);
+        }
+      });
+    },
+    {
+      // Set the rootMargin to create an offset when checking for intersection
+      rootMargin: "0px",
+      // Set the threshold to 0 to trigger the callback as soon as even a single pixel of the target element is visible
+      threshold: 0.5,
+    }
+  );
+
+  // Select the element(s) to observe
+  let targetFooter = document.querySelectorAll(".footer-block-content");
+
+  // Start observing each target element
+  targetFooter.forEach((element) => {
+    observerFooter.observe(element);
   });
 }); // end of jQuery code

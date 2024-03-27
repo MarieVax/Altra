@@ -20,20 +20,20 @@
     printf('<img src="%s" alt="" class="footer-block-image">', $image['url']);
   endif;
   ?>
-  <div class="footer-block-content">
+  <div class="footer-block-content fadeIn">
     <?php
     //Heading
     if ($heading = get_field('heading_block_bottom', 'option')) :
-      printf('<div class="footer-block-content-heading">%s</div>', $heading);
+      printf('<div class="footer-block-content-heading fadeIn">%s</div>', $heading);
     endif;
     ?>
     <?php
     //Text
     if ($text = get_field('text_block_bottom', 'option')) :
-      printf('<div class="footer-block-content-text">%s</div>', $text);
+      printf('<div class="footer-block-content-text fadeIn">%s</div>', $text);
     endif;
     ?>
-    <div class="footer-block-content-links">
+    <div class="relative z-30 footer-block-content-links fadeIn">
       <?php //Link left
       $left = get_field('link_left_block_bottom', 'option');
       if (isset($left) && !empty($left)) :

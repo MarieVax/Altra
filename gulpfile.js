@@ -38,9 +38,23 @@ try {
 function server(done) {
   // Run server
   if (isStatic) {
-    browserSync.init({ server: { baseDir: "./static" } });
+    browserSync.init({
+      server: { baseDir: "./static" },
+      middleware: [
+        function (req, res, next) {
+          res.setHeader("Access-Control-Allow-Origin", "*");
+          next();
+        },
+      ],
+    });
   } else {
-    browserSync.init({ proxy: options.serverLink });
+    browserSync.init({
+      proxy: options.serverLink,
+      middleware: function (req, res, next) {
+        res.setHeader("Access-Control-Allow-Origin", "http://altra:8888");
+        next();
+      },
+    });
   }
   done(); // Signal completion
 }
