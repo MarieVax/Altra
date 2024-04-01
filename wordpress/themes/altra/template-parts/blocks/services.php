@@ -22,7 +22,9 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 <!-- /wp-content/uploads/2024/03/Group.svg -->
 
   <div class="services-block">
-
+    <div class="top-slanted-text">
+      <h2><?php echo wp_kses_post ( get_field('top_slanted_text') ); ?></h2>
+    </div>
     <div class="services-block--container-inside text-white">
     <img src="<?php echo $bg; ?>" alt="" class="services-bg">
     <?php
@@ -38,7 +40,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
     endif;
     ?>
     
-    <div class="flex mb-4 services-column">
+    <div class="flex flex-wrap -mx-4 services-column">
     <?php 
     if (have_rows('services')) :
       while (have_rows('services')) : 
@@ -53,22 +55,33 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
           $service_link = get_the_permalink($service_ID);
           $service_excerpt = get_the_excerpt($service_ID); 
           ?>
-          <div class="w-1/5 services-column--container">
+          <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-2 sm:px-4 mb-4">
+          <div class="services-column--container transition duration-500 ease-in-out">
             <div class="services-column--container-list">
               <img class="" src="<?php echo $service_thumbnail_url ?>" alt="">
               <h4 class="text-center"><?php echo $service_title ?></h4>
-              <div class="text-center hidden"><?php echo $service_excerpt ?></div>
+              <div class="excerpt text-center hidden"><?php echo $service_excerpt ?></div>
+              <div class="arrow hidden">
+                <a href="<?php echo $service_link ?>"><img src="/wp-content/themes/altra/assets/img/secteur-arrow-right.svg" alt=""></a>
+              </div>
             </div>
           </div>
+          </div>
+          
         <?php 
         endif;
       endwhile;
     endif; 
     ?>
 </div>
+
     </div>
     
+    <div class="bottom-slanted-text">
+      <h2><?php echo wp_kses_post ( get_field('bottom_slanted_text') ); ?></h2>
+    </div>
   </div>
+  
   </div>
 
 <?php

@@ -2,11 +2,51 @@
   background-color: #102237
   position: relative
   width: 150vw
-  height: 840px
+  height: 957px
   transform: rotate(-5.5deg)
   margin-left: -25vw
-  margin-top: -113px
   margin-bottom: 150px
+
+  @media (max-width: 640px) 
+    height: auto
+
+  .top-slanted-text
+    position: relative
+    top: -60px
+
+    @media (max-width: 640px) 
+      top: -30px
+
+    h2
+      text-align: center
+      color: #B81734
+      font-family: Prata
+      font-size: 40px
+      font-style: normal
+      font-weight: 400
+      letter-spacing: 1.6px
+
+      @media (max-width: 640px) 
+        font-size: 16px
+
+  .bottom-slanted-text 
+    position: absolute
+    bottom: 10px
+    width: 100%
+    margin-left: 0
+    
+    @media (max-width: 640px) 
+      position: relative
+      margin-top: 80px
+    
+    h2 
+      color: #B81734
+      font-family: Prata
+      font-size: 40px
+      letter-spacing: 1.6px
+      text-align: center
+      @media (max-width: 640px) 
+        font-size: 16px
 
   &--container-inside
     transform: rotate(5.5deg)
@@ -14,6 +54,10 @@
     max-width: 1440px
     margin: 0 auto
     padding-top: 120px
+
+    @media (max-width: 640px) 
+      padding-left: 30px
+      padding-right: 30px
 
     .services-bg
       position: absolute
@@ -25,22 +69,32 @@
         width: 100%
 
         &-list
-          width: 217px
+          width: 100%
+          padding: 20px
 
         h4
           font-size: 30px
           font-weight: 600
+          margin-top: 24px
+
+        .excerpt
+          font-size: 16px
+          font-weight: 400
 
       &--container:hover
         background-color: #223E5E
         cursor: pointer
-        width: 217px
+        width: 100%
 
         img
           width: 131px
 
         .hidden
           display: block
+        
+        .arrow img
+          width: 32px
+          margin-top: 26px
 
       img
         margin: 0 auto
