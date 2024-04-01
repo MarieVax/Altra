@@ -1,6 +1,6 @@
 "use strict";
 module.exports = {
-  serverLink: "http://altra:8888",
+  serverLink: "http://altra.local/",
   isStatic: false,
   isWP: true,
   templateNameWP: "altra",
