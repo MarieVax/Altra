@@ -15,9 +15,11 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
   if (!empty($block['data']['block_preview_img'])) echo '<img src="' . get_template_directory_uri() . '/assets/img/block-preview/' . $block['data']['block_preview_img'] . '" alt="">';
   //Background Image
-  $bg = (get_field('background_image')) ? get_field('background_image')['url'] : '/wp-content/uploads/2024/03/Group.svg';
+  $bg = (get_field('background_image')) ? get_field('background_image')['url'] : '';
 
 ?>
+
+<!-- /wp-content/uploads/2024/03/Group.svg -->
 
   <div class="services-block">
 
@@ -51,7 +53,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
           $service_link = get_the_permalink($service_ID);
           $service_excerpt = get_the_excerpt($service_ID); 
           ?>
-          <div class="w-1/4 services-column--container hover:red">
+          <div class="w-1/4 services-column--container">
             <img class="" src="<?php echo $service_thumbnail_url ?>" alt="">
             <h4 class="text-center"><?php echo $service_title ?></h4>
             <div class="text-center"><?php echo $service_excerpt ?></div>
