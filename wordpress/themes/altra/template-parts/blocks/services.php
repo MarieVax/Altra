@@ -53,10 +53,12 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
           $service_link = get_the_permalink($service_ID);
           $service_excerpt = get_the_excerpt($service_ID); 
           ?>
-          <div class="w-1/4 services-column--container">
-            <img class="" src="<?php echo $service_thumbnail_url ?>" alt="">
-            <h4 class="text-center"><?php echo $service_title ?></h4>
-            <div class="text-center"><?php echo $service_excerpt ?></div>
+          <div class="w-1/5 services-column--container">
+            <div class="services-column--container-list">
+              <img class="" src="<?php echo $service_thumbnail_url ?>" alt="">
+              <h4 class="text-center"><?php echo $service_title ?></h4>
+              <div class="text-center hidden"><?php echo $service_excerpt ?></div>
+            </div>
           </div>
         <?php 
         endif;

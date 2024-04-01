@@ -6,6 +6,7 @@
   transform: rotate(-5.5deg)
   margin-left: -25vw
   margin-top: -113px
+  margin-bottom: 150px
 
   &--container-inside
     transform: rotate(5.5deg)
@@ -21,10 +22,25 @@
     .services-column 
       &--container
         font-family: "Gill Sans"
+        width: 100%
+
+        &-list
+          width: 217px
 
         h4
           font-size: 30px
           font-weight: 600
+
+      &--container:hover
+        background-color: #223E5E
+        cursor: pointer
+        width: 217px
+
+        img
+          width: 131px
+
+        .hidden
+          display: block
 
       img
         margin: 0 auto
