@@ -1,16 +1,119 @@
 .services-block
-  overflow: hidden
-  margin-bottom: 150px
-  background: #102237
-  width: 150vw
-  height: 955px
-  transform: rotate(-5.5deg)
+  background-color: #102237
   position: relative
-  z-index: 0
+  width: 150vw
+  height: 957px
+  transform: rotate(-5.5deg)
   margin-left: -25vw
+  margin-bottom: 150px
+
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-image: url('/wp-content/uploads/2024/03/Group.svg')
+    background-size: cover
+    background-position: center
+    z-index: 10
+
+  @media (max-width: 640px) 
+    height: auto
+
+  .top-slanted-text
+    position: relative
+    top: -60px
+
+    @media (max-width: 640px) 
+      top: -30px
+
+    h2
+      text-align: center
+      color: #B81734
+      font-family: Prata
+      font-size: 40px
+      font-style: normal
+      font-weight: 400
+      letter-spacing: 1.6px
+
+      @media (max-width: 640px) 
+        font-size: 16px
+
+  .bottom-slanted-text 
+    position: absolute
+    bottom: 10px
+    width: 100%
+    margin-left: 0
+
+    @media (max-width: 640px) 
+      position: relative
+      margin-top: 80px
+    
+    h2 
+      color: #B81734
+      font-family: Prata
+      font-size: 40px
+      letter-spacing: 1.6px
+      text-align: center
+      @media (max-width: 640px) 
+        font-size: 16px
 
   &--container-inside
     transform: rotate(5.5deg)
+    width: 100vw
+    max-width: 1440px
+    margin: 0 auto
+    padding-top: 120px
+    z-index: 100
+
+    @media (max-width: 640px) 
+      padding-left: 30px
+      padding-right: 30px
+
+    .services-bg
+      position: absolute
+      z-index: 1
+      
+    .services-column 
+      &--container
+        font-family: "Gill Sans"
+        width: 100%
+
+        &-list
+          width: 100%
+          padding: 20px
+
+        h4
+          font-size: 30px
+          font-weight: 600
+          margin-top: 24px
+
+        .excerpt
+          font-size: 16px
+          font-weight: 400
+
+      &--container:hover
+        background-color: #223E5E
+        cursor: pointer
+        width: 100%
+
+        img
+          width: 131px
+
+        .hidden
+          display: block
+        
+        .arrow img
+          width: 32px
+          margin-top: 26px
+
+      img
+        margin: 0 auto
+        width: 75px
+      
+    
 
 
    
