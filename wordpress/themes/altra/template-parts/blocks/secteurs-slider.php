@@ -19,8 +19,9 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
 ?>
 
-  <div class="secteurs-slider relative">
-    <img src="<?php echo $bg; ?>" alt="" class="secteurs-slider--background-img absolute">
+  <div class="relative secteurs-slider">
+    <img src="<?php //echo $bg; 
+              ?>" alt="" class="absolute secteurs-slider--background-img">
     <?php
     //Heading
     if ($heading = get_field('heading')) :
@@ -33,7 +34,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
       printf('<div class="secteurs-slider--subheading subheading">%s</div>', $subheading);
     endif;
     ?>
-    
+
     <div class="swiper-secteurs">
       <div class="swiper-wrapper">
         <?php
@@ -46,11 +47,13 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
             $secteur_link = get_the_permalink($secteur_ID);
             $secteur_excerpt = get_the_excerpt($secteur_ID); ?>
             <div class="swiper-slide">
-              <img src="<?php echo $secteur_thumbnail_url ?>" alt="" class="swiper-secteurs-image object-cover h-full size-full">
-              <div class="swiper-slide--container relative">
-                <div class="swiper-slide--title size-full"><h4><?php echo $secteur_title ?></h4></div>
+              <img src="<?php echo $secteur_thumbnail_url ?>" alt="" class="object-cover h-full swiper-secteurs-image size-full">
+              <div class="relative swiper-slide--container">
+                <div class="swiper-slide--title size-full">
+                  <h4><?php echo $secteur_title ?></h4>
+                </div>
                 <div class="swiper-slide--excerpt"><?php echo $secteur_excerpt ?></div>
-                <div class="swiper-button-next"></div>  
+                <div class="swiper-button-next"></div>
               </div>
             </div>
         <?php

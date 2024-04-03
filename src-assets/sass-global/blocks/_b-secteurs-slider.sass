@@ -12,117 +12,121 @@
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-
-.swiper-slide
-  width: 272px !important
-  height: 630px !important
-  transition: width 0.5s ease, height 0.5s ease
-
-  &--container
-    height: 92px
-    display: flex
-    flex-direction: column
-    justify-content: center
-    bottom: 92px
-    z-index: 1
-
-    .swiper-button-next 
-      display: none
-
-  &--container:after
-    content: ""
-    background: rgba(16, 34, 55, 0.90)
-    width: 100%
-    height: 92px
-    position: absolute
-    display: block
-    bottom: 0
-    left: 0
-    right: 0
-    z-index: -1
-
-  &--title
-    position: relative
-    width: auto
-
-    h4
-      color: #FFF
-      font-family: Prata
-      font-size: 20px
-      line-height: 123%
-      width: inherit
-      display: inline-block
-      position: relative
-
-      &::after
-        content: ""
-        height: 1px
-        background: #b81734
-        margin-top: 8px
-        display: block
-        position: relative
-
-      &::before 
-        content: ""
-        display: inline-block
-        width: 30px
-
-  &--excerpt
-    color: #FFF
-    font-family: "Gill Sans", sans-serif
-    font-size: 16px
-    line-height: 150%
-    display: none   
+  .swiper-wrapper
+    height: 600px
   
-.swiper-slide-active
-  height: 782px !important
-  top: -70px
-  overflow: hidden
-  width: 532px !important
+    .swiper-slide
+      max-width: 272px
+      height: 630px
+      transition: all 0.5s
+      overflow: hidden
+      &:hover 
+        height: 782px 
+        top: -70px
+        overflow: hidden
+        max-width: 532px
+        .swiper-slide--container
+          height: 255px
+          bottom: 255px
 
-  .swiper-slide--container
-    height: 255px
-    bottom: 255px
+          &::after
+            content: ""
+            background: rgba(16, 34, 55, 0.90)
+            transform: rotate(-5.5deg)
+            height: 276px
+            bottom: -20px
+            display: block
+            position: absolute
+            left: -9px
+            right: 0
+            z-index: -1
+            width: calc(100% + 100px)
 
-    &::after
-      content: ""
-      background: rgba(16, 34, 55, 0.90)
-      transform: rotate(-5.5deg)
-      height: 276px
-      bottom: -20px
-      display: block
-      position: absolute
-      left: -9px
-      right: 0
-      z-index: -1
-      width: calc(100% + 100px)
+          .swiper-secteurs-image
+            width: 532px
+            
+          .swiper-slide--title
+            h4 
+              font-size: 33px
+              padding-left: 0
 
-  .swiper-secteurs-image
-    width: 532px
+          .swiper-slide--excerpt 
+            display: block
+            padding: 7px 40px
+
+          .swiper-button-next 
+            background: url(/wp-content/themes/altra/assets/img/secteur-arrow-right.svg) no-repeat
+            display: block !important
+            width: 100%
+            height: 100%
+            background-size: initial
+            right: 0 !important
+            background-position: right
+            left: auto !important
+            top: 90px !important
+            transform: none
+            margin-right: 25px
+            transition: none
+
+      &--container
+        height: 92px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        bottom: 92px
+        z-index: 1
+
+        .swiper-button-next 
+          display: none
+
+      &--container:after
+        content: ""
+        background: rgba(16, 34, 55, 0.90)
+        width: 100%
+        height: 92px
+        position: absolute
+        display: block
+        bottom: 0
+        left: 0
+        right: 0
+        z-index: -1
+
+      &--title
+        position: relative
+        width: auto
+
+        h4
+          color: #FFF
+          font-family: Prata
+          font-size: 20px
+          line-height: 123%
+          width: inherit
+          display: inline-block
+          position: relative
+
+          &::after
+            content: ""
+            height: 1px
+            background: #b81734
+            margin-top: 8px
+            display: block
+            position: relative
+
+          &::before 
+            content: ""
+            display: inline-block
+            width: 30px
+
+      &--excerpt
+        color: #FFF
+        font-family: "Gill Sans", sans-serif
+        font-size: 16px
+        line-height: 150%
+        display: none   
+
+
     
-  .swiper-slide--title
-    h4 
-      font-size: 33px
-      padding-left: 0
-
-  .swiper-slide--excerpt 
-    display: block
-    padding: 7px 40px
-
-  .swiper-button-next 
-    background: url(/wp-content/themes/altra/assets/img/secteur-arrow-right.svg) no-repeat
-    display: block !important
-    width: 100%
-    height: 100%
-    background-size: initial
-    right: 0 !important
-    background-position: right
-    left: auto !important
-    top: 90px !important
-    transform: none
-    margin-right: 25px
-    transition: none
 
 
 
-    
+        

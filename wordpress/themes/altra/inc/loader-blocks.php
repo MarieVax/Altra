@@ -353,6 +353,27 @@ function register_acf_block_types()
     }
   ));
 
+
+  acf_register_block_type(array(
+    'name'              => 'altra',
+    'title'             => __('Altra'),
+    'description'       => __('Altra block for Altra page'),
+    'render_template'   => 'template-parts/blocks/altra.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => '',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('wide'),
+      'mode'  => false,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      // Enqueue styles
+      wp_enqueue_style('altra-css', get_template_directory_uri() . '/assets/css/admin-acf-blocks.css', array());
+    }
+  ));
 }
 
 // Check if function exists and hook into setup.
