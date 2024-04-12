@@ -123,7 +123,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
       $url = (isset($link['url']) && !empty($link['url'])) ? 'href="' . $link['url'] . '"' : '';
       $title = (isset($link['title']) && !empty($link['title'])) ? $link['title'] : '';
 
-      printf('<a %s %s class="c-btn c-btn-numbers">%s</a>', $url, $target, $title);
+      printf('<a %s %s class="c-btn c-btn-numbers fadeIn">%s</a>', $url, $target, $title);
 
     endif; ?>
   </div>

@@ -263,7 +263,7 @@ function register_acf_block_types()
       'jsx' => true
     ),
     'enqueue_assets'   => function () {
-      wp_enqueue_style('hero-homepage', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/hero-homepage.css'));
+      wp_enqueue_style('admin-acf-blocks', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/admin-acf-blocks.css'));
     }
   ));
 
@@ -306,7 +306,7 @@ function register_acf_block_types()
       'jsx' => true
     ),
     'enqueue_assets'   => function () {
-      wp_enqueue_style('expertises', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/expertises.css'));
+      wp_enqueue_style('admin-acf-blocks', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/expertises.css'));
       wp_enqueue_script('expertises-script', get_template_directory_uri() . '/assets/js/blocks/expertises.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/blocks/expertises.js'), true);
     }
   ));
@@ -327,7 +327,8 @@ function register_acf_block_types()
       'jsx' => true
     ),
     'enqueue_assets'   => function () {
-      wp_enqueue_style('numbers', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array());
+      wp_enqueue_style('admin-acf-blocks', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/admin-acf-blocks.css'));
+      wp_enqueue_script('numbers-script', get_template_directory_uri() . '/assets/js/blocks/numbers.js', array('jquery'), filemtime(get_template_directory() . '/assets/js/blocks/numbers.js'), true);
     }
   ));
 
@@ -352,6 +353,27 @@ function register_acf_block_types()
     }
   ));
 
+
+  acf_register_block_type(array(
+    'name'              => 'altra',
+    'title'             => __('Altra'),
+    'description'       => __('Altra block for Altra page'),
+    'render_template'   => 'template-parts/blocks/altra.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => '',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('wide'),
+      'mode'  => false,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      // Enqueue styles
+      wp_enqueue_style('altra-css', get_template_directory_uri() . '/assets/css/admin-acf-blocks.css', array());
+    }
+  ));
 }
 
 // Check if function exists and hook into setup.
