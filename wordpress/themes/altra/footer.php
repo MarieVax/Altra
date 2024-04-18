@@ -240,6 +240,26 @@
   </div>
 </div>
 
+<?php //if (is_home() && is_front_page()) : 
+?>
+
+<div class="overlay-load">
+  <div class="overlay-load-inside">
+    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/roue_animation.png' ?>" alt="" class="absolute overlay-load-img-roue">
+    <?php
+    for ($i = 1; $i <= 11; $i++) {
+      echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/roue_animation_' . $i . '.png" alt="" class="absolute overlay-load-img-roue-elem overlay-load-img-roue-' . $i . '">';
+    }
+    ?>
+    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/roue_animation_logo.png' ?>" alt="" class="absolute overlay-load-img-roue-logo">
+  </div>
+</div>
+<?php //else : 
+?>
+<?php //endif; 
+?>
+
+
 <a href="#top" class="c-scroll-to-top">
   <svg viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8">
     <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"></path>

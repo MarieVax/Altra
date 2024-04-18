@@ -20,51 +20,53 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 ?>
 
   <div class="relative secteurs-slider">
-    <img src="<?php //echo $bg; 
-              ?>" alt="" class="absolute secteurs-slider--background-img">
-    <?php
-    //Heading
-    if ($heading = get_field('heading')) :
-      $headerTag = (get_field('heading_tag')) ? get_field('heading_tag') : 'h2';
-      printf('<%s class="secteurs-slider--heading heading-h2">%s</%s>', $headerTag, $heading, $headerTag);
-    endif;
+    <div class="secteurs-container">
+      <img src="<?php //echo $bg; 
+                ?>" alt="" class="absolute secteurs-slider--background-img">
+      <?php
+      //Heading
+      if ($heading = get_field('heading')) :
+        $headerTag = (get_field('heading_tag')) ? get_field('heading_tag') : 'h2';
+        printf('<%s class="secteurs-slider--heading heading-h2">%s</%s>', $headerTag, $heading, $headerTag);
+      endif;
 
-    //content
-    if ($subheading = get_field('subheading')) :
-      printf('<div class="secteurs-slider--subheading subheading">%s</div>', $subheading);
-    endif;
-    ?>
+      //content
+      if ($subheading = get_field('subheading')) :
+        printf('<div class="secteurs-slider--subheading subheading">%s</div>', $subheading);
+      endif;
+      ?>
 
-    <div class="swiper-secteurs">
-      <div class="swiper-wrapper">
-        <?php
-        if (have_rows('secteurs')) :
-          while (have_rows('secteurs')) : the_row();
-            $secteur = get_sub_field('secteur');
-            $secteur_title = $secteur->post_title;
-            $secteur_ID = $secteur->ID;
-            $secteur_thumbnail_url = get_the_post_thumbnail_url($secteur_ID, 'medium_large');
-            $secteur_link = get_the_permalink($secteur_ID);
-            $secteur_excerpt = get_the_excerpt($secteur_ID); ?>
-            <div class="swiper-slide">
-              <img src="<?php echo $secteur_thumbnail_url ?>" alt="" class="object-cover h-full swiper-secteurs-image size-full">
-              <div class="relative swiper-slide--container">
-                <div class="swiper-slide--title size-full">
-                  <h4><?php echo $secteur_title ?></h4>
+      <div class="swiper-secteurs">
+        <div class="swiper-wrapper">
+          <?php
+          if (have_rows('secteurs')) :
+            while (have_rows('secteurs')) : the_row();
+              $secteur = get_sub_field('secteur');
+              $secteur_title = $secteur->post_title;
+              $secteur_ID = $secteur->ID;
+              $secteur_thumbnail_url = get_the_post_thumbnail_url($secteur_ID, 'medium_large');
+              $secteur_link = get_the_permalink($secteur_ID);
+              $secteur_excerpt = get_the_excerpt($secteur_ID); ?>
+              <div class="swiper-slide">
+                <img src="<?php echo $secteur_thumbnail_url ?>" alt="" class="object-cover h-full swiper-secteurs-image size-full">
+                <div class="relative swiper-slide--container">
+                  <div class="swiper-slide--title">
+                    <h3><?php echo $secteur_title ?></h3>
+                  </div>
+                  <div class="swiper-slide--excerpt"><?php echo $secteur_excerpt ?></div>
+                  <div class="swiper-button-next"></div>
                 </div>
-                <div class="swiper-slide--excerpt"><?php echo $secteur_excerpt ?></div>
-                <div class="swiper-button-next"></div>
               </div>
-            </div>
-        <?php
-          endwhile;
-        endif;
-        ?>
-      </div>
+          <?php
+            endwhile;
+          endif;
+          ?>
+        </div>
 
+      </div>
     </div>
   </div>
-  </div>
+
 
 <?php
 endif;

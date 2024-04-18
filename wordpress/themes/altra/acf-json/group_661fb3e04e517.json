@@ -1,0 +1,67 @@
+{
+    "key": "group_661fb3e04e517",
+    "title": "Settings CPT",
+    "fields": [
+        {
+            "key": "field_661fb3e3dcb48",
+            "label": "Dossier illustration",
+            "name": "dossier_illustration",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "!!! NE PAS MODIFIER !!! Champs à destination des développeurs : renseigner ici le nom du dossier du thème contenant les images pour l'illustration de l'expertise dans le répertoire assets\/img\/.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_661fba81652af",
+            "label": "Number of images",
+            "name": "number_of_images",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "expertises"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1713355416
+}

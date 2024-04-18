@@ -1,11 +1,12 @@
 .expertises
-  background: rgba(16, 34, 55, 0.03)
+  background: #f7f8f9
   transform: rotate(-5.5deg)
   width: 400vw
   margin-left: -150vw
   padding-top: 130px
   margin-top: 120px
   margin-bottom: 120px
+  overflow: hidden
   &:before  
     content: ''
     width: 1192px
@@ -16,6 +17,14 @@
     background-position: center
     top: -20px
     right: 164vw
+    z-index: 10
+    display: none
+  &-bk-pin 
+    width: 1192px
+    height: 1047px
+    object-fit: contain
+    top: -20px
+    right: 153vw
     z-index: 10
 
   
@@ -46,18 +55,18 @@
       padding-bottom: 20px
       position: relative
       overflow: hidden
-      opacity: 0
+      //opacity: 0
       transition: all 0.3s ease
-      transform: translate(0, 15%)
+      //transform: translate(0, 15%)
       
       &.show 
         opacity: 1
         transform: translate(0, 0)
 
       &-element
-        opacity: 0
+        //opacity: 0
         transition: all 0.3s ease
-        transform: translate(-5%, 0)
+        //transform: translate(-5%, 0)
         
         &.show 
           opacity: 1
@@ -80,7 +89,7 @@
         bottom: -257px
         right: -286px
         z-index: 10
-        animation: rotateAfter 130s linear infinite
+        //animation: rotateAfter 130s linear infinite
 
       &-title
         margin-top: 25px
@@ -169,6 +178,171 @@
       &-link 
         bottom: 26px 
         right: 30px
+
+      &.TVA-FCTVA-Douanes
+        .expertises--list_item-illu-div
+          &-1
+            border-left: 1px dashed white
+            height: 33px
+            width: 1px
+            bottom: 60px
+            right: 23px
+
+          &-2
+            height: 33px 
+            width: 10px 
+            border-right: 1px dashed white
+            border-bottom-right-radius: 0
+            border-top-right-radius: 10px
+            bottom: 155px
+            right: 23px
+
+          &-3
+            height: 27px 
+            width: 79px 
+            border-left: 1px dashed white
+            border-top: 1px dashed white
+            border-radius: 10px
+            border-bottom-left-radius: 0
+            border-top-right-radius: 0
+            top: 5px
+            right: 32px
+
+          &-4
+            height: 24px
+            width: 51px
+            border-bottom: 1px dashed white
+            border-left: 1px dashed white
+            border-bottom-left-radius: 10px
+            bottom: 124px
+            right: 143px
+
+            
+      &.Expertise-comptable-financiere
+       .expertises--list_item-illu-div
+          &-1
+            border-left: 1px dashed white
+            height: 46px
+            width: 1px
+            bottom: 124px
+            left: 193px
+
+          &-2
+            height: 1px
+            width: 38px
+            border-top: 1px dashed white
+            top: 59px
+            right: 205px
+
+          &-3
+            height: 60px
+            width: 25px
+            border-left: 1px dashed white
+            border-top: 1px dashed white
+            border-radius: 10px
+            border-top-right-radius: 10px
+            border-bottom-left-radius: 10px
+            border-bottom-left-radius: 0
+            border-top-right-radius: 0
+            top: 65px
+            right: 321px
+
+      &.Fiscalite-locale-environnemental
+        .expertises--list_item-illu-div
+          &-1
+            border-right: 1px dashed white
+            border-bottom-right-radius: 10px
+            height: 40px
+            width: 10px
+            top: 169px
+            right: 36px
+
+          &-2
+            height: 134px
+            width: 287px
+            border-bottom: 1px dashed white
+            border-left: 1px dashed white
+            border-bottom-left-radius: 10px
+            bottom: 16px
+            right: 44px
+
+      &.impots-commerciaux
+        .expertises--list_item-illu-div
+          &-1
+            height: 92px
+            width: 60px
+            border-left: 1px dashed white
+            border-top: 1px dashed white
+            border-radius: 10px
+            border-bottom-left-radius: 0
+            border-top-right-radius: 0
+            bottom: 88px
+            left: 160px
+
+
+          &-2
+            height: 45px
+            width: 60px
+            border-right: 1px dashed white
+            border-top: 1px dashed white
+            border-radius: 10px
+            border-top-left-radius: 0
+            border-bottom-right-radius: 0
+            top: 42px
+            left: 262px
+
+          &-3
+            height: 45px
+            width: 148px
+            border-right: 1px dashed white
+            border-bottom: 1px dashed white
+            border-radius: 10px
+            border-top-right-radius: 0
+            border-bottom-left-radius: 0
+            top: 136px
+            right: 43px
+      
+      &.Social
+        .expertises--list_item-illu-div
+          &-1
+            height: 61px
+            width: 32px
+            border-left: 1px dashed white
+            border-top: 1px dashed white
+            border-radius: 10px
+            border-bottom-left-radius: 0
+            border-top-right-radius: 0
+            bottom: 162px
+            left: 212px
+
+
+          &-2
+            height: 56px
+            width: 32px
+            border-right: 1px dashed white
+            border-top: 1px dashed white
+            border-radius: 10px
+            border-top-left-radius: 0
+            border-bottom-right-radius: 0
+            top: 33px
+            left: 315px
+
+          &-3
+            height: 35px
+            width: 17px
+            border-right: 1px dashed white
+            border-bottom: 1px dashed white
+            border-radius: 10px
+            border-top-right-radius: 0
+            border-bottom-left-radius: 0
+            top: 148px
+            right: 21px
+
+           
+
+           
+
+
         
 @keyframes rotateAfter 
   from 

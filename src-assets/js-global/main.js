@@ -224,11 +224,13 @@ jQuery(document).ready(function ($) {
   }
 
   // Fonction pour ouvrir la modal avec la tab1 active
-  $("#btn1, .c-btn-footer-block-right").on("click", function () {
+  $("#btn1, .c-btn-footer-block-right").on("click", function (event) {
+    event.preventDefault();
     openModal("tab1");
   });
 
-  $("#btn2").on("click", function () {
+  $("#btn2").on("click", function (event) {
+    event.preventDefault();
     openModal("tab2");
   });
 

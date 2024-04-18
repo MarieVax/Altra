@@ -44,5 +44,5 @@ let targetElements = document.querySelectorAll(".expertises--list_item");
 
 // Start observing each target element
 targetElements.forEach((element) => {
-  observerCard.observe(element);
+  //observerCard.observe(element);
 });
