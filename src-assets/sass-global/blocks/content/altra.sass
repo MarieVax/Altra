@@ -1,19 +1,53 @@
 .altra--main
   .altra-sidebar
+    background: #102237
+    height: 144vh
+    width: 501.86px
+    left: -40.64px
+    top: -43px
+    transform: rotate(-5.5deg)
+    z-index: 10
+
     ul
-      background: #102237
-      transform: rotate(-5.5deg)
-      margin-top: -113px
-      width: 501px
-      height: 808px
+      transform: rotate(5.5deg)
+      margin-top: 280px
+      position: relative
+      left: 142px
 
   .altra-primary
-    z-index: 0
-
     .altra--section-hero
+      position: relative
       .altra--section-hero-img
-        margin-bottom: 150px
+        object-fit: cover
+        width: 150vw
         height: 822px
         transform: rotate(-5.5deg)
-        position: relative
-        margin-top: -113px
+        top: -90.36px
+        left: 57.13px
+
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background: linear-gradient(179.32deg, rgba(16, 34, 55, 0.632) 33.35%, rgba(16, 34, 55, 0) 89.16%)
+          z-index: 2
+
+      .altra--heading-hero
+        top: 196px
+        left: 550px
+        z-index: 1
+        font-family: Gill Sans
+        font-size: 60px
+        font-weight: 300
+        line-height: 72px
+        text-align: left
+        color: #FFFFFF
+        width: 800px
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+        
+
+

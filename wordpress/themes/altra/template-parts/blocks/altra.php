@@ -14,8 +14,8 @@ require get_template_directory() . '/inc/block-start.php';
 
 // Vérifiez s'il y a des entrées flexibles
 if (have_rows('content')) :
-  echo '<div class="relative altra--main flex flex-row">';
-  echo '<div class="altra-sidebar basis-1/4"><ul>';
+  echo '<div class="relative altra--main flex">';
+  echo '<div class="altra-sidebar fixed"><ul>';
   // Bouclez sur chaque entrée flexible
   while (have_rows('content')) : the_row();
 
@@ -24,7 +24,7 @@ if (have_rows('content')) :
     if (get_row_layout() == 'mieux_nous_connaitre') :
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li class="absolute z-50 w-full h-full"><a class="text-white" href="/altra#%s">%s</li></a>',
+          '<li class="z-50 w-full h-full"><a class="text-white" href="/altra#%s">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -82,7 +82,7 @@ if (have_rows('content')) :
     endif;
   endwhile;
   echo '</ul></div>';
-  echo '<div class="altra-primary basis-1/0">';
+  echo '<div class="altra-primary flex-1">';
 
   while (have_rows('content')) : the_row();
     if (get_row_layout() == 'hero') :
