@@ -24,7 +24,7 @@ if (have_rows('content')) :
     if (get_row_layout() == 'mieux_nous_connaitre') :
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li class="z-50 w-full h-full"><a class="text-white" href="/altra#%s">%s</li></a>',
+          '<li class="z-50 h-full"><a class="text-white" href="/altra#%s" tabindex="0">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -33,7 +33,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s">%s</li></a>',
+          '<li><a class="text-white" href="/altra#%s" tabindex="1">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -42,7 +42,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s">%s</li></a>',
+          '<li><a class="text-white" href="/altra#%s" tabindex="2">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -52,7 +52,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s">%s</li></a>',
+          '<li><a class="text-white" href="/altra#%s" tabindex="3">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -62,7 +62,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s">%s</li></a>',
+          '<li><a class="text-white" href="/altra#%s" tabindex="4">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -72,7 +72,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s">%s</li></a>',
+          '<li><a class="text-white" href="/altra#%s" tabindex="5">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -82,7 +82,7 @@ if (have_rows('content')) :
     endif;
   endwhile;
   echo '</ul></div>';
-  echo '<div class="altra-primary flex-1">';
+  echo '<div class="altra-primary">';
 
   while (have_rows('content')) : the_row();
     if (get_row_layout() == 'hero') :

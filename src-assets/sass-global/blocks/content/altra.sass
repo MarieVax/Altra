@@ -2,7 +2,7 @@
   .altra-sidebar
     background: #102237
     height: 144vh
-    width: 501.86px
+    width: 25%
     left: -40.64px
     top: -43px
     transform: rotate(-5.5deg)
@@ -12,18 +12,47 @@
       transform: rotate(5.5deg)
       margin-top: 280px
       position: relative
-      left: 142px
+
+      li 
+        padding-bottom: 20px
+        width: auto
+
+        a 
+          font-family: Gill Sans
+          font-size: 20px
+          font-weight: 600
+          line-height: 30px
+          text-align: left
+          display: inline-block
+          
+          &:hover::after
+            content: ""
+            height: 1px
+            background: #b81734
+            margin-top: 8px
+            display: block
+          
+          &:before
+            content: ""
+            display: inline-block
+            width: 147px
 
   .altra-primary
+    flex-grow: 1
+    margin-left: 25%
+    width: 898px
+    max-width: 100%
+    
     .altra--section-hero
       position: relative
+      width: 100vw
       .altra--section-hero-img
         object-fit: cover
-        width: 150vw
+        width: 100%
         height: 822px
         transform: rotate(-5.5deg)
         top: -90.36px
-        left: 57.13px
+        left: -120.87px
 
         &::before
           content: ''
@@ -37,7 +66,6 @@
 
       .altra--heading-hero
         top: 196px
-        left: 550px
         z-index: 1
         font-family: Gill Sans
         font-size: 60px
@@ -47,6 +75,62 @@
         color: #FFFFFF
         width: 800px
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+    .altra--section2
+      z-index: 1
+      &::before 
+        content: ''
+        display: block
+        position: absolute
+        background-color: orange
+        width: 100vw
+        height: 110%
+        left: -363.98px
+        z-index: -1
+        transform: rotate(-5.5deg)
+      
+      .altra--heading
+        padding-top: 80px
+
+    @for $i from 1 through 5
+      .altra--section#{$i}
+        margin: 40px 100px
+        position: relative
+
+        .c-btn-altra 
+          background-color: #102237
+          border: none
+          padding: 17px 80px 17px 60px
+
+        div > div
+          display: block
+          padding-bottom: 50px
+          width: 620px
+          margin: 0 auto
+
+    .altra--section3
+      .altra--teams
+        &--teams-item-left
+          width: 30%
+        &--teams-item
+          width: 100%
+          &:nth-child(odd)::before 
+            content: ''
+            display: block
+            position: absolute
+            background-color: orange
+            width: 100vw
+            height: 100%
+            left: -363.98px
+            z-index: -1
+            transform: rotate(-5.5deg)
+
+    
+
+        
+
+      
+     
 
         
 
