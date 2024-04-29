@@ -20,20 +20,20 @@
     printf('<img src="%s" alt="" class="footer-block-image">', $image['url']);
   endif;
   ?>
-  <div class="footer-block-content fadeIn">
+  <div class="footer-block-content">
     <?php
     //Heading
     if ($heading = get_field('heading_block_bottom', 'option')) :
-      printf('<div class="footer-block-content-heading fadeIn">%s</div>', $heading);
+      printf('<div class="footer-block-content-heading">%s</div>', $heading);
     endif;
     ?>
     <?php
     //Text
     if ($text = get_field('text_block_bottom', 'option')) :
-      printf('<div class="footer-block-content-text fadeIn">%s</div>', $text);
+      printf('<div class="footer-block-content-text">%s</div>', $text);
     endif;
     ?>
-    <div class="relative z-30 footer-block-content-links fadeIn">
+    <div class="relative z-30 footer-block-content-links">
       <?php //Link left
       $left = get_field('link_left_block_bottom', 'option');
       if (isset($left) && !empty($left)) :
@@ -42,7 +42,7 @@
         $url_left = (isset($left['url']) && !empty($left['url'])) ? 'href="' . $left['url'] . '"' : '';
         $title_left = (isset($left['title']) && !empty($left['title'])) ? $left['title'] : '';
 
-        printf('<a %s %s class="c-btn c-btn-footer-block-left">%s</a>', $url_left, $target_left, $title_left);
+        printf('<a %s %s class="c-btn c-btn-footer-block-left c-btn-light">%s</a>', $url_left, $target_left, $title_left);
       endif;
 
       //Link
@@ -96,7 +96,7 @@
             <?php while (have_rows('social_media_profiles', 'option')) : the_row(); ?>
               <li class="">
                 <a class="flex items-center justify-center rounded-full hover:bg-brand hover:text-white hover:no-underline" href="<?php the_sub_field('link'); ?>" <?php if (get_sub_field('open_in_the_new_window')) : ?>target="_blank" <?php endif; ?>>
-                  <?php echo get_fontawesome_svg(get_sub_field('icon')); ?>
+                  <img src="<?php echo get_sub_field('icon'); ?>" alt="" class="footer-social-icon">
                 </a>
               </li>
             <?php endwhile; ?>
@@ -239,6 +239,26 @@
     </div>
   </div>
 </div>
+
+<?php //if (is_home() && is_front_page()) : 
+?>
+
+<div class="overlay-load">
+  <div class="overlay-load-inside">
+    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/roue_animation.png' ?>" alt="" class="absolute overlay-load-img-roue">
+    <?php
+    for ($i = 1; $i <= 11; $i++) {
+      echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/roue_animation_' . $i . '.png" alt="" class="absolute overlay-load-img-roue-elem overlay-load-img-roue-' . $i . '">';
+    }
+    ?>
+    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/roue_animation_logo.png' ?>" alt="" class="absolute overlay-load-img-roue-logo">
+  </div>
+</div>
+<?php //else : 
+?>
+<?php //endif; 
+?>
+
 
 <a href="#top" class="c-scroll-to-top">
   <svg viewBox="0 0 20 20" fill="currentColor" class="w-8 h-8">

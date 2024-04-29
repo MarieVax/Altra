@@ -19,14 +19,16 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
 ?>
 
-  <div class="expertises">
-    <div class="expertises--container">
+  <div class="relative expertises">
+    <div class="overlay-block"></div>
 
+    <img class="absolute expertises-bk-pin" alt="" src="/wp-content/themes/altra/assets/img/bk-Group.svg">
+    <div class="expertises--container">
       <?php
       //Heading
       if ($heading = get_field('heading')) :
         $headerTag = (get_field('heading_tag')) ? get_field('heading_tag') : 'h2';
-        printf('<%s class="expertises--heading heading-h2">%s</%s>', $headerTag, $heading, $headerTag);
+        printf('<%s class="expertises--heading heading-h2"><div class="heading-h2-before"></div>%s<div class="heading-h2-after"></div></%s>', $headerTag, $heading, $headerTag);
       endif;
 
       //subheading
@@ -51,11 +53,37 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
             $expertise_ID = $expertise->ID;
             $expertise_thumbnail_url = get_the_post_thumbnail_url($expertise_ID, 'medium_large');
             $expertise_link = get_the_permalink($expertise_ID);
-            $expertise_excerpt = get_the_excerpt($expertise_ID); ?>
-            <a href="<?php echo $expertise_link ?>" class="expertises--list_item">
+            $expertise_excerpt = get_the_excerpt($expertise_ID);
+            $expertise_repo = get_field('dossier_illustration', $expertise_ID);
+            $expertise_nb = get_field('number_of_images', $expertise_ID); // On récupère le nombre d'images pour l'illustration car cela diffère d'une expertise à l'autre
+        ?>
+            <a href="<?php echo $expertise_link ?>" class="expertises--list_item <?php echo $expertise_repo ?> ">
+              <div class="relative expertises--list_item-illu">
+                <?php
+                // Boucle for de 1 à 4
+                for ($i = 1; $i <= 4; $i++) {
+                  // Construction de l'URL de l'image
+                  $image_url = get_stylesheet_directory_uri() . '/assets/img/' . $expertise_repo . '/cards/' . $expertise_repo . '-' . $i . '.png';
+                  // Détermine la classe à utiliser en fonction de la valeur de $i
+                  $class = ($i == 1) ? 'relative' : 'absolute top-0 left-0';
+                ?>
+                  <img src="<?php echo $image_url; ?>" alt="" class="expertises--list_item-illu-elem-<?php echo $i; ?> <?php echo $class; ?>">
+                <?php
+                }
+                ?>
 
-              <img src="<?php echo $expertise_thumbnail_url ?>" alt="" class="expertises--list_item-image expertises--list_item-element">
-              <div class="expertises--list_item-title expertises--list_item-element"><?php echo $expertise_title ?></div>
+                <?php
+                // Boucle for de 1 à $expertise_nb pour afficher les blocs qui serviront au traits pointillés
+                for ($i = 1; $i <= 8; $i++) {
+                ?>
+                  <div class="expertises--list_item-illu-div absolute expertises--list_item-illu-div-<?php echo $i; ?>"></div>
+                <?php
+                }
+                ?>
+              </div>
+
+              <div class="expertises--list_item-title expertises--list_item-element"><?php echo $expertise_title ?><span class="expertises--list_item-title-line"></span>
+              </div>
               <div class="expertises--list_item-excerpt expertises--list_item-element"><?php echo $expertise_excerpt ?></div>
               <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/btn-arrow.svg' ?>" alt="" class="absolute expertises--list_item-link">
             </a>

@@ -20,6 +20,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 ?>
 
   <div class="flex items-center hero hero-hp">
+    <div class="overlay-block"></div>
     <img src="<?php echo $bg; ?>" alt="" class="hero-hp--background-img">
     <div class="absolute z-50 w-full h-full text-white hero-hp--container-inside">
       <?php

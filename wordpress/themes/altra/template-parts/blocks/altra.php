@@ -14,8 +14,8 @@ require get_template_directory() . '/inc/block-start.php';
 
 // Vérifiez s'il y a des entrées flexibles
 if (have_rows('content')) :
-  echo '<div class="relative altra--main flex">';
-  echo '<div class="altra-sidebar fixed"><ul>';
+  echo '<div class="relative altra--main">';
+  echo '<div class="fixed altra-sidebar"><ul>';
   // Bouclez sur chaque entrée flexible
   while (have_rows('content')) : the_row();
 
@@ -24,7 +24,7 @@ if (have_rows('content')) :
     if (get_row_layout() == 'mieux_nous_connaitre') :
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li class="z-50 h-full"><a class="text-white" href="/altra#%s" tabindex="0">%s</li></a>',
+          '<li><a href="/altra#%s">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -33,7 +33,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s" tabindex="1">%s</li></a>',
+          '<li><a href="/altra#%s">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -42,7 +42,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s" tabindex="2">%s</li></a>',
+          '<li><a href="/altra#%s">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -52,7 +52,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s" tabindex="3">%s</li></a>',
+          '<li><a href="/altra#%s">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -62,7 +62,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s" tabindex="4">%s</li></a>',
+          '<li><a href="/altra#%s">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );
@@ -72,7 +72,7 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a class="text-white" href="/altra#%s" tabindex="5">%s</li></a>',
+          '<li><a href="/altra#%s">%s</li></a>',
           sanitize_title($anchor),
           $anchor
         );

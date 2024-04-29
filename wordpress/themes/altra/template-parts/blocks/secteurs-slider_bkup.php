@@ -15,14 +15,15 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
   if (!empty($block['data']['block_preview_img'])) echo '<img src="' . get_template_directory_uri() . '/assets/img/block-preview/' . $block['data']['block_preview_img'] . '" alt="">';
   //Background Image
-  $bg = (get_field('background_image')) ? get_field('background_image')['url'] : '/wp-content/themes/altra/assets/img/secteurs-group.svg';
+  $bg = (get_field('background_image')) ? get_field('background_image')['url'] : '/wp-content/uploads/2024/03/Group.svg';
 
 ?>
 
   <div class="relative secteurs-slider">
     <div class="overlay-block"></div>
     <div class="secteurs-container">
-      <img src="<?php echo $bg; ?>" alt="" class="absolute secteurs-slider--background-img">
+      <img src="<?php //echo $bg; 
+                ?>" alt="" class="absolute secteurs-slider--background-img">
       <?php
       //Heading
       if ($heading = get_field('heading')) :
@@ -40,28 +41,20 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
         <div class="swiper-wrapper">
           <?php
           if (have_rows('secteurs')) :
-            $count = 0;
             while (have_rows('secteurs')) : the_row();
               $secteur = get_sub_field('secteur');
               $secteur_title = $secteur->post_title;
               $secteur_ID = $secteur->ID;
               $secteur_thumbnail_url = get_the_post_thumbnail_url($secteur_ID, 'medium_large');
               $secteur_link = get_the_permalink($secteur_ID);
-              $secteur_excerpt = get_the_excerpt($secteur_ID);
-              $count++;
-              if ($count == 2) :
-                $active = "active";
-              else :
-                $active = "";
-              endif;
-          ?>
-              <div class="swiper-slide <?php echo $active ?>">
-                <img src="<?php echo $secteur_thumbnail_url ?>" alt="" class="object-cover w-full h-full swiper-secteurs-image size-full">
+              $secteur_excerpt = get_the_excerpt($secteur_ID); ?>
+              <div class="swiper-slide">
+                <img src="<?php echo $secteur_thumbnail_url ?>" alt="" class="object-cover h-full swiper-secteurs-image size-full">
                 <div class="relative swiper-slide--container">
                   <div class="swiper-slide--title">
                     <h3><?php echo $secteur_title ?></h3>
                   </div>
-                  <div class="swiper-slide--excerpt"><?php echo wp_trim_words($secteur_excerpt, 20, '...') ?></div>
+                  <div class="swiper-slide--excerpt"><?php echo $secteur_excerpt ?></div>
                   <div class="swiper-button-next"></div>
                 </div>
               </div>

@@ -15,47 +15,28 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
   if (!empty($block['data']['block_preview_img'])) echo '<img src="' . get_template_directory_uri() . '/assets/img/block-preview/' . $block['data']['block_preview_img'] . '" alt="">';
 ?>
+  <?php if (have_rows('slider_top')) :
+    echo '<div class="flex services-slider-top">';
+    for ($i = 0; $i < 10; $i++) {
+      echo '<div class="services-slider-top-list">';
+      while (have_rows('slider_top')) :
+        the_row();
+        $text = get_sub_field('text');
+        printf('<div class="services-slider-top-list-item">%s</div>', $text);
+      endwhile;
+      echo '</div>';
+    }
+    echo '</div>';
+  endif ?>
 
   <div class="services">
-    <?php if (have_rows('slider_top')) :
-      echo '<div class="flex services-slider-top">';
-      echo '<div class="services-slider-top-list">';
-      while (have_rows('slider_top')) :
-        the_row();
-        $text = get_sub_field('text');
-        printf('<div class="services-slider-top-list-item">%s</div>', $text);
-      endwhile;
-      echo '</div>';
-      echo '<div class="services-slider-top-list">';
-      while (have_rows('slider_top')) :
-        the_row();
-        $text = get_sub_field('text');
-        printf('<div class="services-slider-top-list-item">%s</div>', $text);
-      endwhile;
-      echo '</div>';
-      echo '<div class="services-slider-top-list">';
-      while (have_rows('slider_top')) :
-        the_row();
-        $text = get_sub_field('text');
-        printf('<div class="services-slider-top-list-item">%s</div>', $text);
-      endwhile;
-      echo '</div>';
-      echo '<div class="services-slider-top-list">';
-      while (have_rows('slider_top')) :
-        the_row();
-        $text = get_sub_field('text');
-        printf('<div class="services-slider-top-list-item">%s</div>', $text);
-      endwhile;
-      echo '</div>';
-      echo '</div>';
-    endif ?>
 
     <div class="text-white services--container-inside">
       <?php
       //Heading
       if ($heading = get_field('heading')) :
         $headerTag = (get_field('heading_tag')) ? get_field('heading_tag') : 'h2';
-        printf('<%s class="services--heading heading-h2">%s</%s>', $headerTag, $heading, $headerTag);
+        printf('<%s class="services--heading heading-h2"><div class="heading-h2-before"></div>%s<div class="heading-h2-after"></div></%s>', $headerTag, $heading, $headerTag);
       endif;
 
       //content
@@ -91,41 +72,21 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
       endif;
       ?>
     </div>
-    <?php if (have_rows('slider_bottom')) :
-      echo '<div class="flex services-slider-bottom">';
-      echo '<div class="services-slider-bottom-list">';
-      while (have_rows('slider_bottom')) :
-        the_row();
-        $text = get_sub_field('text');
-        printf('<div class="services-slider-bottom-list-item">%s</div>', $text);
-      endwhile;
-      echo '</div>';
-      echo '<div class="services-slider-bottom-list">';
-      while (have_rows('slider_bottom')) :
-        the_row();
-        $text = get_sub_field('text');
-        printf('<div class="services-slider-bottom-list-item">%s</div>', $text);
-      endwhile;
-      echo '</div>';
-      echo '<div class="services-slider-bottom-list">';
-      while (have_rows('slider_bottom')) :
-        the_row();
-        $text = get_sub_field('text');
-        printf('<div class="services-slider-bottom-list-item">%s</div>', $text);
-      endwhile;
-      echo '</div>';
-      echo '<div class="services-slider-bottom-list">';
-      while (have_rows('slider_bottom')) :
-        the_row();
-        $text = get_sub_field('text');
-        printf('<div class="services-slider-bottom-list-item">%s</div>', $text);
-      endwhile;
-      echo '</div>';
-      echo '</div>';
-    endif ?>
-  </div>
-  </div>
 
+  </div>
+  <?php if (have_rows('slider_bottom')) :
+    echo '<div class="flex services-slider-bottom">';
+    for ($i = 0; $i < 10; $i++) {
+      echo '<div class="services-slider-bottom-list">';
+      while (have_rows('slider_bottom')) :
+        the_row();
+        $text = get_sub_field('text');
+        printf('<div class="services-slider-bottom-list-item">%s</div>', $text);
+      endwhile;
+      echo '</div>';
+    }
+    echo '</div>';
+  endif ?>
 
 <?php
 endif;

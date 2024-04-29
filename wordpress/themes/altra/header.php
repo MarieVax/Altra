@@ -41,7 +41,7 @@
 
   <div class="l-outline">
 
-    <header class="fixed top-0 left-0 w-full transition-all duration-500 transform js-header not-prose header-visual-styles" data-behavior-when-scrolling-down="<?php the_field('header_behavior_when_scrolling_down', 'option'); ?>">
+    <header class="absolute top-0 left-0 w-full transition-all duration-500 transform js-header not-prose header-visual-styles">
       <div class="flex items-center header-inside">
         <a class="header-logo-link" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php esc_html_e('Go to homepage', 'altra'); ?>">
           <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-altra-consulting.svg' ?>" alt="" class="site-logo">
