@@ -1,197 +1,66 @@
 .altra--main
-  .altra-sidebar
-    background: #102237
-    height: 853.23px
-    width: 25%
-    left: -40.64px
-    top: -43px
-    transform: rotate(-5.5deg)
-    z-index: 10
 
+  .altra-primary 
+    margin-left: 350px
+
+    .altra--section-hero
+      margin-bottom: 100px
+      width: 100vw
+      position: relative
+      display: inline-block
+      .altra--section-hero-img
+        width: 100%
+        object-fit: cover
+        transform: rotate(-5.5deg)
+        top: -77px
+
+        &::after
+          content: ""
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: rgba(0, 0, 0, 0.5)
+
+  .altra-sidebar 
+    top: 0
+    left: -45px
+    padding-top: 50px
+    width: 502px
+    height: 808px
+    background: #102237
+    transform: rotate(-5.5deg)
+    z-index: 1
     ul
       transform: rotate(5.5deg)
-      margin-top: 280px
-      position: relative
-
-      li 
-        padding-bottom: 20px
-        width: auto
-
-        a 
+      padding-top: 199px
+      padding-bottom: 50px
+      li
+        padding-bottom: 50px
+        a
           font-family: Gill Sans
           font-size: 20px
           font-weight: 600
           line-height: 30px
-          text-align: left
+          color: #fff
           display: inline-block
-          
           &:hover::after
             content: ""
             height: 1px
             background: #b81734
             margin-top: 8px
             display: block
-          
           &:before
             content: ""
             display: inline-block
             width: 147px
-
-  .altra-primary
-    flex-grow: 1
-    margin-left: 25%
-    width: 898px
-    max-width: 100%
-    
-    .altra--section-hero
-      position: relative
-      width: 100vw
-      .altra--section-hero-img
-        object-fit: cover
-        width: 100%
-        height: 822px
-        transform: rotate(-5.5deg)
-        top: -90.36px
-        left: -120.87px
-
-        &::before
-          content: ''
-          position: absolute
-          top: 0
-          left: 0
-          width: 100%
-          height: 100%
-          background: linear-gradient(179.32deg, rgba(16, 34, 55, 0.632) 33.35%, rgba(16, 34, 55, 0) 89.16%)
-          z-index: 2
-
-      .altra--heading-hero
-        top: 196px
-        z-index: 1
-        font-family: Gill Sans
-        font-size: 60px
-        font-weight: 300
-        line-height: 72px
-        text-align: left
-        color: #FFFFFF
-        width: 800px
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-
-    .altra--section2
-      z-index: 1
-      &::before 
-        content: ''
-        display: block
-        position: absolute
-        background-color: orange
-        width: 108vw
-        height: 110%
-        left: -621.98px
-        z-index: -1
-        transform: rotate(-5.5deg)
-      
-      .altra--heading
-        padding-top: 80px
-
-    @for $i from 1 through 5
-      .altra--section#{$i}
-        margin: 40px 100px
-        position: relative
-
-        .c-btn-altra 
-          background-color: #102237
-          border: none
-          padding: 17px 80px 17px 60px
-
-    .altra--section3
-      .altra--heading
-        margin-top: 230px
-      .altra--subheading
-        margin-bottom: 100px
-
-      .altra--teams
-        .altra--teams-item
-          width: 100%
-          
-          &:nth-child(odd)
-            &::before 
-              content: ''
-              display: block
-              position: absolute
-              background-color: orange
-              width: 108vw
-              height: 560px
-              left: -621.98px
-              z-index: -1
-              transform: rotate(-5.5deg)
-        .altra--teams-item-left
-          width: 400px
-       
-        .altra--teams-item-right
-          width: 485px
-          .altra--heading
-            font-family: Prata
-            font-size: 24px
-            font-weight: 400
-            line-height: 36px
-            margin-top: 0
-          .altra--content
-            font-family: Gill Sans
-            font-size: 18px
-            font-weight: 400
-            line-height: 27px
-
-    .altra--section4
-      z-index: 1
-      color: #FFFFFF
-      text-align: center
-      padding-top: 100px
-      &::before 
-        content: ''
-        display: block
-        position: absolute
-        background-color: #102237
-        width: 108vw
-        height: 100%
-        left: -621.98px
-        z-index: -1
-        transform: rotate(-5.5deg)
-      .altra--heading
-        padding-top: 150px
-      .altra--subheading
-        padding-top: 50px
-        font-family: Gill Sans
-        font-size: 18px
-        font-weight: 400
-        line-height: 27px
-      .altra--city
-        padding-top: 100px
-        font-family: Gill Sans
-        font-size: 64px
-        font-weight: 300
-        line-height: 96px
-      .altra--address
-        font-family: Gill Sans
-        font-size: 26px
-        font-weight: 400
-        line-height: 39px
-      .altra--phone
-        font-family: Gill Sans
-        font-size: 18px
-        font-weight: 400
-        line-height: 27px
-        padding-top: 50px
-
-    .altra--section5
-      margin-top: 210px
-
-
+  
+  @for $i from 1 through 5
+    .altra--section#{$i}
+      padding: 0 200px
+      margin-bottom: 100px
     
 
-        
-
-      
-     
-
-        
 
 
