@@ -46,3 +46,5 @@ let targetElements = document.querySelectorAll(".expertises--list_item");
 targetElements.forEach((element) => {
   //observerCard.observe(element);
 });
+
+//# sourceMappingURL=expertises.js.map

@@ -1,0 +1,66 @@
+.altra--main
+
+  .altra-primary 
+    margin-left: 350px
+
+    .altra--section-hero
+      margin-bottom: 100px
+      width: 100vw
+      position: relative
+      display: inline-block
+      .altra--section-hero-img
+        width: 100%
+        object-fit: cover
+        transform: rotate(-5.5deg)
+        top: -77px
+
+        &::after
+          content: ""
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: rgba(0, 0, 0, 0.5)
+
+  .altra-sidebar 
+    top: 0
+    left: -45px
+    padding-top: 50px
+    width: 502px
+    height: 808px
+    background: #102237
+    transform: rotate(-5.5deg)
+    z-index: 1
+    ul
+      transform: rotate(5.5deg)
+      padding-top: 199px
+      padding-bottom: 50px
+      li
+        padding-bottom: 50px
+        a
+          font-family: Gill Sans
+          font-size: 20px
+          font-weight: 600
+          line-height: 30px
+          color: #fff
+          display: inline-block
+          &:hover::after
+            content: ""
+            height: 1px
+            background: #b81734
+            margin-top: 8px
+            display: block
+          &:before
+            content: ""
+            display: inline-block
+            width: 147px
+  
+  @for $i from 1 through 5
+    .altra--section#{$i}
+      padding: 0 200px
+      margin-bottom: 100px
+    
+
+
+

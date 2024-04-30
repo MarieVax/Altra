@@ -8,7 +8,7 @@ echo '<div class="altra--section4 altra-section" id="' . $id . '">';
 //Heading
 if ($heading = get_sub_field('heading')) :
   $headerTag = (get_sub_field('heading_tag')) ? get_sub_field('heading_tag') : 'h2';
-  printf('<%s class="altra--heading heading-h2">%s</%s>', $headerTag, $heading, $headerTag);
+  printf('<%s class="altra--heading heading-h2"><div class="heading-h2-before"></div>%s<div class="heading-h2-after"></div></%s>', $headerTag, $heading, $headerTag);
 endif;
 
 //Sub-heading

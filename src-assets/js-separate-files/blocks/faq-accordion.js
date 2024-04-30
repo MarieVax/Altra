@@ -37,3 +37,5 @@ jQuery(document).ready(function($) {
     window.acf.addAction('render_block_preview/type=faqaccordion', initfaqaccordionBlock);
   }
 });
+
+//# sourceMappingURL=faq-accordion.js.map

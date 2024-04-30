@@ -350,6 +350,9 @@ function register_acf_block_types()
     'enqueue_assets'   => function () {
       // Enqueue styles
       wp_enqueue_style('services-css', get_template_directory_uri() . '/assets/css/admin-acf-blocks.css', array());
+      wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/js/vendor/swiper.js', array('jquery'));
+      wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/vendor/swiper.css', array());
+      wp_enqueue_script('services-slider', get_template_directory_uri() . '/assets/js/blocks/services.js', array('jquery'));
     }
   ));
 

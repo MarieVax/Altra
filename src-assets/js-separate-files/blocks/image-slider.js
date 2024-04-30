@@ -55,3 +55,5 @@ jQuery( document ).ready(function($) {
     window.acf.addAction( 'render_block_preview/type=image-slider', initImageSliderBlock );
   }
 });
+
+//# sourceMappingURL=image-slider.js.map

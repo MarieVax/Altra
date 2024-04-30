@@ -15,10 +15,12 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
   if (!empty($block['data']['block_preview_img'])) echo '<img src="' . get_template_directory_uri() . '/assets/img/block-preview/' . $block['data']['block_preview_img'] . '" alt="">';
 ?><div class="numbers-block">
+    <div class="overlay-block"></div>
     <div class="numbers-container">
+
       <div class="flex numbers">
         <div class="flex-1 text-center numbers-col numbers-col1">
-          <div class="numbers-col-item numbers-col1-item1 fadeIn">
+          <div class="numbers-col-item numbers-col1-item1 ">
             <?php
             //Position Cabinet
             if ($cab_position = get_field('cab_position')) :
@@ -78,7 +80,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
             <?php
             //Montant récupéré
             if ($money_retrieved = get_field('money_retrieved')) :
-              printf('<div class="numbers--money_retrieved numbers-col-item--heading"><div class="numbers--money_retrieved-100 numbers--money_retrieved fadeInMoney">100</div><div class="numbers--money_retrieved-200 numbers--money_retrieved fadeInMoney">200</div><div class="numbers--money_retrieved-300 numbers--money_retrieved fadeInMoney">%s</div></div>', $money_retrieved);
+              printf('<div class="numbers--money_retrieved numbers-col-item--heading"><div class="numbers--money_retrieved-100 numbers--money_retrieved Money">100</div><div class="numbers--money_retrieved-200 numbers--money_retrieved Money">200</div><div class="numbers--money_retrieved-300 numbers--money_retrieved Money">%s</div></div>', $money_retrieved);
             endif;
             //Montant récupéré texte
 
@@ -89,7 +91,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
           </div>
         </div>
         <div class="flex-1 text-center numbers-col numbers-col3">
-          <div class="numbers-col-item numbers-col3-item1 fadeIn">
+          <div class="numbers-col-item numbers-col3-item1 ">
             <?php
             //Nombres de collaborateurs
             if ($workers_number = get_field('workers_number')) :
@@ -123,7 +125,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
         $url = (isset($link['url']) && !empty($link['url'])) ? 'href="' . $link['url'] . '"' : '';
         $title = (isset($link['title']) && !empty($link['title'])) ? $link['title'] : '';
 
-        printf('<a %s %s class="c-btn c-btn-numbers fadeIn">%s</a>', $url, $target, $title);
+        printf('<a %s %s class="c-btn c-btn-numbers c-btn-light ">%s</a>', $url, $target, $title);
 
       endif; ?>
     </div>

@@ -19,6 +19,7 @@ TOC:
 *******************************************************************************/
 
 // Fix "Does not use passive listeners to improve scrolling performance" issue in the PageSpeed Insights
+document.querySelector("html").style.scrollBehavior = "";
 
 jQuery.event.special.touchstart = {
   setup: function (_, ns, handle) {
@@ -49,6 +50,10 @@ jQuery.event.special.mousewheel = {
 };
 
 jQuery(document).ready(function ($) {
+  $(window).on("beforeunload", function () {
+    $(window).scrollTop(0);
+  });
+
   /* Dropdown Menu
 ------------------------------------------------------------------------------*/
 
@@ -224,13 +229,11 @@ jQuery(document).ready(function ($) {
   }
 
   // Fonction pour ouvrir la modal avec la tab1 active
-  $("#btn1, .c-btn-footer-block-right").on("click", function (event) {
-    event.preventDefault();
+  $("#btn1 img, #btn1 img, .c-btn-footer-block-right").on("click", function () {
     openModal("tab1");
   });
 
-  $("#btn2").on("click", function (event) {
-    event.preventDefault();
+  $("#btn2").on("click", function () {
     openModal("tab2");
   });
 
@@ -298,55 +301,10 @@ jQuery(document).ready(function ($) {
       $(this).attr("placeholder", originalPlaceholder);
     }
   });
+});
 
-  /**
-   Footer FadeIn
-   */
-  // Create an Intersection Observer instance with a callback function
-  let observerFooter = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Element is intersecting, play animation
+// end of jQuery code
 
-          entry.target.classList.add("show");
+//# sourceMappingURL=main.js.map
 
-          const blockHeading = entry.target.querySelector(
-            ".footer-block-content-heading"
-          );
-          const blockText = entry.target.querySelector(
-            ".footer-block-content-text"
-          );
-          const blockLinks = entry.target.querySelector(
-            ".footer-block-content-links"
-          );
-
-          // Ajouter une classe pour faire apparaître les éléments avec décalage
-          setTimeout(() => {
-            blockHeading.classList.add("show");
-          }, 0); // Décalage pour l'image
-          setTimeout(() => {
-            blockText.classList.add("show");
-          }, 200); // Décalage pour le titre
-          setTimeout(() => {
-            blockLinks.classList.add("show");
-          }, 400);
-        }
-      });
-    },
-    {
-      // Set the rootMargin to create an offset when checking for intersection
-      rootMargin: "0px",
-      // Set the threshold to 0 to trigger the callback as soon as even a single pixel of the target element is visible
-      threshold: 0.5,
-    }
-  );
-
-  // Select the element(s) to observe
-  let targetFooter = document.querySelectorAll(".footer-block-content");
-
-  // Start observing each target element
-  targetFooter.forEach((element) => {
-    observerFooter.observe(element);
-  });
-}); // end of jQuery code
+//# sourceMappingURL=main.js.map

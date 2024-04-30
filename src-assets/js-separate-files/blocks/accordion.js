@@ -40,3 +40,4 @@ jQuery( document ).ready(function($) {
     window.acf.addAction( 'render_block_preview/type=accordion', initAccordionBlock );
   }
 });
+//# sourceMappingURL=accordion.js.map

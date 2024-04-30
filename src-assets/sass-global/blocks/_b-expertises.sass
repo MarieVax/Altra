@@ -58,6 +58,10 @@
       //opacity: 0
       transition: all 0.3s ease
       //transform: translate(0, 15%)
+      transform: scale(1)
+
+      &:not(.expertises--list_item-text-top):not(.expertises--list_item-text-bottom):hover 
+        transform: scale(1.1)
       
       &.show 
         opacity: 1
@@ -77,12 +81,11 @@
       &:nth-child(7)
         margin-top: -489px
 
-
       &:after 
         content: ''
         width: 674px
         height: 674px
-        background: url('../img/background-card-group.svg')
+        //background: url('../img/background-card-group.svg')
         background-size: contain
         position: absolute
         background-position: center
@@ -103,8 +106,7 @@
         margin-bottom: 36px
         position: relative
         z-index: 20
-        &:after
-          content:''
+        &-line
           width: calc(100% + 41px)
           height: 1px 
           background: $color-red
@@ -178,6 +180,7 @@
       &-link 
         bottom: 26px 
         right: 30px
+
 
       &.TVA-FCTVA-Douanes
         .expertises--list_item-illu-div

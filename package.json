@@ -56,6 +56,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "aos": "^2.3.4",
     "bigpicture": "^2.6.2",
+    "fitvids": "^2.1.1",
     "gsap": "^3.12.5",
     "hamburgers": "^1.2.1",
     "jquery": "^3.6.3",

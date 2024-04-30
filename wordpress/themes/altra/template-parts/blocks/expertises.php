@@ -20,13 +20,15 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 ?>
 
   <div class="relative expertises">
+    <div class="overlay-block"></div>
+
     <img class="absolute expertises-bk-pin" alt="" src="/wp-content/themes/altra/assets/img/bk-Group.svg">
     <div class="expertises--container">
       <?php
       //Heading
       if ($heading = get_field('heading')) :
         $headerTag = (get_field('heading_tag')) ? get_field('heading_tag') : 'h2';
-        printf('<%s class="expertises--heading heading-h2">%s</%s>', $headerTag, $heading, $headerTag);
+        printf('<%s class="expertises--heading heading-h2"><div class="heading-h2-before"></div>%s<div class="heading-h2-after"></div></%s>', $headerTag, $heading, $headerTag);
       endif;
 
       //subheading
@@ -80,7 +82,8 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
                 ?>
               </div>
 
-              <div class="expertises--list_item-title expertises--list_item-element"><?php echo $expertise_title ?></div>
+              <div class="expertises--list_item-title expertises--list_item-element"><?php echo $expertise_title ?><span class="expertises--list_item-title-line"></span>
+              </div>
               <div class="expertises--list_item-excerpt expertises--list_item-element"><?php echo $expertise_excerpt ?></div>
               <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/btn-arrow.svg' ?>" alt="" class="absolute expertises--list_item-link">
             </a>

@@ -18,3 +18,4 @@ jQuery( document ).ready(function($) {
     window.acf.addAction( 'render_block_preview/type=faqmasonry', initfaqmasonryBlock );
   }
 });
+//# sourceMappingURL=faq-masonry.js.map

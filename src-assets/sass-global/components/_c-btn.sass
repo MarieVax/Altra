@@ -14,8 +14,10 @@
   user-select: none
   position: relative
   transition: all 0.3s
+
+
   &:after
-    content: ''
+    content:''
     position: absolute
     width: 24px
     height: 24px
@@ -24,17 +26,23 @@
     background-size: contain
     right: 23px
     top: 18px
+    transition: all 0.3s
   &:hover,
   &.btn--hover
     text-decoration: none
     color: #fff
-    background: #fff
-    color: $color-red
-    &:after 
-      background: url(../img/btn-arrow.svg)
+    border-color: $color-light-blue
+    &:after
+      background: url(../img/btn-arrow-hover.svg)
       background-repeat: no-repeat
-      background-size: contain
-      border-color: $color-red
+      background-size: contain  
+  
+  &-light
+    border-color: $color-dark-blue
+    color: $color-dark-blue
+    &:hover
+      color: $color-dark-blue
+
   &:focus,
   &:active,
   &:active:focus

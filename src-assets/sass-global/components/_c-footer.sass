@@ -10,8 +10,12 @@
   &-image
     width: 100%
     position: relative
-    z-index: 10
-    margin-bottom: -250px
+    z-index: -1
+    height: calc(845 / 1440 * 100%)
+    width: 100%
+    object-fit: cover
+    object-position: 0% -14%
+
 
   &-content
     position: absolute
@@ -23,6 +27,9 @@
     margin: auto
     max-width: 668px
     padding: 48px 74px 56px 74px
+    @media all and (min-width: 1600px)
+      bottom: 400px
+   
     &:after
       content: ''
       width: calc(100% - 22px)
@@ -50,30 +57,24 @@
 
         &-footer-block-left
           margin-right: 36px
-          color: $color-dark-blue
-          border-color: $color-dark-blue
-          &:after
-            background: url('../img/btn-arrow-blue.svg')
-          &:hover 
-            color: #fff
-            background: $color-dark-blue
-            &:after
-              background: url('../img/btn-arrow-white-blue.svg')
-              background-repeat: no-repeat
-              background-size: contain
 
         &-footer-block-right
           background: $color-red
           border-color: $color-red
           &:after
-            background: url('../img/btn-arrow-white.svg')
+            background: url('../img/nous-contacter.svg')
+            background-size: contain
+            background-repeat: no-repeat
+            width: 27px
+            height: 29px
+            margin-top: -5px
           &:hover 
-            color: $color-red
-            background: #fff
+            background: rgba(205, 56, 83, 0.80)
+            border-color: rgba(205, 56, 83, 0.80)
             &:after
-              background: url('../img/btn-arrow.svg')
-              background-repeat: no-repeat
+              background: url('../img/nous-contacter.svg')
               background-size: contain
+              background-repeat: no-repeat
 
         
 .footer 
@@ -100,8 +101,6 @@
       
       .c-btn-footer 
         margin-top: 35px
-        &:after
-          background: url('../img/btn-arrow-white.svg')
 
       ul 
         margin-top: 25px
@@ -154,5 +153,20 @@
       li
         margin-left: 100px
 
+  .menu-item
+    a
+      position: relative
+      &:after
+        content: ''
+        position: absolute
+        height: 1px
+        width: 0
+        background: $color-light-blue
+        transition: all 0.3s
+        left: 0
+        top: 25px
 
+      &:hover
+        &:after
+          width: 100%
   

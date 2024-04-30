@@ -21,6 +21,7 @@
     display: flex
     max-width: 1080px
     margin: auto
+    justify-content: center
 
     &-item
       text-align: center
@@ -30,7 +31,7 @@
       padding: 12px 20px
 
       &:hover
-        background: $color-light-blue
+        background: $color-blue
 
         .services-list-item-image
           img
@@ -92,6 +93,7 @@
     height: 86px
     background: #fff
     color: $color-dark-blue
+    transform: rotate(-5.5deg)
 
     &-list
       animation: 30s slide infinite linear
@@ -129,7 +131,10 @@
     white-space: nowrap
     height: 86px
     position: absolute
-    bottom: 0
+    transform: rotate(-5.5deg)
+    bottom: 40px
+    right: 0
+    max-width: 100vw
 
     &-list-item
       font-family: Prata
@@ -141,12 +146,12 @@
       position: relative
       z-index: 10        
       margin-left: 10px
-
+      color: #fff
       span 
         color: $color-red
 
     &-list
-      animation: 30s slide-reverse infinite linear
+      animation: 30s slide infinite linear
       display: inline-flex
       align-items: center
       padding: 29px 0
@@ -156,23 +161,15 @@
   0%
     transform: translateX(0)
 
-  50%
-    transform: translateX(-100%)
-
   100%
-    transform: translateX(0)
+    transform: translateX(-100%)
 
 
 @keyframes slide-reverse
   0%
     transform: translateX(0)
 
-  50%
-    transform: translateX(100%)
-
   100%
-    transform: translateX(0)
-
-
+    transform: translateX(100%)
 
    
