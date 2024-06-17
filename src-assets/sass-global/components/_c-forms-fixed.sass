@@ -4,7 +4,9 @@
   top: 254px
   display: flex
   flex-direction: column
-  z-index: 98
+  z-index: 999
+  @media all and (max-width: 768px)
+    top: 500px
 
   &-elem
     color: #fff
@@ -19,6 +21,8 @@
     justify-content: center
     @media all and (max-width: 768px)
       padding: 5px
+      height: 45px
+      width: 45px
     margin-bottom: 5px
   
     &:hover
@@ -27,7 +31,7 @@
   &-img
     width: 30px
     @media all and (max-width: 768px)
-      width: 34px
+      width: 24px
     height: auto
 
   &-txt
@@ -88,8 +92,6 @@
         display: flex
         justify-content: center
         margin-bottom: 50px
-        @media all and (max-width: 768px)
-          flex-direction: column
       
         button
           display: flex
@@ -101,8 +103,11 @@
           transition: all 0.3s
           font-size: 24px
           @media all and (max-width: 768px)
-            font-size: 16px
+            font-size: 14px
             padding: 13px
+
+            .btn-fixed-img
+              display: none !important
           border: 1px solid $color-red
           .img-white
             display: none

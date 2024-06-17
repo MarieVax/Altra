@@ -1,38 +1,37 @@
+.page-altra
+  header
+    background: $color-dark-blue
+
+  .footer-block
+    display: none
+
+  .altra-section .footer-block  
+    display: block
+
+  @media all and (max-width: 992px)
+    .heading-h2
+      font-size: 40px
+
+    .altra--heading-inside
+      max-width: 400px
+
 .altra--main
-
-  .altra-primary 
-    margin-left: 350px
-
-    .altra--section-hero
-      margin-bottom: 100px
-      width: 100vw
-      position: relative
-      display: inline-block
-      .altra--section-hero-img
-        width: 100%
-        object-fit: cover
-        transform: rotate(-5.5deg)
-        top: -77px
-
-        &::after
-          content: ""
-          position: absolute
-          top: 0
-          left: 0
-          width: 100%
-          height: 100%
-          background-color: rgba(0, 0, 0, 0.5)
-
+     
   .altra-sidebar 
-    top: 0
+    top: -20px
     left: -45px
     padding-top: 50px
-    width: 502px
-    height: 808px
+    width: 430px
+    height: 110vh
     background: #102237
     transform: rotate(-5.5deg)
-    z-index: 1
-    ul
+    z-index: 99
+    @media all and (max-width: 1200px)
+      width: 332px
+    @media all and (max-width: 992px)
+      display: none
+    
+    ul#altra--sidebar
       transform: rotate(5.5deg)
       padding-top: 199px
       padding-bottom: 50px
@@ -41,26 +40,460 @@
         a
           font-family: Gill Sans
           font-size: 20px
+          position: relative
+          @media all and (max-width: 992px)
+            font-size: 16px
           font-weight: 600
           line-height: 30px
           color: #fff
           display: inline-block
-          &:hover::after
-            content: ""
-            height: 1px
-            background: #b81734
-            margin-top: 8px
-            display: block
           &:before
             content: ""
             display: inline-block
             width: 147px
+            @media all and (max-width: 1200px)
+              width: 118px
+            @media all and (max-width: 992px)
+              width: 78px
+
+          &:after
+            content: ''
+            display: block
+            height: 1px
+            background: $color-red
+            position: absolute
+            width: 0%
+            transition: width 0.3s
+
+          .altra--sidebar-after
+            content: ''
+            display: block
+            height: 1px
+            background: $color-red
+            position: absolute
+            width: 0%
+            transition: width 0.3s
+            
+
+        &:hover
+            a:after
+              width: 100%
   
   @for $i from 1 through 5
     .altra--section#{$i}
-      padding: 0 200px
-      margin-bottom: 100px
+      padding-left: 400px
+      padding-right: 80px
+      padding-top: 100px 
+      padding-bottom: 100px
+      .heading-h2
+        margin-bottom: 30px
+      .c-btn-light
+        margin-top: 80px
+      @media all and (max-width: 1200px)
+        padding-left: 250px
+      @media all and (max-width: 992px)
+        padding-left: 80px
+        padding-right: 80px
+      @media all and (max-width: 768px)
+        padding-left: 30px
+        padding-right: 30px
+
+
+.altra--section-hero
+  @include polygon-properties
+  min-height: 822px
+  margin-top: 100px
+
+  .altra--section-background
+    clip-path: polygon(0 0,100% 0,100% calc(100% - var(--offset)),0 100%)
+    &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: linear-gradient(179deg, rgba(16, 34, 55, 0.63) 33.35%, rgba(16, 34, 55, 0.00) 89.16%)
+      z-index: 10
+
+    .altra--section-hero-img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      position: absolute
+      top: 0
+      margin: auto
+      z-index: 9
+
+  .altra--heading-hero
+    position: absolute
+    z-index: 20
+    margin-left: 520px
+    top: 130px
+    color: #fff
+    font-size: 60px
+    font-style: normal
+    font-weight: 300
+    line-height: 120% 
+    max-width: 802px
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    font-family: "Gill Sans Light"
+    @media all and (max-width: 1200px)
+      margin-left: 350px
+    @media all and (max-width: 992px)
+      margin-left: 50px
+
+    @media all and (max-width: 550px)
+      margin-left: 15px
+      font-size: 45px
+      top: 100px
+      max-width: calc(100% - 30px)
+
+    
+.altra--main .altra--section1
+  .altra--heading-inside
+    max-width: 400px
+
+  .altra--services
+    &-item
+      flex-direction: column
+      justify-content: center
+      align-item: center
+
+      &-icone
+        width: 27px
+        height: 41px
+        margin: auto
+        margin-top: 16px
+
+      &-text
+        max-width: 620px
+        margin: auto
+        margin-top: 16px
+
+.altra--main .altra--section2
+  @include polygon-properties
+  .altra--section-background
+    background: rgba(16, 34, 55, 0.03)
+  .altra--heading
+    white-space: nowrap
+
+  .altra--subheading
+    font-family: "Gill Sans Light"
+    font-size: 38px
+    font-style: normal
+    font-weight: 300
+    line-height: 150%
+    max-width: 522px
+    margin: auto
+    margin-top: 30px
+    margin-bottom: 40px
+
+  .altra--approches
+    &-item
+      &-nb
+        font-family: Prata
+        font-size: 56px
+        font-style: normal
+        font-weight: 400
+        line-height: 100% 
+        letter-spacing: 2.24px
+        position: relative
+        display: inline-block
+        margin: auto
+        margin-bottom: 20px
+
+        &-after
+          width: 8px 
+          height: 8px
+          //background: url('../img/point.svg')
+          display: block
+          position: absolute
+          background-size: cover
+          background-repeat: no-repeat
+          bottom: 8px
+          right: -13px
+      max-width: 580px
+      margin: auto
+      margin-bottom: 50px
+
+  .altra--heading2
+    font-family: "Gill Sans Light"
+    font-size: 38px
+    font-style: normal
+    font-weight: 300
+    line-height: 150%
+    margin-top: 80px
     
 
+  .altra--content
+    max-width: 580px
+    margin: auto
+  
+.altra--main .altra--section3
 
+  .altra--subheading
+    max-width: 616px
+    margin: auto
+    margin-bottom: 55px
+    
+    p:first-child
+      margin-bottom: 2rem
+
+  .altra--heading-inside
+    max-width: 700px
+
+
+.altra--teams
+
+  &-item
+    display: flex
+    align-items: center
+    padding-left: 50px
+    @media all and (min-width: 1600px)
+      padding-left: 250px
+    min-height: 560px
+    @media all and (max-width: 1200px)
+      padding-left: 250px
+    @media all and (max-width: 992px)
+      flex-direction: column
+      padding: 80px
+    @media all and (max-width: 768px)
+      padding-left: 30px
+      padding-right: 30px
+
+    
+    @include polygon-properties-item
+
+    &:nth-child(odd) 
+      .altra--teams-item-background
+        background: #f6f7f8
+    &:nth-child(even) 
+      .altra--teams-item-background
+        background: #fff 
+    
+      
+          
+    &-left
+      max-width: 310px
+      height: 431px
+      flex: 1
+      border-bottom: 5px solid $color-red
+      overflow: hidden
+      @media all and (max-width: 992px)
+        margin: auto
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+    &-right
+      flex: 1
+      padding-left: 32px
+      max-width: 550px
+      @media all and (max-width: 992px)
+        text-align: center
+        margin-top: 50px
+        padding-left: 0
+
+      .altra--heading
+        font-family: Prata
+        font-size: 24px
+        font-style: normal
+        font-weight: 400
+        line-height: 150%
+
+      .altra-content  
+        text-justify: distribute
+
+
+.altra--main .altra--section4
+  @include polygon-properties
+  color: #fff
+  padding-top: 150px
+  padding-bottom: 100px
+  @media all and (min-width: 992px)
+    margin-top: -1580px
+  .altra--section-background
+    background: $color-dark-blue
+    z-index: -1
+
+  .altra--section4-img1
+    left: -200px
+    top: 200px
+
+  .altra--section4-img2
+    right: -310px
+    transform: rotate(180deg)
+
+
+
+  .altra--subheading
+    color: #fff
+
+  .altra--cities
+    max-width: 450px
+    margin: auto
+    position: relative
+    @media all and (max-width: 350px)
+      margin-left: -28px
+
+    .altra--section4-logo
+      top: 0 
+      left: 0
+      width: 47.2px
+      height: 47.2px
+      z-index: 999
+
+    &-div
+      &1
+        width: 163px
+        height: 240px
+        border-bottom-left-radius: 20px
+        border-left: 1px solid $color-red
+        border-bottom: 1px solid $color-red
+        z-index: 99
+        top: 47px 
+        left: 22px
+
+        @media all and (max-width: 768px)
+          width: 140px 
+
+      &2
+        width: 246px
+        height: 122px
+        border-top-right-radius: 20px
+        border-right: 1px dashed $color-red
+        border-top: 1px dashed $color-red
+        z-index: 99
+        top: 286px 
+        left: 188px
+        @media all and (max-width: 768px)
+          width: 140px
+          left: 162px
+
+      
+
+    &-item
+      text-align: center
+      margin-bottom: 121px
+      @media all and (min-width: 400px) and (max-width: 768px)
+        &:nth-child(7)
+          margin-right: -150px
+
+        &:last-child
+          margin-left: -150px
+
+      .altra--city
+        font-size: 64px
+        font-style: normal
+        font-weight: 300
+        line-height: 150% 
+        font-family: "Gill Sans Light"
+
+      .altra--address
+        font-size: 26px
+        font-style: normal
+        font-weight: 400
+        line-height: 150% 
+        font-family: "Gill Sans Light"
+      
+      .altra--phone
+        margin-top: 38px
+
+.altra--main .altra--section5
+  position: relative
+  .altra--key 
+    max-width: 900px
+    margin: auto
+    @media all and (min-width: 992px) and (max-width: 1200px)
+      max-width: 600px
+    @media all and (max-width: 768px)
+      flex-direction: column
+  .altra--key_results
+    max-width: 300px
+    padding: 0 30px
+    position: relative
+    @media all and (max-width: 768px)
+      margin: auto
+      margin-bottom: 50px
+    @media all and (max-width: 350px)
+      padding: 0 15px
+    &:after
+      content: ''
+      position: absolute
+      height: calc(100% - 3em)
+      width: 1px
+      background: $color-red
+      top: 1.5em
+      right: 0
+    &-item
+      .altra--key_result
+        font-family: "Gill Sans Light"
+        font-size: 25px
+        font-style: normal
+        font-weight: 300
+        line-height: 150%
+        margin-top: 1em
+        margin-bottom: 1em
+
+        br
+          height: 10px
+
+        &_span 
+          text-align: center
+          font-family: Prata
+          font-size: 29px
+          font-style: normal
+          font-weight: 400
+          line-height: 100% /* 56px */
+          letter-spacing: 2.24px
+          display: inline-block
+
+      &:nth-child(1)
+        .altra--key_result
+          .altra--key_result_span
+            font-size: 56px
+
+  .altra--content
+    max-width: 485px
+    padding: 0  0 0 60px
+    @media all and (max-width: 768px)
+      padding: 0 15px 
+      text-align: center
+      margin: auto
+
+  &-rond
+    top: 1em
+    right: -7px
+
+
+.altra--main .altra--section6
+  @include polygon-properties
+  min-height: 860px
+  margin-top: 100px
+
+  .altra--section-background
+    clip-path: polygon(0 var(--offset),100% 0,100% 100%,0 100%)
+    .footer-block-image 
+      position: relative
+      z-index: -1
+      height: 100%
+      width: 100%
+      object-fit: cover
+      object-position: -100px 0%
+
+  .footer-block-content
+    bottom: 370px
+
+    @media all and (max-width: 1200px)
+      right: 50px
+    @media all and (max-width: 768px)
+      right: 15px
+      width: calc(100% - 30px)
+
+
+    .footer-block-content-links .c-btn-footer-block-left 
+      width: auto
 

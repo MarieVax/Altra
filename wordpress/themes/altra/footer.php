@@ -14,12 +14,15 @@
 
 </main>
 <div class="footer-block">
+
   <?php
   //Image
   if ($image = get_field('image_block_bottom', 'option')) :
     printf('<img src="%s" alt="" class="footer-block-image">', $image['url']);
   endif;
   ?>
+
+
   <div class="footer-block-content">
     <?php
     //Heading
@@ -96,7 +99,7 @@
             <?php while (have_rows('social_media_profiles', 'option')) : the_row(); ?>
               <li class="">
                 <a class="flex items-center justify-center rounded-full hover:bg-brand hover:text-white hover:no-underline" href="<?php the_sub_field('link'); ?>" <?php if (get_sub_field('open_in_the_new_window')) : ?>target="_blank" <?php endif; ?>>
-                  <img src="<?php echo get_sub_field('icon'); ?>" alt="" class="footer-social-icon">
+                  <img src="<?php echo get_sub_field('icone_social')['url']; ?>" alt="" class="footer-social-icon">
                 </a>
               </li>
             <?php endwhile; ?>
@@ -240,23 +243,23 @@
   </div>
 </div>
 
-<?php //if (is_home() && is_front_page()) : 
+<?php if (is_front_page()) :
 ?>
 
-<div class="overlay-load">
-  <div class="overlay-load-inside">
-    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/roue_animation.png' ?>" alt="" class="absolute overlay-load-img-roue">
-    <?php
-    for ($i = 1; $i <= 11; $i++) {
-      echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/roue_animation_' . $i . '.png" alt="" class="absolute overlay-load-img-roue-elem overlay-load-img-roue-' . $i . '">';
-    }
-    ?>
-    <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/roue_animation_logo.png' ?>" alt="" class="absolute overlay-load-img-roue-logo">
+  <div class="overlay-load">
+    <div class="overlay-load-inside">
+      <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/roue_animation.png' ?>" alt="" class="absolute overlay-load-img-roue">
+      <?php
+      for ($i = 1; $i <= 11; $i++) {
+        echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/roue_animation_' . $i . '.png" alt="" class="absolute overlay-load-img-roue-elem overlay-load-img-roue-' . $i . '">';
+      }
+      ?>
+      <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/roue_animation_logo.png' ?>" alt="" class="absolute overlay-load-img-roue-logo">
+    </div>
   </div>
-</div>
-<?php //else : 
-?>
-<?php //endif; 
+  <?php //else : 
+  ?>
+<?php endif;
 ?>
 
 
@@ -304,28 +307,7 @@
             ?>
           </div>
         </div>
-        <?php if (get_field('phone_number_enabled', 'option') || get_field('social_media_enabled', 'option')) : ?>
-          <div class="relative flex-shrink-0 w-full text-center bg-white bottom-inset-shadow">
-            <?php if (get_field('phone_number_enabled', 'option')) : ?>
-              <div class="py-2">
-                <a class="text-gray-600 text-20 hover:no-underline" href="tel:<?php the_field('phone_number_link', 'option'); ?>"><?php echo get_fontawesome_svg('fas fa-phone-alt'); ?> <?php the_field('phone_number', 'option'); ?></a>
-              </div>
-            <?php endif; ?>
-            <?php if (have_rows('social_media_profiles', 'option') && get_field('social_media_enabled', 'option')) : ?>
-              <div class="border-t">
-                <ul class="flex justify-center pt-2">
-                  <?php while (have_rows('social_media_profiles', 'option')) : the_row(); ?>
-                    <li class="ml-3">
-                      <a class="flex items-center justify-center w-10 h-10 text-white bg-gray-600 rounded-full text-16 hover:bg-brand hover:text-white hover:no-underline" href="<?php the_sub_field('link'); ?>" <?php if (get_sub_field('open_in_the_new_window')) : ?>target="_blank" <?php endif; ?>>
-                        <?php echo get_fontawesome_svg(get_sub_field('icon')); ?>
-                      </a>
-                    </li>
-                  <?php endwhile; ?>
-                </ul>
-              </div>
-            <?php endif; ?>
-          </div>
-        <?php endif; ?>
+
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-.services
+.services-block
   overflow: hidden
   position: relative
   background: $color-dark-blue
@@ -16,29 +16,52 @@
     max-width: 1440px
     margin: auto
     margin-top: 120px
+    width: 100vw
 
   &-list
     display: flex
     max-width: 1080px
     margin: auto
-    justify-content: center
+    @media all and (min-width: 992px)
+      justify-content: center
+
+    @media all and (max-width: 992px)
+      width: 100%
+      max-width: 100%
+      &-desktop
+        display: none !important
 
     &-item
       text-align: center
       background: transparent
       transition: all 0.3s
       max-width: 216px
+      min-width: 216px
       padding: 12px 20px
 
-      &:hover
+      @media all and (min-width: 992px)
+        &:hover
+          background: $color-blue
+
+          .services-block-list-item-image
+            img
+              transform: scale(1.4)
+              transition: all 0.5s
+
+          .services-block-list-item-excerpt
+            opacity: 1
+            visibility: visible
+            max-height: 99999px
+
+      &.swiper-slide-active
         background: $color-blue
 
-        .services-list-item-image
+        .services-block-list-item-image
           img
             transform: scale(1.4)
             transition: all 0.5s
 
-        .services-list-item-excerpt
+        .services-block-list-item-excerpt
           opacity: 1
           visibility: visible
           max-height: 99999px
@@ -94,14 +117,18 @@
     background: #fff
     color: $color-dark-blue
     transform: rotate(-5.5deg)
+    &-container
+      animation: 800s slide infinite linear
+      position: absolute
+      right: -13000px
+      top: 0
 
     &-list
-      animation: 30s slide infinite linear
       display: inline-flex
       align-items: center
       padding: 29px 0
       position: relative
-
+      
       &:after
         content: ''
         width: calc(100% + 5px)
@@ -122,19 +149,23 @@
         position: relative
         z-index: 10
         margin-left: 10px
+        @media all and (max-width: 768px)
+          font-size: 30px
 
         span 
           color: $color-red
 
   &-slider-bottom
-    overflow: hidden
     white-space: nowrap
     height: 86px
     position: absolute
     transform: rotate(-5.5deg)
-    bottom: 40px
+    bottom: 30px
     right: 0
     max-width: 100vw
+    width: 100%
+    @media all and (max-width: 768px)
+      bottom: 0
 
     &-list-item
       font-family: Prata
@@ -147,17 +178,29 @@
       z-index: 10        
       margin-left: 10px
       color: #fff
+      @media all and (max-width: 768px)
+        font-size: 30px
       span 
         color: $color-red
+    &-container
+        animation: 800s slide infinite linear
+        position: absolute
+        right: -13000px
+        top: 0
 
     &-list
-      animation: 30s slide infinite linear
       display: inline-flex
       align-items: center
       padding: 29px 0
 
+  .swiper-services-block 
+    width: 100vw
+    margin: auto
+    max-width: 100vw
+    @media all and (min-width: 992px)
+      display: none
 
-@keyframes slide 
+@keyframes slide
   0%
     transform: translateX(0)
 

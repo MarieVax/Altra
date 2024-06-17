@@ -28,6 +28,7 @@ function secteur_post_type()
 
   $args = array(
     'labels'             => $labels,
+    'description'        => __('Nos secteurs', 'altra'),
     'public'             => true,
     'publicly_queryable' => true,
     'show_ui'            => true,
@@ -36,10 +37,10 @@ function secteur_post_type()
     'capability_type'    => 'post',
     'has_archive'        => true,
     'hierarchical'       => true,
-    'menu_position'      => null,
+    'menu_position'      => 12,
     'menu_icon'          => 'dashicons-images-alt',
     'exclude_from_search' => false,
-    'show_in_rest' => false,
+    'show_in_rest'       => true,
     'supports'           => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt'),
     'rewrite' => array('slug' => 'secteurs', 'with_front'     => false,)
   );
@@ -50,8 +51,8 @@ add_action('init', 'secteur_post_type', 0);
 
 if (function_exists('acf_add_options_sub_page')) {
   acf_add_options_sub_page(array(
-    'page_title'   => 'secteurs Settings',
-    'menu_title'  => 'secteurs Settings',
+    'page_title'   => 'Secteurs Settings',
+    'menu_title'  => 'Secteurs Settings',
     'parent_slug'  => 'edit.php?post_type=secteurs',
   ));
 }

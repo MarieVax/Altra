@@ -15,16 +15,15 @@ require get_template_directory() . '/inc/block-start.php';
 // Vérifiez s'il y a des entrées flexibles
 if (have_rows('content')) :
   echo '<div class="relative altra--main">';
-  echo '<div class="fixed altra-sidebar"><ul>';
+  echo '<div class="fixed altra-sidebar"><ul id="altra--sidebar">';
   // Bouclez sur chaque entrée flexible
   while (have_rows('content')) : the_row();
-
-
     // Vérifiez le type de layout actuel
     if (get_row_layout() == 'mieux_nous_connaitre') :
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a href="/altra#%s">%s</li></a>',
+          '<li class="%s"><a href="#%s">%s<div class="altra--sidebar-after"></div></a></li>',
+          sanitize_title($anchor),
           sanitize_title($anchor),
           $anchor
         );
@@ -33,7 +32,8 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a href="/altra#%s">%s</li></a>',
+          '<li class="%s"><a href="#%s">%s<div class="altra--sidebar-after"></div></a></li>',
+          sanitize_title($anchor),
           sanitize_title($anchor),
           $anchor
         );
@@ -42,7 +42,8 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a href="/altra#%s">%s</li></a>',
+          '<li class="%s"><a href="#%s">%s<div class="altra--sidebar-after"></div></a></li>',
+          sanitize_title($anchor),
           sanitize_title($anchor),
           $anchor
         );
@@ -52,7 +53,8 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a href="/altra#%s">%s</li></a>',
+          '<li class="%s"><a href="#%s">%s<div class="altra--sidebar-after"></div></a></li>',
+          sanitize_title($anchor),
           sanitize_title($anchor),
           $anchor
         );
@@ -62,7 +64,8 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a href="/altra#%s">%s</li></a>',
+          '<li class="%s"><a href="#%s">%s<div class="altra--sidebar-after"></div></a></li>',
+          sanitize_title($anchor),
           sanitize_title($anchor),
           $anchor
         );
@@ -72,7 +75,8 @@ if (have_rows('content')) :
 
       if ($anchor = get_sub_field('anchor')) :
         printf(
-          '<li><a href="/altra#%s">%s</li></a>',
+          '<li class="%s"><a href="#%s">%s<div class="altra--sidebar-after"></div></a></li>',
+          sanitize_title($anchor),
           sanitize_title($anchor),
           $anchor
         );

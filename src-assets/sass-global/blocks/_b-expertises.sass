@@ -1,4 +1,4 @@
-.expertises
+.expertises-block
   background: #f7f8f9
   transform: rotate(-5.5deg)
   width: 400vw
@@ -31,7 +31,7 @@
   &--container
     transform: rotate(5.5deg)
     max-width: 100vw
-    margin-left: 150vw
+    margin-left: 149vw
     position: relative
     z-index: 20
 
@@ -43,6 +43,8 @@
     max-width: 1005px
     margin: auto
     margin-top: 150px
+    @media all and (max-width: 992px)
+      display: block
 
     &_item  
       background: $color-dark-blue
@@ -59,8 +61,16 @@
       transition: all 0.3s ease
       //transform: translate(0, 15%)
       transform: scale(1)
+      @media all and (max-width: 992px)
+        max-width: 80%
+        margin: auto
+        margin-bottom: 39px
+        padding: 28px 0
 
-      &:not(.expertises--list_item-text-top):not(.expertises--list_item-text-bottom):hover 
+      @media all and (max-width: 992px)
+        max-width: 345px
+
+      &:not(.expertises-block--list_item-text-top):not(.expertises-block--list_item-text-bottom):hover 
         transform: scale(1.1)
       
       &.show 
@@ -75,11 +85,11 @@
         &.show 
           opacity: 1
           transform: translate(0, 0)
-
-      &:nth-child(4), &:nth-child(6)
-        margin-top: -326px
-      &:nth-child(7)
-        margin-top: -489px
+      @media all and (min-width: 992px)
+        &:nth-child(4), &:nth-child(6)
+          margin-top: -326px
+        &:nth-child(7)
+          margin-top: -489px
 
       &:after 
         content: ''
@@ -106,6 +116,8 @@
         margin-bottom: 36px
         position: relative
         z-index: 20
+        @media all and (max-width: 992px)
+          padding: 0 15px
         &-line
           width: calc(100% + 41px)
           height: 1px 
@@ -115,10 +127,16 @@
           left: -59px
           bottom: 0
           z-index: 20
+          @media all and (max-width: 768px)
+            bottom: -14px
 
       &-excerpt
         position: relative
         z-index: 20
+        @media all and (max-width: 992px)
+          padding: 0 15px
+        @media all and (max-width: 550px)
+          font-size: 14px
 
 
       &-text
@@ -129,6 +147,8 @@
           color: $color-dark-blue
           height: 300px
           padding: 0 50px
+          @media all and (max-width: 768px)
+            padding: 0 20px
           text-align: center
           display: flex
           justify-content: center
@@ -136,6 +156,8 @@
           flex-direction: column
           position: relative
           margin-top: -87px
+          @media all and (max-width: 992px)
+            margin-bottom: 80px
           &:before
             content: ''
             width: 32px
@@ -168,7 +190,9 @@
           color: $color-dark-blue
           text-align: center
           padding: 112px 50px
-          heigth: auto
+          height: auto
+          @media all and (max-width: 992px)
+            padding: 30px 50px
 
           a     
             font-weight: 600
@@ -180,16 +204,25 @@
       &-link 
         bottom: 26px 
         right: 30px
-
-
+        @media all and (max-width: 992px)
+          right: 10px
+      .expertises-block--list_item-illu
+        margin: auto
       &.TVA-FCTVA-Douanes
-        .expertises--list_item-illu-div
+        .expertises-block--list_item-illu
+          height: 192.6px
+          width: 365px
+          @media all and (max-width: 992px)
+            width: 325px
+        .expertises-block--list_item-illu-div
           &-1
             border-left: 1px dashed white
             height: 33px
             width: 1px
             bottom: 60px
             right: 23px
+            @media all and (max-width: 992px)
+              bottom: 72px
 
           &-2
             height: 33px 
@@ -199,6 +232,8 @@
             border-top-right-radius: 10px
             bottom: 155px
             right: 23px
+            @media all and (max-width: 992px)
+              bottom: 160px
 
           &-3
             height: 27px 
@@ -210,6 +245,8 @@
             border-top-right-radius: 0
             top: 5px
             right: 32px
+            @media all and (max-width: 992px)
+              top: -1px
 
           &-4
             height: 24px
@@ -219,16 +256,27 @@
             border-bottom-left-radius: 10px
             bottom: 124px
             right: 143px
+            @media all and (max-width: 992px)
+              right: 128px
+              bottom: 130px
 
             
       &.Expertise-comptable-financiere
-       .expertises--list_item-illu-div
+        .expertises-block--list_item-illu
+          height: 256.4px
+          width: 365px
+          @media all and (max-width: 992px)
+            width: 325px
+        .expertises-block--list_item-illu-div
           &-1
             border-left: 1px dashed white
             height: 46px
             width: 1px
             bottom: 124px
             left: 193px
+            @media all and (max-width: 992px)
+              bottom: 142px
+              left: 160px
 
           &-2
             height: 1px
@@ -236,6 +284,8 @@
             border-top: 1px dashed white
             top: 59px
             right: 205px
+            @media all and (max-width: 992px)
+              right: 179px
 
           &-3
             height: 60px
@@ -249,9 +299,17 @@
             border-top-right-radius: 0
             top: 65px
             right: 321px
+            @media all and (max-width: 992px)
+              top: 61px
+              right: 292px
 
       &.Fiscalite-locale-environnemental
-        .expertises--list_item-illu-div
+        .expertises-block--list_item-illu
+          height: 224px
+          width: 365px
+          @media all and (max-width: 992px)
+            width: 325px
+        .expertises-block--list_item-illu-div
           &-1
             border-right: 1px dashed white
             border-bottom-right-radius: 10px
@@ -270,7 +328,12 @@
             right: 44px
 
       &.impots-commerciaux
-        .expertises--list_item-illu-div
+        .expertises-block--list_item-illu
+          height: 221.7px
+          width: 365px
+          @media all and (max-width: 992px)
+            width: 325px
+        .expertises-block--list_item-illu-div
           &-1
             height: 92px
             width: 60px
@@ -281,6 +344,9 @@
             border-top-right-radius: 0
             bottom: 88px
             left: 160px
+            @media all and (max-width: 992px)
+              bottom: 93px
+              left: 136px
 
 
           &-2
@@ -293,6 +359,9 @@
             border-bottom-right-radius: 0
             top: 42px
             left: 262px
+            @media all and (max-width: 992px)
+              top: 36px
+              left: 235px
 
           &-3
             height: 45px
@@ -304,9 +373,17 @@
             border-bottom-left-radius: 0
             top: 136px
             right: 43px
+            @media all and (max-width: 992px)
+              top: 126px
+              right: 31px
       
       &.Social
-        .expertises--list_item-illu-div
+        .expertises-block--list_item-illu
+          height: 256.4px
+          width: 365px
+          @media all and (max-width: 992px)
+            width: 325px
+        .expertises-block--list_item-illu-div
           &-1
             height: 61px
             width: 32px
@@ -317,6 +394,9 @@
             border-top-right-radius: 0
             bottom: 162px
             left: 212px
+            @media all and (max-width: 992px)
+              bottom: 173px
+              left: 182px
 
 
           &-2
@@ -329,6 +409,9 @@
             border-bottom-right-radius: 0
             top: 33px
             left: 315px
+            @media all and (max-width: 992px)
+              top: 22px
+              left: 283px
 
           &-3
             height: 35px
@@ -340,13 +423,11 @@
             border-bottom-left-radius: 0
             top: 148px
             right: 21px
+            @media all and (max-width: 992px)
+              top: 132px
+              right: 12px
 
-           
-
-           
-
-
-        
+                 
 @keyframes rotateAfter 
   from 
     transform: rotate(0deg)

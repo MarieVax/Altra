@@ -32,7 +32,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
       //content
       if ($content = get_field('content')) :
-        printf('<div class="max-w-2xl hero-hp--content">%s</div>', $content);
+        printf('<div class="hero-hp--content">%s</div>', $content);
       endif;
 
       //Link

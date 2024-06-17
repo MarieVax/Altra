@@ -1,10 +1,13 @@
 .numbers 
+  @media all and (max-width: 992px)
+    flex-direction: column
   &-block
     transform: rotate(-5.5deg)
     width: 150vw
     margin-left: -25vw
     background: #fff
-    padding: 160px 0 360px 0
+    @media all and (min-width: 992px)
+      padding: 160px 0 360px 0
     position: relative
     
   &-container
@@ -14,15 +17,24 @@
     padding: 0 90px
     transform: rotate(5.5deg)
 
+    @media all and (max-width: 1200px)
+      max-width: 1150px
 
     .c-btn
       position: absolute
       bottom: 0
       right: 305px
+      @media all and (max-width: 450px)
+        right: 115px
      
 
   &-col
+    @media all and (max-width: 992px)
+      flex-direction: column
+      display: flex
     &-item
+      @media all and (max-width: 992px)
+        display: inline-block
       &--heading
         font-family: Prata
         font-size: 68px
@@ -106,22 +118,73 @@
   &-col1
     .numbers-col-item:first-child
       margin-bottom: 118px
+    @media all and (max-width: 992px)
+      &-item1
+        margin-left: -150px
+
+      &-item2
+        margin-right: -150px
+
+    @media all and (max-width: 550px)
+      &-item1
+        margin-left: 0
+
+      &-item2
+        margin-right: 0
 
   &-col2
-    margin-top: -50px
+    @media all and (min-width: 992px)
+      margin-top: -50px
     
     .numbers-col-item:first-child
       margin-bottom: 118px
+    @media all and (max-width: 992px)
+      margin-top: 100px
+      &-item1
+        margin-left: -150px
+
+      &-item2
+        margin-right: -150px
+
+    @media all and (max-width: 550px)
+      &-item1
+        margin-left: 0
+
+      &-item2
+        margin-right: 0
 
   &-col3
-    margin-top: -124px
+    @media all and (min-width: 992px)
+      margin-top: -124px
     .numbers-col-item
       margin-bottom: 80px
+    @media all and (max-width: 992px)
+      margin-top: 100px
+
+      &-item1
+        margin-left: -150px
+
+      &-item2
+        margin-right: -150px
+
+    @media all and (max-width: 550px)
+      &-item1
+        margin-left: 0
+
+      &-item2
+        margin-right: 0
+  
   .img-dot
     width: 210px
     height: 210px
     top: -70px
     right: 20px
+    @media all and (max-width: 992px)
+      right: 34%
+    @media all and (max-width: 600px)
+      right: 20%
+    @media all and (max-width: 400px)
+      right: 12%
 
     &.lazyloading
       opacity: 1

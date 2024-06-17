@@ -3,15 +3,19 @@ if ($anchor = get_sub_field('anchor')) :
   $id = sanitize_title($anchor);
 endif;
 
-echo '<div class="altra--section6 altra-section" id="' . $id . '">'; ?>
+echo '<div class="altra--section6 altra-section altra--section-' . $id . '" id="' . $id . '">';
+//Image
+if ($image = get_sub_field('background_image')) :
+  echo '<div id="' . $id . '-background" class="altra--section-background">';
+  printf('<img src="%s" alt="" class="footer-block-image">', $image['url']);
+  echo '</div>';
+endif;
+?>
+
+
 <div class="footer-block">
-  <?php
-  //Image
-  if ($image = get_sub_field('background_image')) :
-    printf('<img src="%s" alt="" class="footer-block-image">', $image['url']);
-  endif;
-  ?>
-  <div class="footer-block-content fadeIn">
+
+  <div class="footer-block-content">
     <?php
     //Heading
     if ($heading = get_sub_field('heading')) :
@@ -21,7 +25,7 @@ echo '<div class="altra--section6 altra-section" id="' . $id . '">'; ?>
     <?php
     //Text
     if ($text = get_sub_field('content')) :
-      printf('<div class="footer-block-content-text fadeIn">%s</div>', $text);
+      printf('<div class="footer-block-content-text">%s</div>', $text);
     endif;
     ?>
     <div class="relative z-30 footer-block-content-links ">
@@ -33,7 +37,7 @@ echo '<div class="altra--section6 altra-section" id="' . $id . '">'; ?>
         $url_left = (isset($left['url']) && !empty($left['url'])) ? 'href="' . $left['url'] . '"' : '';
         $title_left = (isset($left['title']) && !empty($left['title'])) ? $left['title'] : '';
 
-        printf('<a %s %s class="c-btn c-btn-footer-block-left">%s</a>', $url_left, $target_left, $title_left);
+        printf('<a %s %s class="c-btn c-btn-footer-block-left c-btn-light">%s</a>', $url_left, $target_left, $title_left);
       endif;
       ?>
     </div>
@@ -41,4 +45,5 @@ echo '<div class="altra--section6 altra-section" id="' . $id . '">'; ?>
 </div>
 
 <?php
+
 echo '</div>';

@@ -2,8 +2,9 @@
 $bg = (get_sub_field('background_image')) ? get_sub_field('background_image')['url'] : '';
 
 echo '<div class="altra--section-hero altra-section">';
+echo '<div class="altra--section-background">';
 echo '<img src="' . $bg . '" alt="" class="altra--section-hero-img">';
-
+echo '</div>';
 //Heading
 if ($heading = get_sub_field('heading')) :
   $headerTag = (get_sub_field('heading_tag')) ? get_sub_field('heading_tag') : 'h1';

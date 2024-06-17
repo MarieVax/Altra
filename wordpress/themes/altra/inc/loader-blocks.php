@@ -375,6 +375,238 @@ function register_acf_block_types()
     'enqueue_assets'   => function () {
       // Enqueue styles
       wp_enqueue_style('altra-css', get_template_directory_uri() . '/assets/css/admin-acf-blocks.css', array());
+      wp_enqueue_script('altra', get_template_directory_uri() . '/assets/js/blocks/altra.js', array('jquery'));
+    }
+  ));
+
+  // register the hero singlepage block.
+  acf_register_block_type(array(
+    'name'              => 'hero-singlepage',
+    'title'             => __('Hero Singlepage'),
+    'description'       => __('Hero singlepage block'),
+    'render_template'   => 'template-parts/blocks/hero-singlepage.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'edit',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('hero-singlepage', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/hero-singlepage.css'));
+    }
+  ));
+
+  // register the generic block for group of links between pages.
+  acf_register_block_type(array(
+    'name'              => 'altrabuttons',
+    'title'             => __('Altrabuttons'),
+    'description'       => __('Altrabuttons block'),
+    'render_template'   => 'template-parts/blocks/altrabuttons.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altrabuttons', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altrabuttons.css'));
+    }
+  ));
+
+  // register the generic block for group of cards with unique link.
+  acf_register_block_type(array(
+    'name'              => 'altracards',
+    'title'             => __('Altracards'),
+    'description'       => __('Altracards block'),
+    'render_template'   => 'template-parts/blocks/altracards.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altracards', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altracards.css'));
+    }
+  ));
+
+  // register the generic block for simple text.
+  acf_register_block_type(array(
+    'name'              => 'altrasimpletext',
+    'title'             => __('Altrasimpletext'),
+    'description'       => __('Altrasimpletext block'),
+    'render_template'   => 'template-parts/blocks/altrasimpletext.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altrasimpletext', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altrasimpletext.css'));
+    }
+  ));
+
+  // register the generic block for text with background image.
+  acf_register_block_type(array(
+    'name'              => 'altrajolitext',
+    'title'             => __('Altrajolitext'),
+    'description'       => __('Altrajolitext block'),
+    'render_template'   => 'template-parts/blocks/altrajolitext.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altrajolitext', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altrajolitext.css'));
+    }
+  ));
+
+  // register the generic block for text, buttons and photo.
+  acf_register_block_type(array(
+    'name'              => 'altraphoto',
+    'title'             => __('Altraphoto'),
+    'description'       => __('Altraphoto block'),
+    'render_template'   => 'template-parts/blocks/altraphoto.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altraphoto', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altraphoto.css'));
+    }
+  ));
+
+  // register the generic block for two columns block and post block.
+  acf_register_block_type(array(
+    'name'              => 'altrabicoltext',
+    'title'             => __('Altrabicoltext'),
+    'description'       => __('Altrabicoltext block'),
+    'render_template'   => 'template-parts/blocks/altrabicoltext.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altrabicoltext', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altrabicoltext.css'));
+    }
+  ));
+
+  // register the generic block for basic list.
+  acf_register_block_type(array(
+    'name'              => 'altrabasiclist',
+    'title'             => __('Altrabasiclist'),
+    'description'       => __('Altrabasiclist block'),
+    'render_template'   => 'template-parts/blocks/altrabasiclist.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altrabasiclist', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altrabasiclist.css'));
+    }
+  ));
+
+  // register the generic block for cards with shifting effect.
+  acf_register_block_type(array(
+    'name'              => 'altrashifters',
+    'title'             => __('Altrashifters'),
+    'description'       => __('Altrashifters block'),
+    'render_template'   => 'template-parts/blocks/altrashifters.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altrashifters', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altrashifters.css'));
+    }
+  ));
+
+  // register the generic block for stickers with list of things.
+  acf_register_block_type(array(
+    'name'              => 'altrastickers',
+    'title'             => __('Altrastickers'),
+    'description'       => __('Altrastickers block'),
+    'render_template'   => 'template-parts/blocks/altrastickers.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altrastickers', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altrastickers.css'));
+    }
+  ));
+
+  // register the generic block for references.
+  acf_register_block_type(array(
+    'name'              => 'altrareferences',
+    'title'             => __('Altrareferences'),
+    'description'       => __('Altrareferences block'),
+    'render_template'   => 'template-parts/blocks/altrareferences.php',
+    'category'          => 'project',
+    'icon'              => '',
+    'align'             => 'full',
+    'mode'              => 'preview',
+    'supports'          => array(
+      'align' => array('full'),
+      'mode'  => true,
+      'anchor' => true,
+      'jsx' => true
+    ),
+    'enqueue_assets'   => function () {
+      wp_enqueue_style('altrareferences', get_template_directory_uri() . '/assets/css/blocks/admin-acf-blocks.css', array(), filemtime(get_template_directory() . '/assets/css/blocks/altrareferences.css'));
     }
   ));
 }

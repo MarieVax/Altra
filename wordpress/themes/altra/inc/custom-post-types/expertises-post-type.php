@@ -17,17 +17,18 @@ function expertise_post_type()
     'add_new'               => __('Add New', 'Expertise', 'altra'),
     'add_new_item'          => __('Add New Expertise', 'altra'),
     'new_item'              => __('New', 'Expertise', 'altra'),
-    'edit_item'             => __('Edit Expertise', 'altra'),
-    'view_items'            => __('View Expertises', 'altra'),
-    'view_item'             => __('View Expertise', 'altra'),
-    'search_items'          => __('Search Expertise', 'altra'),
-    'all_items'             => __('All Expertises', 'altra'),
-    'not_found'             => __('No Expertise found', 'altra'),
-    'not_found_in_trash'    => __('No Expertise found in trash', 'altra'),
+    'edit_item'             => __('Edit expertise', 'altra'),
+    'view_items'            => __('View expertises', 'altra'),
+    'view_item'             => __('View expertise', 'altra'),
+    'search_items'          => __('Search expertise', 'altra'),
+    'all_items'             => __('All expertises', 'altra'),
+    'not_found'             => __('No expertise found', 'altra'),
+    'not_found_in_trash'    => __('No expertise found in trash', 'altra'),
   );
 
   $args = array(
     'labels'             => $labels,
+    'description'        => __('Nos expertises', 'altra'),
     'public'             => true,
     'publicly_queryable' => true,
     'show_ui'            => true,
@@ -36,10 +37,10 @@ function expertise_post_type()
     'capability_type'    => 'post',
     'has_archive'        => true,
     'hierarchical'       => true,
-    'menu_position'      => null,
+    'menu_position'      => 11,
     'menu_icon'          => 'dashicons-images-alt',
     'exclude_from_search' => false,
-    'show_in_rest' => false,
+    'show_in_rest'       => true,
     'supports'           => array('title', 'editor', 'thumbnail', 'custom-fields', 'excerpt'),
     'rewrite' => array('slug' => 'expertises', 'with_front'     => false,)
   );

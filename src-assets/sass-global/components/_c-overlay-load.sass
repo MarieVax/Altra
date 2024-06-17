@@ -11,6 +11,10 @@
     transform: rotate(-5.5deg)
     border-bottom: 10px solid $color-red
     display: none
+    @media all and (max-width: 768px)
+      left: -21vw
+    @media all and (max-width: 992px)
+      display: none
 
     &-inside 
       position: relative
@@ -23,12 +27,23 @@
       align-items: center
       justify-content: center
 
+
     &-img-roue
       width: 70%
       max-width: 700px
       height: auto
       margin: 0 calc(50% - 350px)
       top: calc(75vh - 350px)
+      @media all and (max-width: 768px)
+        max-width: 500px
+        width: 500px
+        margin: 0 calc(50% - 250px)
+        top: calc(75vh - 250px)
+      @media all and (max-width: 550px)
+        max-width: 300px
+        width: 300px
+        margin: 0 calc(50% - 150px)
+        top: calc(75vh - 150px)
       
       &-logo
         width: 70%
@@ -36,6 +51,16 @@
         height: auto
         margin: 0 calc(50% - 350px)
         top: calc(75vh - 350px)
+        @media all and (max-width: 768px)
+          max-width: 500px
+          width: 500px
+          margin: 0 calc(50% - 250px)
+          top: calc(75vh - 250px)
+        @media all and (max-width: 550px)
+          max-width: 300px
+          width: 300px
+          margin: 0 calc(50% - 150px)
+          top: calc(75vh - 150px)
        
       &-elem
         width: 70%
@@ -43,5 +68,15 @@
         height: auto
         margin: 0 calc(50% - 350px)
         top: calc(75vh - 350px)
+        @media all and (max-width: 768px)
+          max-width: 500px
+          width: 500px
+          margin: 0 calc(50% - 250px)
+          top: calc(75vh - 250px)
+        @media all and (max-width: 550px)
+          max-width: 300px
+          width: 300px
+          margin: 0 calc(50% - 150px)
+          top: calc(75vh - 150px)
 
         

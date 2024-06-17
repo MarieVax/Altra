@@ -1,28 +1,30 @@
 jQuery(function ($) {
   const swiperOptions = {
+    spaceBetween: 1,
     slidesPerView: "auto",
-    spaceBetween: 16,
+    centeredSlides: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
   };
-  //var swiper = new Swiper(".swiper-secteurs", swiperOptions);
 
-  // Sélectionnez tous les éléments .swiper-slide
-  var swiperSlides = document.querySelectorAll(".swiper-slide");
+  var mediaQuery992px = window.matchMedia("(min-width: 992px)");
 
-  // Ajoutez un écouteur d'événements à chaque élément .swiper-slide
-  swiperSlides.forEach(function (slide) {
-    slide.addEventListener("mouseenter", function () {
-      // Supprimez la classe active de tous les éléments .swiper-slide
-      swiperSlides.forEach(function (slide) {
-        slide.classList.remove("active");
+  if (mediaQuery992px.matches) {
+    var swiperSlides = document.querySelectorAll(".swiper-slide");
+
+    swiperSlides.forEach(function (slide) {
+      slide.addEventListener("mouseenter", function () {
+        swiperSlides.forEach(function (slide) {
+          slide.classList.remove("active");
+        });
+        slide.classList.add("active");
       });
-      // Ajoutez la classe active à l'élément survolé
-      slide.classList.add("active");
     });
-  });
+  } else {
+    var swiper = new Swiper(".swiper-secteurs", swiperOptions);
+  }
 });
 
 //# sourceMappingURL=secteurs-slider.js.map

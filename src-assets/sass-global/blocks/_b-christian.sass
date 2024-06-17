@@ -1,0 +1,2677 @@
+.altrabasiclist 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrabasiclist--container 
+  padding-top: 96px
+  padding-bottom: 144px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrabasiclist--container 
+    padding-top: 72px
+    padding-bottom: 96px
+  
+
+.altrabasiclist--container .content-wrapper 
+  --content-max: 1208px
+  max-width: var(--content-max)
+  padding-left: 16px
+  padding-right: 16px
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 150%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.altrabasiclist--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrabasiclist--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrabasiclist--container .content-wrapper .heading::before, .altrabasiclist--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrabasiclist--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrabasiclist--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrabasiclist--container .content-wrapper .enumeration 
+  margin-top: 48px
+  margin-bottom: 72px
+  max-width: 520px
+  list-style-image: url("../img/list-disk-marker.svg")
+  list-style-position: outside
+  text-align: left
+
+.altrabasiclist--container .content-wrapper .enumeration .line 
+  margin-top: 24px
+  padding-left: 16px
+
+
+.altrabicoltext 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrabicoltext--container 
+  padding-top: 84px
+  padding-bottom: 96px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrabicoltext--container 
+    padding-top: 72px
+    padding-bottom: 84px
+  
+
+.altrabicoltext--container .content-wrapper 
+  --content-max: 1208px
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 150%
+  display: grid
+  grid-template-columns: repeat(2, minmax(50%, calc(var(--content-max) / 2)))
+
+@media screen and (max-width: 768px) 
+  .altrabicoltext--container .content-wrapper 
+    display: flex
+    flex-direction: column
+    row-gap: 64px
+  
+
+.altrabicoltext--container .content-wrapper .left-content, .altrabicoltext--container .content-wrapper .right-content 
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.altrabicoltext--container .content-wrapper .left-content .text-block, .altrabicoltext--container .content-wrapper .right-content .text-block 
+  max-width: 520px
+  padding-right: 16px
+  padding-left: 16px
+
+.altrabicoltext--container .content-wrapper .left-content 
+  padding-top: 3vw
+
+@media screen and (max-width: 768px) 
+  .altrabicoltext--container .content-wrapper .left-content 
+    padding-top: 0
+  
+
+.altrabicoltext--container .content-wrapper .right-content 
+  padding-bottom: 3vw
+
+@media screen and (max-width: 768px) 
+  .altrabicoltext--container .content-wrapper .right-content 
+    padding-bottom: 0
+  
+
+.altrabicoltext--container .content-wrapper .heading 
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+
+@media screen and (max-width: 768px) 
+  .altrabicoltext--container .content-wrapper .heading 
+    font-size: 36px
+  
+
+.altrabicoltext--container .content-wrapper .preface-wrapper 
+  margin-top: 34px
+  border-top: 1px solid #B81734
+  border-bottom: 1px solid #B81734
+
+.altrabicoltext--container .content-wrapper .preface-wrapper .preface 
+  font-family: "Gill Sans Light"
+  font-size: 24px
+  font-style: italic
+  line-height: 150%
+  color: #B81734
+
+.altrabicoltext--container .content-wrapper .introduction 
+  margin-top: 42px
+  font-weight: 600
+  text-align: left
+
+.altrabicoltext--container .content-wrapper .enumeration 
+  margin-top: 34px
+  padding-left: 18px
+  list-style-image: url("../img/list-disk-marker.svg")
+  list-style-position: outside
+  text-align: left
+
+.altrabicoltext--container .content-wrapper .enumeration .line 
+  margin-top: 24px
+  padding-left: 16px
+
+.altrabicoltext--container .content-wrapper .post-content 
+  margin-top: 24px
+  grid-column: 1/3
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.altrabicoltext--container .content-wrapper .post-content .postface 
+  max-width: 496px
+  padding-right: 16px
+  padding-left: 16px
+
+
+.altrabigstickers 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrabigstickers--container 
+  padding-top: 84px
+  padding-bottom: 144px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrabigstickers--container 
+    padding-top: 48px
+    padding-bottom: 84px
+  
+
+.altrabigstickers--container .content-wrapper 
+  --content-max: 1208px
+  --block-width: 861px
+  --button-height: 139px
+  padding-left: 18px
+  padding-right: 18px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@media screen and (max-width: 768px) 
+  .altrabigstickers--container .content-wrapper 
+    padding-left: 12px
+    padding-right: 12px
+  
+
+.altrabigstickers--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrabigstickers--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrabigstickers--container .content-wrapper .heading::before, .altrabigstickers--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrabigstickers--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrabigstickers--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrabigstickers--container .content-wrapper .stickers 
+  margin-top: 128px
+
+.altrabigstickers--container .content-wrapper .stickers article:hover 
+  cursor: help
+
+.altrabigstickers--container .content-wrapper .stickers .sticker 
+  --button-color: #223E5E
+  margin-top: 24px
+  max-width: var(--block-width)
+  max-height: var(--button-height)
+  transition: max-height 600ms ease-in-out
+
+.altrabigstickers--container .content-wrapper .stickers .sticker:hover 
+  max-height: 100vh
+  max-height: calc(var(--vh, 1vh) * 100)
+
+.altrabigstickers--container .content-wrapper .stickers .sticker:hover .button .arrow 
+  transform: translateY(-50%) scaleY(-1)
+
+.altrabigstickers--container .content-wrapper .stickers .sticker:hover .dropdown 
+  transform: scaleY(1)
+
+.altrabigstickers--container .content-wrapper .stickers .sticker .button 
+  min-height: var(--button-height)
+  padding-left: 35px
+  padding-right: 166px
+  display: flex
+  align-items: center
+  background-color: var(--button-color)
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrabigstickers--container .content-wrapper .stickers .sticker .button 
+    padding-left: 18px
+    padding-right: 96px
+  
+
+.altrabigstickers--container .content-wrapper .stickers .sticker .button .title 
+  margin: 0
+  padding-top: 8px
+  font-family: "Gill Sans"
+  font-size: 30px
+  line-height: 125%
+  letter-spacing: 0.04em
+
+@media screen and (max-width: 768px) 
+  .altrabigstickers--container .content-wrapper .stickers .sticker .button .title 
+    font-size: 24px
+  
+
+.altrabigstickers--container .content-wrapper .stickers .sticker .button .arrow 
+  width: 32px
+  height: 32px
+  position: absolute
+  top: 50%
+  right: 32px
+  transform: translateY(-50%) scaleY(1)
+  transition: transform 600ms linear
+
+.altrabigstickers--container .content-wrapper .stickers .sticker .dropdown 
+  padding: 32px 56px 32px 36px
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 125%
+  letter-spacing: 0.04em
+  border: 1px solid var(--button-color)
+  transform-origin: top
+  transform: scaleY(0)
+  transition: transform 600ms ease-in-out
+
+@media screen and (max-width: 768px) 
+  .altrabigstickers--container .content-wrapper .stickers .sticker .dropdown 
+    padding: 32px 18px 36px 18px
+  
+
+.altrabigstickers--container .content-wrapper .stickers .sticker .dropdown .content p 
+  margin-top: 0
+
+.altrabigstickers--container .content-wrapper .stickers .sticker .dropdown .content strong 
+  font-weight: 700
+
+.altrabigstickers--container .content-wrapper .stickers .sticker .dropdown .content ol 
+  padding-left: 12px
+  list-style: none
+  counter-reset: num
+
+.altrabigstickers--container .content-wrapper .stickers .sticker .dropdown .content ol li 
+  padding-top: 4px
+  counter-increment: num
+
+.altrabigstickers--container .content-wrapper .stickers .sticker .dropdown .content ol li::before 
+  content: counter(num) "° "
+
+
+.altrabuttons 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrabuttons--container 
+  padding-top: 84px
+  padding-bottom: 164px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrabuttons--container 
+    padding-top: 48px
+    padding-bottom: 96px
+  
+
+.altrabuttons--container .content-wrapper 
+  --content-max: 1208px
+  max-width: var(--content-max)
+  padding-left: 24px
+  padding-right: 24px
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 125%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@media screen and (max-width: 768px) 
+  .altrabuttons--container .content-wrapper 
+    padding-left: 16px
+    padding-right: 16px
+  
+
+.altrabuttons--container .content-wrapper p 
+  margin: 0
+  padding: 0
+
+.altrabuttons--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrabuttons--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrabuttons--container .content-wrapper .heading::before, .altrabuttons--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrabuttons--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrabuttons--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrabuttons--container .content-wrapper .buttons 
+  margin-top: 96px
+  max-width: 1134px
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  row-gap: 27px
+
+@media screen and (max-width: 768px) 
+  .altrabuttons--container .content-wrapper .buttons 
+    flex-direction: column
+    align-items: center
+  
+
+.altrabuttons--container .content-wrapper .buttons .big-button 
+  --button-color: #223E5E
+  --animation-duration: 450ms
+  width: min-content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  border: 1px solid var(--button-color)
+  position: relative
+
+.altrabuttons--container .content-wrapper .buttons .big-button:hover > .description 
+  background-color: rgba(34, 62, 94, 0.2)
+
+.altrabuttons--container .content-wrapper .buttons .big-button:hover > .button 
+  background-color: #FFF
+
+.altrabuttons--container .content-wrapper .buttons .big-button:hover > .button > .icon > .icon-blue 
+  opacity: 0
+
+.altrabuttons--container .content-wrapper .buttons .big-button:hover > .button > .icon > .icon-white 
+  opacity: 1
+
+.altrabuttons--container .content-wrapper .buttons .big-button:hover > .button > .label 
+  color: #102237
+
+.altrabuttons--container .content-wrapper .buttons .big-button .description 
+  width: 100%
+  min-height: 172px
+  font-size: 30px
+  line-height: 115%
+  transition-property: background-color
+  transition-duration: var(--animation-duration)
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrabuttons--container .content-wrapper .buttons .big-button .description 
+    min-height: 128px
+    font-size: 24px
+  
+
+.altrabuttons--container .content-wrapper .buttons .big-button .description p 
+  padding-top: 6px
+
+.altrabuttons--container .content-wrapper .buttons .big-button .description p em 
+  font-size: 22px
+  font-style: normal
+
+@media screen and (max-width: 768px) 
+  .altrabuttons--container .content-wrapper .buttons .big-button .description p em 
+    font-size: 18px
+  
+
+.altrabuttons--container .content-wrapper .buttons .big-button .button 
+  --size-s: 342px
+  --size-m: 526px
+  --size-l: 711px
+  height: 96px
+  padding-right: 18px
+  background-color: var(--button-color)
+  transition-property: background-color
+  transition-duration: var(--animation-duration)
+  display: flex
+  justify-content: center
+  align-items: center
+  column-gap: 12px
+
+@media screen and (max-width: 768px) 
+  .altrabuttons--container .content-wrapper .buttons .big-button .button 
+    height: 84px
+  
+
+.altrabuttons--container .content-wrapper .buttons .big-button .button.size-s 
+  width: var(--size-s)
+
+.altrabuttons--container .content-wrapper .buttons .big-button .button.size-m 
+  width: var(--size-m)
+
+@media screen and (max-width: 768px) 
+  .altrabuttons--container .content-wrapper .buttons .big-button .button.size-m 
+    width: 394px
+  
+
+.altrabuttons--container .content-wrapper .buttons .big-button .button.size-l 
+  width: var(--size-l)
+
+@media screen and (max-width: 768px) 
+  .altrabuttons--container .content-wrapper .buttons .big-button .button.size-l 
+    width: 446px
+  
+
+.altrabuttons--container .content-wrapper .buttons .big-button .button .icon 
+  --icon-side: 75px
+  width: var(--icon-side)
+  height: var(--icon-side)
+  position: relative
+
+.altrabuttons--container .content-wrapper .buttons .big-button .button .icon .icon-white, .altrabuttons--container .content-wrapper .buttons .big-button .button .icon .icon-blue 
+  position: absolute
+  transition-property: opacity
+  transition-duration: var(--animation-duration)
+
+.altrabuttons--container .content-wrapper .buttons .big-button .button .icon .icon-white 
+  opacity: 0
+
+.altrabuttons--container .content-wrapper .buttons .big-button .button .label 
+  width: 161px
+  padding-top: 3px
+  font-weight: 600
+  transition-property: color
+  transition-duration: var(--animation-duration)
+
+
+.altracards 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altracards--container 
+  padding-top: 84px
+  padding-bottom: 132px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altracards--container 
+    padding-top: 64px
+    padding-bottom: 64px
+  
+
+.altracards--container .content-wrapper 
+  --content-max: 1208px
+  max-width: var(--content-max)
+  padding-left: 24px
+  padding-right: 24px
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 150%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@media screen and (max-width: 768px) 
+  .altracards--container .content-wrapper 
+    padding-left: 16px
+    padding-right: 16px
+  
+
+.altracards--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altracards--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altracards--container .content-wrapper .heading::before, .altracards--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altracards--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altracards--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altracards--container .content-wrapper .description 
+  margin-top: 44px
+  max-width: 800px
+
+@media screen and (max-width: 768px) 
+  .altracards--container .content-wrapper .description 
+    margin-top: 32px
+  
+
+.altracards--container .content-wrapper .introduction 
+  margin-top: 92px
+  max-width: 744px
+  font-family: "Gill Sans Light"
+  font-size: 38px
+  line-height: 125%
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altracards--container .content-wrapper .introduction 
+    margin-top: 36px
+    font-size: 28px
+  
+
+.altracards--container .content-wrapper .introduction::after 
+  content: ""
+  width: 18.5px
+  height: 28px
+  position: absolute
+  top: calc(100% + 18px)
+  left: 50%
+  transform: translateX(-50%)
+  background-image: url("../img/red-arrow-down.svg")
+  background-size: contain
+  background-repeat: no-repeat
+
+.altracards--container .content-wrapper .cards 
+  --card-gap: 32px
+  margin-top: 48px
+  column-count: 2
+  column-gap: var(--card-gap)
+
+@media screen and (max-width: 768px) 
+  .altracards--container .content-wrapper .cards 
+    column-count: 1
+  
+
+.altracards--container .content-wrapper .cards .card 
+  --card-width: 487px
+  max-width: var(--card-width)
+  break-inside: avoid
+  position: relative
+
+.altracards--container .content-wrapper .cards .card::after 
+  content: ""
+  display: block
+  height: var(--card-gap)
+
+.altracards--container .content-wrapper .cards .card .card-sketch, .altracards--container .content-wrapper .cards .card .card-list, .altracards--container .content-wrapper .cards .card .card-button 
+  background-color: #102237
+
+.altracards--container .content-wrapper .cards .card .card-sketch 
+  margin: auto
+  width: var(--card-width)
+  height: 280px
+  padding: 16px 48px
+
+@media screen and (max-width: 768px) 
+  .altracards--container .content-wrapper .cards .card .card-sketch 
+    height: 210px
+    padding: 16px
+  
+
+.altracards--container .content-wrapper .cards .card .card-list 
+  display: flex
+  flex-direction: column
+  border-top: 1px solid #B81734
+
+.altracards--container .content-wrapper .cards .card .card-list .element 
+  display: inline-block
+  border-bottom: 1px solid #B81734
+  transition-property: background-color, color
+  transition-duration: 400ms
+
+@media screen and (max-width: 768px) 
+  .altracards--container .content-wrapper .cards .card .card-list .element 
+    padding-left: 16px
+    padding-right: 16px
+  
+
+.altracards--container .content-wrapper .cards .card .card-list .element:hover 
+  color: #102237
+  background-color: #FFF
+
+.altracards--container .content-wrapper .cards .card .card-list .element:hover > .explanation 
+  max-height: 500px
+
+.altracards--container .content-wrapper .cards .card .card-list .element .title-wrapper 
+  min-height: 83px
+  padding-left: 24px
+  padding-right: 24px
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.altracards--container .content-wrapper .cards .card .card-list .element .title-wrapper .title 
+  margin: 0
+  padding-top: 24px
+  padding-bottom: 6px
+  font-size: 30px
+  line-height: 130%
+
+@media screen and (max-width: 768px) 
+  .altracards--container .content-wrapper .cards .card .card-list .element .title-wrapper .title 
+    font-size: 24px
+  
+
+.altracards--container .content-wrapper .cards .card .card-list .element .explanation 
+  margin-top: 0
+  max-height: 0
+  padding-left: 16px
+  padding-right: 16px
+  overflow: hidden
+  line-height: 130%
+  transition-property: max-height
+  transition-duration: 400ms
+  transition-delay: 200ms
+  transition-timing-function: ease-in-out
+
+.altracards--container .content-wrapper .cards .card .card-button 
+  height: 116px
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altracards--container .content-wrapper .cards .card .card-button 
+    height: 96px
+  
+
+.altracards--container .content-wrapper .cards .card .card-button img 
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+
+.altractablade 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altractablade--container 
+  padding-top: 118px
+  padding-bottom: 96px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altractablade--container 
+    padding-top: 72px
+    padding-bottom: 64px
+  
+
+.altractablade--container .content-wrapper 
+  --content-max: 1900px
+  width: var(--content-max)
+  padding-right: 126px
+  font-family: "Gill Sans"
+  display: flex
+  justify-content: end
+  transition: all 400ms ease-out
+
+@media screen and (max-width: 1199px) 
+  .altractablade--container .content-wrapper 
+    padding-right: 36px
+  
+
+@media screen and (max-width: 768px) 
+  .altractablade--container .content-wrapper 
+    padding-left: 24px
+    padding-right: 24px
+  
+
+.altractablade--container .content-wrapper .right-content 
+  --content-max: 668px
+  max-width: var(--content-max)
+  padding: 48px 72px
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altractablade--container .content-wrapper .right-content 
+    padding: 48px 48px
+  
+
+.altractablade--container .content-wrapper .right-content::before 
+  z-index: -25
+  content: ""
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  background-color: #FFF
+  opacity: 0.9
+
+.altractablade--container .content-wrapper .right-content::after 
+  --offset-line: 13px
+  z-index: -20
+  content: ""
+  width: calc(100% - 2 * var(--offset-line))
+  height: calc(100% - 2 * var(--offset-line))
+  position: absolute
+  top: var(--offset-line)
+  left: var(--offset-line)
+  border: 1px solid #B81734
+
+.altractablade--container .content-wrapper .right-content .heading 
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  transition: all 400ms ease-out
+
+@media screen and (max-width: 768px) 
+  .altractablade--container .content-wrapper .right-content .heading 
+    font-size: 42px
+  
+
+.altractablade--container .content-wrapper .right-content .description 
+  margin-top: 36px
+  font-size: 18px
+  line-height: normal
+  transition: all 400ms ease-in
+
+@media screen and (max-width: 768px) 
+  .altractablade--container .content-wrapper .right-content .description 
+    font-size: 16px
+  
+
+.altractablade--container .content-wrapper .right-content .buttons 
+  margin-top: 36px
+  display: flex
+  gap: 35px
+
+@media screen and (max-width: 768px) 
+  .altractablade--container .content-wrapper .right-content .buttons 
+    flex-direction: column
+  
+
+
+.altraheroblade 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altraheroblade--container 
+  padding-top: 218px
+  padding-bottom: 84px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altraheroblade--container 
+    padding-top: 192px
+    padding-bottom: 64px
+  
+
+.altraheroblade--container .content-wrapper 
+  --content-max: 1900px
+  width: var(--content-max)
+  --padding-left: 126px
+  --padding-right: 24px
+  font-family: "Gill Sans"
+
+@media screen and (max-width: 1199px) 
+  .altraheroblade--container .content-wrapper 
+    --padding-left: 36px
+  
+
+@media screen and (max-width: 768px) 
+  .altraheroblade--container .content-wrapper 
+    --padding-left: 24px
+  
+
+.altraheroblade--container .content-wrapper .heading-wrapper 
+  display: inline-block
+  padding-bottom: 12px
+  border-bottom: 1px solid #B81734
+
+.altraheroblade--container .content-wrapper .heading-wrapper .heading 
+  padding-left: var(--padding-left)
+  padding-right: var(--padding-right)
+  font-family: "Gill Sans Light"
+  font-size: 62px
+  line-height: 110%
+  letter-spacing: 0.04em
+  transition: all 400ms ease-out
+
+@media screen and (max-width: 768px) 
+  .altraheroblade--container .content-wrapper .heading-wrapper .heading 
+    font-size: 48px
+  
+
+.altraheroblade--container .content-wrapper .introduction 
+  margin-top: 48px
+  padding-left: var(--padding-left)
+  padding-right: var(--padding-right)
+  max-width: calc(641px + var(--padding-left) + var(--padding-right))
+  font-size: 26px
+  font-weight: 600
+  transition: all 400ms ease-in
+
+@media screen and (max-width: 768px) 
+  .altraheroblade--container .content-wrapper .introduction 
+    font-size: 22px
+  
+
+.altraheroblade--container .content-wrapper .content 
+  padding-left: var(--padding-left)
+  padding-right: var(--padding-right)
+  max-width: calc(665px + var(--padding-left) + var(--padding-right))
+  font-size: 18px
+  transition: all 400ms ease-in
+
+@media screen and (max-width: 768px) 
+  .altraheroblade--container .content-wrapper .content 
+    font-size: 16px
+  
+
+
+.altrajolitext 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrajolitext--container 
+  padding: 84px 24px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrajolitext--container 
+    padding: 32px 18px
+  
+
+.altrajolitext--container .content-wrapper 
+  --content-max: 806px
+  max-width: var(--content-max)
+  padding: 84px 32px
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 150%
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrajolitext--container .content-wrapper 
+    padding: 56px 18px
+  
+
+.altrajolitext--container .content-wrapper::before 
+  z-index: -25
+  content: ""
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  background-color: #FFF
+  opacity: 0.9
+  transform: skewY(calc(-1 * var(--angle)))
+
+.altrajolitext--container .content-wrapper::after 
+  --offset-line: 13px
+  z-index: -20
+  content: ""
+  width: calc(100% - 2 * var(--offset-line))
+  height: calc(100% - 2 * var(--offset-line))
+  position: absolute
+  top: var(--offset-line)
+  left: var(--offset-line)
+  border: 1px solid #B81734
+  transform: skewY(calc(-1 * var(--angle)))
+
+.altrajolitext--container .content-wrapper p 
+  margin: 0
+  padding: 0
+
+.altrajolitext--container .content-wrapper .heading 
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+
+@media screen and (max-width: 768px) 
+  .altrajolitext--container .content-wrapper .heading 
+    font-size: 36px
+  
+
+.altrajolitext--container .content-wrapper .preface 
+  margin-top: 18px
+  max-width: 624px
+
+.altrajolitext--container .content-wrapper .preface p 
+  margin-top: 18px
+
+.altrajolitext--container .content-wrapper .introduction 
+  margin-top: 36px
+  max-width: 744px
+  font-family: "Gill Sans Light"
+  font-size: 34px
+  line-height: 130%
+
+@media screen and (max-width: 768px) 
+  .altrajolitext--container .content-wrapper .introduction 
+    font-size: 28px
+  
+
+.altrajolitext--container .content-wrapper .lines 
+  margin-top: 36px
+  max-width: 620px
+
+@media screen and (max-width: 768px) 
+  .altrajolitext--container .content-wrapper .lines 
+    margin-top: 24px
+  
+
+.altrajolitext--container .content-wrapper .lines .line 
+  padding-top: 48px
+  font-size: 20px
+  line-height: 140%
+  position: relative
+
+.altrajolitext--container .content-wrapper .lines .line::after 
+  content: ""
+  width: 27px
+  height: 41px
+  position: absolute
+  top: 4px
+  left: 50%
+  transform: translateX(-50%)
+  background-image: url("../img/empty-arrow-down.svg")
+  background-size: contain
+  background-repeat: no-repeat
+
+.altrajolitext--container .content-wrapper .lines .line:first-child::after 
+  background-image: url("../img/full-arrow-down.svg")
+
+.altrajolitext--container .content-wrapper .lines .line .title 
+  font-weight: 600
+  color: #B81734
+
+.altrajolitext--container .content-wrapper .lines .line .text p 
+  padding-bottom: 8px
+
+
+.altrakeynumbers 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrakeynumbers--container 
+  padding-top: 128px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrakeynumbers--container 
+    padding-top: 64px
+  
+
+.altrakeynumbers--container .content-wrapper 
+  --content-max: 1208px
+  --block-width: 440px
+  --block-height: 270px
+  font-family: "Gill Sans"
+  font-size: 18px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.altrakeynumbers--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrakeynumbers--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrakeynumbers--container .content-wrapper .heading::before, .altrakeynumbers--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrakeynumbers--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrakeynumbers--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrakeynumbers--container .content-wrapper .numbers-content 
+  padding-bottom: calc(var(--block-height) * 3 / 4)
+  display: grid
+  grid-template-columns: repeat(3, minmax(auto, var(--block-width)))
+  grid-auto-flow: row dense
+  grid-template-rows: var(--block-height)
+
+@media screen and (max-width: 1023px) 
+  .altrakeynumbers--container .content-wrapper .numbers-content 
+    display: flex
+    flex-direction: column
+  
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block 
+  height: var(--block-height)
+  position: relative
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block.left 
+  grid-column: 1
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block.center 
+  grid-column: 2
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block.right 
+  grid-column: 3
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper 
+  width: 100%
+  position: absolute
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper.left, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper.left 
+  top: 75%
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper.center, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper.center 
+  top: 50%
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper.right, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper.right 
+  top: 25%
+
+@media screen and (max-width: 1023px) 
+  .altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper 
+    width: var(--block-width)
+    position: relative
+  
+  .altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper.left, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper.center, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper.right, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper.left, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper.center, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper.right 
+    top: 50%
+  
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .number, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper .number 
+  margin: 0
+  font-family: "Prata"
+  font-size: 68px
+  line-height: 125%
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .number em, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper .number em 
+  font-family: "Gill Sans Light"
+  font-style: normal
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .details, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper .details 
+  margin-top: 12px
+  font-size: 28px
+  line-height: 150%
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .details em, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper .details em 
+  font-family: "Gill Sans Light"
+  font-size: 52px
+  font-style: normal
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper 
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper .introduction 
+  font-size: 28px
+  font-weight: 600
+
+
+.altranumbers 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altranumbers--container 
+  padding-top: 32px
+  padding-bottom: 128px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altranumbers--container 
+    padding-top: 16px
+    padding-bottom: 48px
+  
+
+.altranumbers--container .content-wrapper 
+  --block-width: 440px
+  --block-height: 270px
+  padding-left: 18px
+  padding-right: 18px
+  font-family: "Gill Sans"
+  font-size: 18px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@media screen and (max-width: 768px) 
+  .altranumbers--container .content-wrapper 
+    --block-width: 300px
+    --block-height: 200px
+    padding-left: 12px
+    padding-right: 12px
+  
+
+.altranumbers--container .content-wrapper .numbers-content 
+  padding-bottom: calc(var(--block-height) * 3 / 4)
+  display: grid
+  grid-template-columns: repeat(2, minmax(auto, var(--block-width)))
+  grid-auto-flow: row dense
+  grid-template-rows: var(--block-height)
+
+.altranumbers--container .content-wrapper .numbers-content .number-block 
+  height: var(--block-height)
+  position: relative
+
+.altranumbers--container .content-wrapper .numbers-content .number-block.left 
+  grid-column: 1
+
+.altranumbers--container .content-wrapper .numbers-content .number-block.right 
+  grid-column: 2
+
+.altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper 
+  width: 100%
+  position: absolute
+
+.altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper.left 
+  top: 66%
+
+.altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper.right 
+  top: 33%
+
+.altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .number 
+  margin: 0
+  font-family: "Prata"
+  font-size: 68px
+  line-height: 125%
+
+@media screen and (max-width: 768px) 
+  .altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .number 
+    font-size: 42px
+  
+
+.altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .number em 
+  font-family: "Gill Sans Light"
+  font-style: normal
+
+.altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .details 
+  margin-top: 12px
+  font-size: 28px
+  line-height: 150%
+
+@media screen and (max-width: 768px) 
+  .altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .details 
+    font-size: 18px
+  
+
+.altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .details em 
+  font-family: "Gill Sans Light"
+  font-size: 52px
+  font-style: normal
+
+@media screen and (max-width: 768px) 
+  .altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .details em 
+    font-size: 32px
+  
+
+.altranumbers--container .content-wrapper .customers-content 
+  max-width: 743px
+
+.altranumbers--container .content-wrapper .customers-content.short-spacing 
+  margin-top: calc(var(--block-height) * -1 / 2)
+
+.altranumbers--container .content-wrapper .customers-content .customers .customer 
+  margin-top: 8px
+  padding-top: 15px
+  position: relative
+
+.altranumbers--container .content-wrapper .customers-content .customers .customer::after 
+  content: ""
+  width: 11px
+  height: 3px
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  background-image: url("../img/list-big-minus-marker.svg")
+  background-size: contain
+
+
+.altraphoto 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altraphoto--container 
+  padding-bottom: 64px
+  display: flex
+  justify-content: center
+
+.altraphoto--container .content-wrapper 
+  --img-width: 556px
+  --offset-img: calc(var(--tan) * var(--img-width))
+  --img-height: 723px
+  --text-width: 588px
+  padding-left: 24px
+  padding-right: 24px
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 150%
+  display: grid
+  column-gap: 64px
+
+@media screen and (max-width: 1023px) 
+  .altraphoto--container .content-wrapper 
+    padding-left: 16px
+    padding-right: 16px
+    display: flex
+    flex-direction: column
+    align-items: center
+  
+
+.altraphoto--container .content-wrapper.image-left 
+  grid-template-columns: var(--img-width) 1fr
+  padding-top: 72px
+
+@media screen and (max-width: 1023px) 
+  .altraphoto--container .content-wrapper.image-left 
+    padding-top: 32px
+  
+
+.altraphoto--container .content-wrapper.image-right 
+  grid-template-columns: 1fr var(--img-width)
+  padding-top: 0
+
+@media screen and (max-width: 1023px) 
+  .altraphoto--container .content-wrapper.image-right 
+    padding-top: 32px
+  
+
+.altraphoto--container .content-wrapper p 
+  margin: 0
+  padding: 0
+
+.altraphoto--container .content-wrapper .image-content 
+  max-width: var(--img-width)
+  max-height: var(--img-height)
+  clip-path: polygon(0 calc(var(--offset-img)), 100% 0, 100% calc(100% - var(--offset-img)), 0 100%)
+
+@media screen and (max-width: 768px) 
+  .altraphoto--container .content-wrapper .image-content 
+    clip-path: none
+    margin-top: 28px
+  
+
+.altraphoto--container .content-wrapper .image-content img 
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.altraphoto--container .content-wrapper .image-content.image-right 
+  grid-row: 1
+  grid-column: 2
+
+.altraphoto--container .content-wrapper .text-content 
+  max-width: var(--text-width)
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.altraphoto--container .content-wrapper .text-content.image-left 
+  padding-top: 0
+  padding-bottom: calc(1.5 * var(--offset-img))
+
+@media screen and (max-width: 1023px) 
+  .altraphoto--container .content-wrapper .text-content.image-left 
+    padding-bottom: 0
+  
+
+.altraphoto--container .content-wrapper .text-content.image-right 
+  grid-row: 1
+  grid-column: 1
+  padding-top: calc(1.5 * var(--offset-img))
+  padding-bottom: 0
+
+@media screen and (max-width: 1023px) 
+  .altraphoto--container .content-wrapper .text-content.image-right 
+    padding-top: 0
+  
+
+.altraphoto--container .content-wrapper .text-content .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 48px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 1023px) 
+  .altraphoto--container .content-wrapper .text-content .heading 
+    --spacing: 18px
+    font-size: 42px
+    margin-top: 28px
+  
+
+.altraphoto--container .content-wrapper .text-content .heading::before, .altraphoto--container .content-wrapper .text-content .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--text-width) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altraphoto--container .content-wrapper .text-content .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altraphoto--container .content-wrapper .text-content .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altraphoto--container .content-wrapper .text-content .heading.new 
+  color: #B81734
+
+.altraphoto--container .content-wrapper .text-content .description p 
+  margin-top: 24px
+
+.altraphoto--container .content-wrapper .text-content .actions 
+  margin-top: 36px
+  display: flex
+  flex-direction: column
+  row-gap: 18px
+
+.altraphoto--container .content-wrapper .text-content .actions .introduction 
+  font-weight: 600
+
+.altraphoto--container .content-wrapper .text-content .actions .action 
+  --icon-side: 37px
+  padding-left: 12px
+  padding-right: 48px
+  display: grid
+  grid-template-columns: var(--icon-side) auto
+  column-gap: 20px
+
+.altraphoto--container .content-wrapper .text-content .actions .action:hover .icon-blue 
+  opacity: 0
+
+.altraphoto--container .content-wrapper .text-content .actions .action:hover .label 
+  color: #B81734
+
+.altraphoto--container .content-wrapper .text-content .actions .action .icons 
+  margin: auto
+  width: var(--icon-side)
+  height: var(--icon-side)
+  position: relative
+
+.altraphoto--container .content-wrapper .text-content .actions .action .icons .icon-blue, .altraphoto--container .content-wrapper .text-content .actions .action .icons .icon-red 
+  position: absolute
+
+.altraphoto--container .content-wrapper .text-content .actions .action .label 
+  padding-top: 8px
+  margin-bottom: 0
+  text-decoration: underline
+
+.altraphoto--container .content-wrapper .text-content .buttons 
+  margin-top: 46px
+  display: flex
+  flex-direction: column
+  row-gap: 28px
+
+.altraphoto--container .content-wrapper .post-content 
+  grid-column: 1/3
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.altraphoto--container .content-wrapper .post-content .postface 
+  margin-top: 24px
+  max-width: 800px
+
+.altraphoto--container .content-wrapper .post-content .button 
+  margin-top: 38px
+
+
+.altrareferences 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrareferences--container 
+  padding-top: 96px
+  padding-bottom: 96px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrareferences--container 
+    padding-top: 72px
+    padding-bottom: 72px
+  
+
+.altrareferences--container .content-wrapper 
+  --content-max: 1208px
+  padding-left: 24px
+  padding-right: 24px
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 150%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@media screen and (max-width: 768px) 
+  .altrareferences--container .content-wrapper 
+    padding-left: 18px
+    padding-right: 18px
+  
+
+.altrareferences--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrareferences--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrareferences--container .content-wrapper .heading::before, .altrareferences--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrareferences--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrareferences--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrareferences--container .content-wrapper .introduction 
+  margin-top: 24px
+  max-width: calc(var(--content-max) / 2)
+  margin-bottom: 144px
+
+.altrareferences--container .content-wrapper .references 
+  max-width: 888px
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+
+@media screen and (max-width: 1023px) 
+  .altrareferences--container .content-wrapper .references 
+    grid-template-columns: repeat(3, 1fr)
+  
+
+@media screen and (max-width: 768px) 
+  .altrareferences--container .content-wrapper .references 
+    display: flex
+    flex-direction: column
+  
+
+.altrareferences--container .content-wrapper .references .spacer 
+  grid-column-end: span 1
+
+.altrareferences--container .content-wrapper .references .reference 
+  grid-column-end: span 1
+  width: 180px
+  height: 146px
+  position: relative
+  transform: scale(1)
+  transition-property: transform, color
+  transition-duration: 400ms
+  transition-timing-function: ease-in-out
+
+.altrareferences--container .content-wrapper .references .reference:hover 
+  color: #B81734
+  transform: scale(1.5)
+
+.altrareferences--container .content-wrapper .references .reference .identification 
+  width: 270px
+  font-size: 24px
+  font-weight: 600
+  line-height: 125%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.altrareferences--container .content-wrapper .postface 
+  margin-top: 144px
+  max-width: calc(var(--content-max) / 2)
+  margin-bottom: 24px
+
+
+.altrashifters 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrashifters--container 
+  padding-top: 128px
+  padding-bottom: 144px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrashifters--container 
+    padding-top: 64px
+    padding-bottom: 72px
+  
+
+.altrashifters--container .content-wrapper 
+  --content-max: 1208px
+  padding-left: 16px
+  padding-right: 16px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.altrashifters--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrashifters--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrashifters--container .content-wrapper .heading::before, .altrashifters--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrashifters--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrashifters--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrashifters--container .content-wrapper .introduction 
+  margin-top: 32px
+  max-width: calc(var(--content-max) / 2)
+  font-family: "Gill Sans Light"
+  font-size: 38px
+  line-height: 125%
+
+@media screen and (max-width: 768px) 
+  .altrashifters--container .content-wrapper .introduction 
+    font-size: 28px
+  
+
+.altrashifters--container .content-wrapper .cards 
+  margin-top: 24px
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 32px
+
+@media screen and (max-width: 1199px) 
+  .altrashifters--container .content-wrapper .cards 
+    grid-template-columns: repeat(2, 1fr)
+  
+
+@media screen and (max-width: 768px) 
+  .altrashifters--container .content-wrapper .cards 
+    grid-template-columns: 1fr
+  
+
+.altrashifters--container .content-wrapper .cards article:hover 
+  cursor: help
+
+.altrashifters--container .content-wrapper .cards .card 
+  --anim-duration: 450ms
+  max-width: 380px
+  background-color: #102237
+  font-family: "Gill Sans"
+  font-size: 18px
+  display: flex
+  flex-direction: column
+
+.altrashifters--container .content-wrapper .cards .card:hover > .image-content 
+  height: 0
+
+.altrashifters--container .content-wrapper .cards .card:hover > .solution-content 
+  height: 230px
+
+.altrashifters--container .content-wrapper .cards .card .image-content 
+  height: 230px
+  transition-property: height
+  transition-duration: var(--anim-duration)
+
+.altrashifters--container .content-wrapper .cards .card .image-content img 
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.altrashifters--container .content-wrapper .cards .card .problem-content 
+  padding-left: 40px
+  padding-right: 32px
+
+.altrashifters--container .content-wrapper .cards .card .problem-content .title 
+  margin-top: 36px
+  margin-bottom: 24px
+  font-size: 30px
+  line-height: 130%
+  letter-spacing: 0.04em
+
+.altrashifters--container .content-wrapper .cards .card .problem-content .red-line 
+  width: 100%
+  height: 1px
+  background-color: #B81734
+
+.altrashifters--container .content-wrapper .cards .card .problem-content .preface 
+  margin-top: 36px
+  margin-bottom: 48px
+  font-family: "Gill Sans Light"
+  font-style: italic
+
+.altrashifters--container .content-wrapper .cards .card .solution-content 
+  padding-left: 40px
+  padding-right: 32px
+  overflow: hidden
+  height: 0
+  transition-property: height
+  transition-duration: var(--anim-duration)
+
+.altrashifters--container .content-wrapper .cards .card .solution-content .intro 
+  margin-top: 0
+  font-size: 20px
+  font-weight: 600
+
+.altrashifters--container .content-wrapper .cards .card .solution-content .lines 
+  padding-left: 16px
+  padding-right: 27px
+  list-style-image: url("../img/list-disk-marker.svg")
+  list-style-position: outside
+
+.altrashifters--container .content-wrapper .cards .card .solution-content .lines .line 
+  margin-top: 16px
+  padding-left: 8px
+
+
+.altrasimpletext 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrasimpletext--container 
+  padding-top: 84px
+  padding-bottom: 112px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrasimpletext--container 
+    padding-top: 64px
+    padding-bottom: 64px
+  
+
+.altrasimpletext--container .content-wrapper 
+  --content-max: 1208px
+  max-width: var(--content-max)
+  padding-left: 24px
+  padding-right: 24px
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 150%
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@media screen and (max-width: 768px) 
+  .altrasimpletext--container .content-wrapper 
+    padding-left: 16px
+    padding-right: 16px
+  
+
+.altrasimpletext--container .content-wrapper p 
+  margin: 0
+  padding: 0
+
+.altrasimpletext--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrasimpletext--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrasimpletext--container .content-wrapper .heading::before, .altrasimpletext--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrasimpletext--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrasimpletext--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrasimpletext--container .content-wrapper .preface, .altrasimpletext--container .content-wrapper .postface 
+  margin-top: 44px
+
+@media screen and (max-width: 768px) 
+  .altrasimpletext--container .content-wrapper .preface, .altrasimpletext--container .content-wrapper .postface 
+    margin-top: 32px
+  
+
+.altrasimpletext--container .content-wrapper .preface 
+  max-width: 720px
+
+.altrasimpletext--container .content-wrapper .postface 
+  max-width: 640px
+
+.altrasimpletext--container .content-wrapper .introduction 
+  margin-top: 52px
+  max-width: 650px
+  font-family: "Gill Sans Light"
+  font-size: 38px
+  line-height: 125%
+
+@media screen and (max-width: 768px) 
+  .altrasimpletext--container .content-wrapper .introduction 
+    margin-top: 36px
+    font-size: 28px
+  
+
+.altrasimpletext--container .content-wrapper .lines 
+  margin-top: 36px
+  max-width: 620px
+
+@media screen and (max-width: 768px) 
+  .altrasimpletext--container .content-wrapper .lines 
+    margin-top: 24px
+  
+
+.altrasimpletext--container .content-wrapper .lines .line 
+  padding-top: 48px
+  font-size: 20px
+  line-height: 140%
+  position: relative
+
+.altrasimpletext--container .content-wrapper .lines .line::after 
+  content: ""
+  width: 27px
+  height: 41px
+  position: absolute
+  top: 4px
+  left: 50%
+  transform: translateX(-50%)
+  background-image: url("../img/empty-arrow-down.svg")
+  background-size: contain
+
+.altrasimpletext--container .content-wrapper .lines .line:first-child::after 
+  background-image: url("../img/full-arrow-down.svg")
+
+.altrasimpletext--container .content-wrapper .lines .line p 
+  padding-bottom: 8px
+
+
+.altrasteps 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrasteps--container 
+  padding-top: 128px
+  padding-bottom: 96px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrasteps--container 
+    padding-top: 64px
+    padding-bottom: 48px
+  
+
+.altrasteps--container .content-wrapper 
+  --content-max: 1208px
+  padding-left: 24px
+  padding-right: 24px
+  font-family: "Gill Sans"
+  font-size: 18px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@media screen and (max-width: 768px) 
+  .altrasteps--container .content-wrapper 
+    padding-left: 16px
+    padding-right: 16px
+  
+
+.altrasteps--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrasteps--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrasteps--container .content-wrapper .heading::before, .altrasteps--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrasteps--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrasteps--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrasteps--container .content-wrapper .preface, .altrasteps--container .content-wrapper .postface 
+  font-family: "Gill Sans Light"
+  font-size: 24px
+  line-height: 150%
+
+@media screen and (max-width: 768px) 
+  .altrasteps--container .content-wrapper .preface, .altrasteps--container .content-wrapper .postface 
+    margin-top: 32px
+  
+
+.altrasteps--container .content-wrapper .preface 
+  margin-top: 56px
+  max-width: 792px
+
+.altrasteps--container .content-wrapper .postface 
+  margin-top: 84px
+  max-width: 626px
+
+.altrasteps--container .content-wrapper .steps-content 
+  margin-top: 48px
+  display: grid
+  grid-template-columns: repeat(2, minmax(auto, 484px))
+  gap: 32px
+
+@media screen and (max-width: 768px) 
+  .altrasteps--container .content-wrapper .steps-content 
+    grid-template-columns: 1fr
+  
+
+.altrasteps--container .content-wrapper .steps-content .step-block 
+  min-height: 192px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+@media screen and (max-width: 768px) 
+  .altrasteps--container .content-wrapper .steps-content .step-block 
+    min-height: auto
+  
+
+.altrasteps--container .content-wrapper .steps-content .step-block .order 
+  margin: 0
+  font-family: "Prata"
+  font-size: 56px
+  color: #B81734
+
+.altrasteps--container .content-wrapper .steps-content .step-block .content 
+  max-width: 384px
+  line-height: 130%
+
+.altrasteps--container .content-wrapper .steps-content .step-block .content p 
+  margin: 8px auto
+
+.altrasteps--container .content-wrapper .steps-content .step-block .content p em 
+  font-size: 14px
+  font-style: normal
+
+
+.altrastickers 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrastickers--container 
+  padding-top: 144px
+  padding-bottom: 144px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrastickers--container 
+    padding-top: 84px
+    padding-bottom: 84px
+  
+
+.altrastickers--container .content-wrapper 
+  --content-max: 1208px
+  padding-left: 16px
+  padding-right: 16px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.altrastickers--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrastickers--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrastickers--container .content-wrapper .heading::before, .altrastickers--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrastickers--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrastickers--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrastickers--container .content-wrapper .stickers 
+  margin-top: 96px
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  column-gap: 32px
+  row-gap: 24px
+
+@media screen and (max-width: 1023px) 
+  .altrastickers--container .content-wrapper .stickers 
+    grid-template-columns: repeat(2, 1fr)
+  
+
+@media screen and (max-width: 768px) 
+  .altrastickers--container .content-wrapper .stickers 
+    grid-template-columns: 1fr
+  
+
+.altrastickers--container .content-wrapper .stickers article:hover 
+  cursor: help
+
+.altrastickers--container .content-wrapper .stickers .sticker 
+  max-width: 380px
+  min-height: 139px
+  padding-left: 27px
+  padding-right: 70px
+  background-color: #FFF
+  display: flex
+  align-items: center
+  position: relative
+
+.altrastickers--container .content-wrapper .stickers .sticker .title 
+  margin: 0
+  padding-top: 8px
+  font-family: "Gill Sans"
+  font-size: 30px
+  line-height: 110%
+  letter-spacing: 0.04em
+
+.altrastickers--container .content-wrapper .stickers .sticker .arrow 
+  width: 32px
+  height: 32px
+  position: absolute
+  top: 50%
+  right: 20px
+  transform: translateY(-50%) scaleY(1)
+  transition: transform 400ms ease-in-out
+
+.altrastickers--container .content-wrapper .stickers .sticker:hover .arrow 
+  transform: translateY(-50%) scaleY(-1)
+
+.altrastickers--container .content-wrapper .stickers .sticker:hover .dropdown 
+  transform: scaleY(1)
+
+.altrastickers--container .content-wrapper .stickers .sticker .dropdown 
+  padding-bottom: 24px
+  position: absolute
+  top: 100%
+  left: 0
+  z-index: 50
+  font-family: "Gill Sans"
+  font-size: 18px
+  background-color: #FFF
+  transform-origin: top
+  transform: scaleY(0)
+  transition: transform 400ms ease-in-out
+
+.altrastickers--container .content-wrapper .stickers .sticker .dropdown .text 
+  padding-left: 27px
+  padding-right: 24px
+  line-height: 125%
+  letter-spacing: 0.04em
+
+.altrastickers--container .content-wrapper .stickers .sticker .dropdown .list 
+  padding-left: 44px
+  padding-right: 27px
+  list-style-image: url("../img/list-disk-marker.svg")
+  list-style-position: outside
+
+.altrastickers--container .content-wrapper .stickers .sticker .dropdown .list .item 
+  margin-top: 16px
+  padding-left: 8px
+
+.altrastickers--container .content-wrapper .postface 
+  margin-top: 64px
+  margin-bottom: 32px
+  max-width: calc(var(--content-max) * 3 / 4)
+
+
+.altrathumbnails 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.altrathumbnails--container 
+  padding-top: 144px
+  padding-bottom: 222px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .altrathumbnails--container 
+    padding-top: 84px
+    padding-bottom: 96px
+  
+
+.altrathumbnails--container .content-wrapper 
+  --content-max: 1208px
+  padding-left: 16px
+  padding-right: 16px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.altrathumbnails--container .content-wrapper .heading 
+  --spacing: 36px
+  font-family: "Prata"
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+
+@media screen and (max-width: 768px) 
+  .altrathumbnails--container .content-wrapper .heading 
+    --spacing: 18px
+    font-size: 42px
+  
+
+.altrathumbnails--container .content-wrapper .heading::before, .altrathumbnails--container .content-wrapper .heading::after 
+  content: ""
+  position: absolute
+  width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+  height: 1px
+  top: 50%
+  background-color: #B81734
+
+.altrathumbnails--container .content-wrapper .heading::before 
+  left: calc(100% + var(--spacing))
+
+.altrathumbnails--container .content-wrapper .heading::after 
+  right: calc(100% + var(--spacing))
+
+.altrathumbnails--container .content-wrapper .preface 
+  margin-top: 32px
+  max-width: calc(var(--content-max) * 3 / 4)
+  font-family: "Gill Sans"
+  font-size: 18px
+  line-height: 150%
+
+.altrathumbnails--container .content-wrapper .thumbnails 
+  margin-top: 48px
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 32px
+
+@media screen and (max-width: 1199px) 
+  .altrathumbnails--container .content-wrapper .thumbnails 
+    grid-template-columns: repeat(2, 1fr)
+  
+
+@media screen and (max-width: 768px) 
+  .altrathumbnails--container .content-wrapper .thumbnails 
+    grid-template-columns: 1fr
+  
+
+.altrathumbnails--container .content-wrapper .thumbnails article:hover 
+  cursor: help
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail 
+  --anim-duration: 450ms
+  background-color: #102237
+  display: flex
+  flex-direction: column
+  position: relative
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .image-wrapper 
+  height: 230px
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .image-wrapper img 
+  width: 380px
+  height: 100%
+  object-fit: cover
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .title-wrapper 
+  min-height: 139px
+  padding-left: 27px
+  padding-right: 70px
+  display: flex
+  align-items: center
+  position: relative
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .title-wrapper .title 
+  margin: 0
+  padding-top: 8px
+  font-family: "Gill Sans"
+  font-size: 30px
+  line-height: 110%
+  letter-spacing: 0.04em
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .title-wrapper .arrow 
+  width: 32px
+  height: 32px
+  position: absolute
+  top: 50%
+  right: 20px
+  transform: translateY(-50%) scaleY(1)
+  transition: transform var(--anim-duration) ease-in-out
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail:hover .arrow 
+  transform: translateY(-50%) scaleY(-1)
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail:hover .dropdown 
+  transform: scaleY(1)
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .dropdown 
+  padding-bottom: 24px
+  position: absolute
+  top: 100%
+  left: 0
+  z-index: 50
+  font-family: "Gill Sans"
+  font-size: 18px
+  background-color: #102237
+  transform-origin: top
+  transform: scaleY(0)
+  transition: transform var(--anim-duration) ease-in-out
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .dropdown .text 
+  padding-left: 27px
+  padding-right: 24px
+  line-height: 125%
+  letter-spacing: 0.04em
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .dropdown .list 
+  padding-left: 44px
+  padding-right: 27px
+  list-style-image: url("../img/list-disk-marker.svg")
+  list-style-position: outside
+
+.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .dropdown .list .item 
+  margin-top: 16px
+  padding-left: 8px
+
+
+.hero-sp 
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+.hero-sp--animation 
+  z-index: -5
+  width: var(--lame-width)
+  height: calc(100% + var(--half-offset))
+  position: absolute
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+
+//Modif
+.hero-sp--animation .illustration-wrapper 
+  position: absolute
+  top: 180px
+  left: 52%
+//Modif
+
+.hero-sp--animation .icon-wrapper 
+  width: 131px
+  height: 131px
+  position: absolute
+  top: 218px
+  left: 50%
+
+.hero-sp--animation .icon-wrapper img 
+  width: 100%
+  height: 100%
+  object-fit: contain
+
+.hero-sp--container 
+  padding-top: 218px
+  padding-bottom: 64px
+  display: flex
+  justify-content: center
+
+@media screen and (max-width: 768px) 
+  .hero-sp--container 
+    padding-top: 192px
+    padding-bottom: 48px
+  
+
+.hero-sp--container .content-wrapper 
+  --content-max: 1900px
+  width: var(--content-max)
+  --padding-left: 116px
+  --padding-right: 24px
+  font-family: "Gill Sans"
+
+@media screen and (max-width: 1199px) 
+  .hero-sp--container .content-wrapper 
+    --padding-left: 36px
+  
+
+@media screen and (max-width: 768px) 
+  .hero-sp--container .content-wrapper 
+    --padding-left: 24px
+  
+
+.hero-sp--container .content-wrapper .heading-wrapper 
+  display: inline-block
+  padding-bottom: 24px
+
+.hero-sp--container .content-wrapper .heading-wrapper .heading 
+  padding-left: var(--padding-left)
+  padding-right: var(--padding-right)
+  max-width: calc(620px + var(--padding-left) + var(--padding-right))
+  font-family: "Gill Sans Light"
+  font-size: 62px
+  line-height: 110%
+  letter-spacing: 0.04em
+  transition: all 400ms ease-out
+
+@media screen and (max-width: 768px) 
+  .hero-sp--container .content-wrapper .heading-wrapper .heading 
+    font-size: 48px
+  
+
+.hero-sp--container .content-wrapper .start-point 
+  max-width: 536px
+  height: 1px
+  background-color: #B81734
+
+.hero-sp--container .content-wrapper .introduction 
+  margin-top: 56px
+  padding-left: var(--padding-left)
+  padding-right: var(--padding-right)
+  max-width: calc(620px + var(--padding-left) + var(--padding-right))
+  font-size: 26px
+  font-weight: 600
+  transition: all 400ms ease-in
+
+@media screen and (max-width: 768px) 
+  .hero-sp--container .content-wrapper .introduction 
+    font-size: 22px
+  
+
+.hero-sp--container .content-wrapper .content 
+  padding-left: var(--padding-left)
+  padding-right: var(--padding-right)
+  max-width: calc(640px + var(--padding-left) + var(--padding-right))
+  font-size: 18px
+  transition: all 400ms ease-in
+
+@media screen and (max-width: 768px) 
+  .hero-sp--container .content-wrapper .content 
+    font-size: 16px
+  
+
+.hero-sp--container .content-wrapper .content ul 
+  list-style-image: url("../img/list-minus-marker.svg")
+  list-style-position: outside
+  padding-left: 16px
+
+.hero-sp--container .content-wrapper .content ul li 
+  padding-left: 16px
+
+.hero-sp--container .content-wrapper .button-wrapper 
+  margin-top: 56px
+  padding-left: var(--padding-left)
+  transition: all 400ms ease-in
+
+
+.altra-background-image 
+  z-index: -100
+  width: var(--lame-width)
+  height: calc(100% + var(--offset))
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  clip-path: polygon(0 calc(var(--offset)), 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+
+.altra-background-image .image 
+  width: 100vw
+  height: 100%
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.altra-background-image .image img 
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+.altra-background-image.lame-hero 
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+
+.altra-background-image.lame-cta 
+  clip-path: polygon(0 calc(var(--offset)), 100% 0, 100% 100%, 0 100%)
+
+
+.altra-background 
+  z-index: -50
+  width: var(--lame-width)
+  height: calc(100% + var(--offset))
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  clip-path: polygon(0 calc(var(--offset)), 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+
+.altra-background.blue 
+  background-color: #102237
+
+
+.altra-background.blue-overlay 
+  background-color: #102237
+  opacity: 0.9
+
+//Modif
+.altra-background.gray 
+  background-color: #f6f6f7
+
+.altra-background.white
+  background-color: #fff
+//Modif
+
+.altra-background.white 
+  background-color: #FFF
+
+.altra-background.lame-hero 
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+
+.altra-background.lame-cta 
+  clip-path: polygon(0 calc(var(--offset)), 100% 0, 100% 100%, 0 100%)
+
+
+.altra-bottom 
+  width: 100%
+  position: absolute
+  bottom: 0
+  box-sizing: content-box
+  border-bottom: 10px solid
+  transform: skewY(calc(-1 * var(--angle)))
+
+.altra-bottom.blue 
+  border-bottom-color: #102237
+
+.altra-bottom.red 
+  border-bottom-color: #B81734
+
+.altra-bottom.lame-cta 
+  transform: translateY(var(--half-offset))
+
+
+.altra-button 
+  width: 302px
+  height: 54px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  box-sizing: content-box
+  border: 1px solid
+  position: relative
+
+.altra-button::before 
+  content: ""
+  width: 24px
+  height: 24px
+  position: absolute
+  top: 50%
+  right: 24px
+  transform: translateY(-50%)
+  background-size: contain
+
+.altra-button.short 
+  width: 245px
+
+.altra-button.blue 
+  background-color: #102237
+  border-color: #102237
+  color: #FFF
+
+.altra-button.blue::before 
+  background-image: url("../img/altra-btn-arrow-red.svg")
+
+.altra-button.blue-red 
+  background-color: #102237
+  border-color: #B81734
+  color: #FFF
+
+.altra-button.blue-red::before 
+  background-image: url("../img/altra-btn-arrow-red.svg")
+
+.altra-button.white 
+  background-color: #FFF
+  border-color: #102237
+  color: #102237
+
+.altra-button.white::before 
+  background-image: url("../img/altra-btn-arrow-red.svg")
+
+.altra-button.red 
+  background-color: #B81734
+  border-color: #B81734
+  color: #FFF
+
+.altra-button.red::before 
+  background-image: url("../img/altra-btn-arrow-white.svg")
+
+.altra-button .label 
+  padding-top: 5px
+  padding-left: 24px
+  padding-right: 60px
+  font-family: "Gill Sans"
+  font-size: 16px
+  line-height: normal
+  text-align: center

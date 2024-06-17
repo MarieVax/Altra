@@ -1,0 +1,101 @@
+@mixin polygon-properties
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --std-width: 1920px
+  --lame-width: calc(1645 / 1440 * 100vw)
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --neg-half-offset: calc(-1*var(--half-offset))
+  --neg-offset: calc(-1*var(--offset))
+  max-width: var(--lame-width)
+  margin: 0 auto
+  box-sizing: border-box
+  position: relative
+  min-height: 822px
+
+  .altra--section-background
+    width: var(--lame-width)
+    position: absolute
+    height: calc(100% + var(--offset))
+    top: calc(-1*var(--half-offset))
+    left: 50%
+    transform: translateX(-50%)
+    clip-path: polygon(0 var(--offset),100% 0,100% calc(100% - var(--offset)),0 100%)
+
+
+@mixin polygon-properties-item
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --std-width: 1920px
+  --lame-width: calc(1645 / 1440 * 100vw)
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --neg-half-offset: calc(-1*var(--half-offset))
+  --neg-offset: calc(-1*var(--offset))
+  max-width: var(--lame-width)
+  margin: 0 auto
+  box-sizing: border-box
+  position: relative
+  min-height: 560px
+
+  .altra--teams-item-background
+    width: var(--lame-width)
+    position: absolute
+    height: calc(100% + var(--offset))
+    top: calc(-1*var(--half-offset))
+    left: 50%
+    transform: translateX(-50%)
+    clip-path: polygon(0 var(--offset),100% 0,100% calc(100% - var(--offset)),0 100%)
+    z-index: -1
+
+
+@mixin slide-active
+  height: 560px 
+  top: -70px
+  overflow: hidden
+  max-width: 381px
+  .secteurs-slider-link
+    opacity: 1 !important
+    visibility: visible !important
+    transition: all 0.3s
+  @media all and (max-width: 550px)
+    max-width: calc(100vw - 60px)
+    min-width: calc(100vw - 60px)
+  .swiper-slide--container
+    &::after
+      height: 276px
+      bottom: -20px
+      left: -9px
+      right: 0
+      width: calc(100% + 100px)
+
+    .swiper-secteurs-image
+      width: 532px
+                
+    .swiper-slide--title
+      top: 35px
+      h3 
+        font-size: 33px
+        padding-left: 0
+        @media all and (max-width: 992px)
+          font-size: 25px
+
+    .swiper-slide--excerpt 
+      opacity: 1
+      visibility: visible
+      transition: all 0.5s ease-in-out 0s
+              
+
+    .swiper-button-next 
+      background: url(/wp-content/themes/altra/assets/img/secteur-arrow-right.svg) no-repeat
+      display: none
+      width: 100%
+      height: 100%
+      background-size: initial
+      right: 0 !important
+      background-position: right
+      left: auto !important
+      top: 90px !important
+      transform: none
+      margin-right: 25px
+      transition: none

@@ -50,9 +50,28 @@ jQuery.event.special.mousewheel = {
 };
 
 jQuery(document).ready(function ($) {
-  $(window).on("beforeunload", function () {
-    $(window).scrollTop(0);
-  });
+  // Define the media query
+  const mediaQuery = window.matchMedia("(min-width: 992px)");
+
+  // Function to handle the change in media query status
+  function handleMediaQueryChange(event) {
+    if (event.matches) {
+      $(window).on("beforeunload", function () {
+        $(window).scrollTop(0);
+      });
+
+      window.addEventListener("resize", function () {
+        $(window).scrollTop(0);
+        location.reload();
+      });
+    }
+  }
+
+  // Add a listener for changes in the media query status
+  mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+  // Initial check
+  handleMediaQueryChange(mediaQuery);
 
   /* Dropdown Menu
 ------------------------------------------------------------------------------*/

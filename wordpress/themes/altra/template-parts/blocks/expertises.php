@@ -16,28 +16,26 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
   if (!empty($block['data']['block_preview_img'])) echo '<img src="' . get_template_directory_uri() . '/assets/img/block-preview/' . $block['data']['block_preview_img'] . '" alt="">';
   //Background Image
   $bg = (get_field('background_image')) ? get_field('background_image')['url'] : '';
-
 ?>
-
-  <div class="relative expertises">
+  <div class="relative expertises-block">
     <div class="overlay-block"></div>
 
-    <img class="absolute expertises-bk-pin" alt="" src="/wp-content/themes/altra/assets/img/bk-Group.svg">
-    <div class="expertises--container">
+    <img class="absolute expertises-block-bk-pin" alt="" src="/wp-content/themes/altra/assets/img/bk-Group.svg">
+    <div class="expertises-block--container">
       <?php
       //Heading
       if ($heading = get_field('heading')) :
         $headerTag = (get_field('heading_tag')) ? get_field('heading_tag') : 'h2';
-        printf('<%s class="expertises--heading heading-h2"><div class="heading-h2-before"></div>%s<div class="heading-h2-after"></div></%s>', $headerTag, $heading, $headerTag);
+        printf('<%s class="expertises-block--heading heading-h2"><div class="heading-h2-before"></div>%s<div class="heading-h2-after"></div></%s>', $headerTag, $heading, $headerTag);
       endif;
 
       //subheading
       if ($subheading = get_field('subheading')) :
-        printf('<div class="expertises--subheading subheading">%s</div>', $subheading);
+        printf('<div class="expertises-block--subheading subheading">%s</div>', $subheading);
       endif;
       ?>
-      <div class="expertises--list">
-        <div class="expertises--list_item expertises--list_item-text-top">
+      <div class="expertises-block--list">
+        <div class="expertises-block--list_item expertises-block--list_item-text-top">
           <?php
           //Text top
           if ($text_top = get_field('text_top')) :
@@ -57,8 +55,8 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
             $expertise_repo = get_field('dossier_illustration', $expertise_ID);
             $expertise_nb = get_field('number_of_images', $expertise_ID); // On récupère le nombre d'images pour l'illustration car cela diffère d'une expertise à l'autre
         ?>
-            <a href="<?php echo $expertise_link ?>" class="expertises--list_item <?php echo $expertise_repo ?> ">
-              <div class="relative expertises--list_item-illu">
+            <a href="<?php echo $expertise_link ?>" class="expertises-block--list_item <?php echo $expertise_repo ?> ">
+              <div class="relative expertises-block--list_item-illu">
                 <?php
                 // Boucle for de 1 à 4
                 for ($i = 1; $i <= 4; $i++) {
@@ -67,7 +65,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
                   // Détermine la classe à utiliser en fonction de la valeur de $i
                   $class = ($i == 1) ? 'relative' : 'absolute top-0 left-0';
                 ?>
-                  <img src="<?php echo $image_url; ?>" alt="" class="expertises--list_item-illu-elem-<?php echo $i; ?> <?php echo $class; ?>">
+                  <img src="<?php echo $image_url; ?>" alt="" class="expertises-block--list_item-illu-elem-<?php echo $i; ?> <?php echo $class; ?>">
                 <?php
                 }
                 ?>
@@ -76,23 +74,23 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
                 // Boucle for de 1 à $expertise_nb pour afficher les blocs qui serviront au traits pointillés
                 for ($i = 1; $i <= 8; $i++) {
                 ?>
-                  <div class="expertises--list_item-illu-div absolute expertises--list_item-illu-div-<?php echo $i; ?>"></div>
+                  <div class="expertises-block--list_item-illu-div absolute expertises-block--list_item-illu-div-<?php echo $i; ?>"></div>
                 <?php
                 }
                 ?>
               </div>
 
-              <div class="expertises--list_item-title expertises--list_item-element"><?php echo $expertise_title ?><span class="expertises--list_item-title-line"></span>
+              <div class="expertises-block--list_item-title expertises-block--list_item-element"><?php echo $expertise_title ?><span class="expertises-block--list_item-title-line"></span>
               </div>
-              <div class="expertises--list_item-excerpt expertises--list_item-element"><?php echo $expertise_excerpt ?></div>
-              <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/btn-arrow.svg' ?>" alt="" class="absolute expertises--list_item-link">
+              <div class="expertises-block--list_item-excerpt expertises-block--list_item-element"><?php echo $expertise_excerpt ?></div>
+              <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/btn-arrow.svg' ?>" alt="" class="absolute expertises-block--list_item-link">
             </a>
 
         <?php
           endwhile;
         endif;
         ?>
-        <div class="expertises--list_item expertises--list_item-text-bottom">
+        <div class="expertises-block--list_item expertises-block--list_item-text-bottom">
           <?php
           //Text top
           if ($text_bottom = get_field('text_bottom')) :

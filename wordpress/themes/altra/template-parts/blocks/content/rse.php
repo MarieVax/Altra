@@ -3,7 +3,10 @@ if ($anchor = get_sub_field('anchor')) :
   $id = sanitize_title($anchor);
 endif;
 
-echo '<div class="altra--section5 altra-section" id="' . $id . '">';
+echo '<div class="altra--section5 altra-section altra--section-' . $id . '" id="' . $id . '">';
+echo '<div class="altra--section-background"></div>';
+echo '<div id="altra--section-' . $id . '">';
+
 
 //Heading
 if ($heading = get_sub_field('heading')) :
@@ -13,13 +16,15 @@ endif;
 
 //Sub-heading
 if ($subheading = get_sub_field('subheading')) :
-  printf('<div class="altra--subheading">%s</div>', $subheading);
+  printf('<div class="altra--subheading subheading">%s</div>', $subheading);
 endif;
+echo '<div class="flex altra--key">';
 
 if (have_rows('key_results')) :
-  echo '<div class"altra--key_results">';
+  echo '<div class="text-center altra--key_results">';
+  $count = 0;
   while (have_rows('key_results')) : the_row();
-    echo '<div class"altra--key_results-item">';
+    echo '<div class="altra--key_results-item altra--key_results-item_' . $count . '">';
 
     //Key Result
     if ($key_result = get_sub_field('key_result')) :
@@ -27,7 +32,11 @@ if (have_rows('key_results')) :
     endif;
 
     echo '</div>';
+    $count++;
   endwhile;
+  echo '<img src="' . get_stylesheet_directory_uri() . '/assets/img/rond-rse.svg" alt="" class="absolute altra--section5-rond">';
+
+  echo '</div>';
 endif;
 
 
@@ -37,5 +46,6 @@ if ($content = get_sub_field('content')) :
 endif;
 
 
+echo '</div>';
 echo '</div>';
 echo '</div>';

@@ -7,6 +7,14 @@
   transform: rotate(-5.5deg)
   width: 150vw
   margin-left: -25vw
+
+  &-link
+    width: 27px
+    height: 27px
+    bottom: 16px
+    right: 16px 
+    opacity: 0 !important
+    visible: hidden ! important
   .overlay-block  
     height: 120%
 
@@ -25,60 +33,34 @@
     margin: auto
   .swiper-secteurs
     max-width: 1210px
-    margin: auto
     height: 600px
+    width: 100vw
+    margin: auto
+    @media all and (max-width: 550px)
+      max-width: 100vw
+      width: 100vw
   
     .swiper-slide
       max-width: 196px
+      min-width: 196px
       height: 451px
       transition: all 0.5s
       overflow: hidden
-      margin: 0 6px 
+      @media all and (min-width: 992px)
+        margin: 0 6px 
       &:nth-child(4)
         .swiper-slide--title h3
           max-width: 80px
 
-      &.active
-        height: 560px 
-        top: -70px
-        overflow: hidden
-        max-width: 381px
-        .swiper-slide--container
-          &::after
-            height: 276px
-            bottom: -20px
-            left: -9px
-            right: 0
-            width: calc(100% + 100px)
+      @media all and (min-width: 992px)
+        &.active
+          @include slide-active
 
-          .swiper-secteurs-image
-            width: 532px
-            
-          .swiper-slide--title
-            top: 35px
-            h3 
-              font-size: 33px
-              padding-left: 0
-
-          .swiper-slide--excerpt 
-            opacity: 1
-            visibility: visible
-            transition: all 0.5s ease-in-out 0s
-           
-
-          .swiper-button-next 
-            background: url(/wp-content/themes/altra/assets/img/secteur-arrow-right.svg) no-repeat
-            display: none
-            width: 100%
-            height: 100%
-            background-size: initial
-            right: 0 !important
-            background-position: right
-            left: auto !important
-            top: 90px !important
-            transform: none
-            margin-right: 25px
-            transition: none
+      @media all and (max-width: 992px)
+        transform: scale(0.9)
+        @include slide-active
+        &-active
+          transform: scale(1)
 
       &--container
         height: 255px
@@ -149,10 +131,17 @@
         padding: 7px 40px
         transition: all 0.5s ease-in-out
         margin-top: 120px
+        @media all and (max-width: 992px)
+          padding: 7px 28px
+          width: 300px
 
 .secteurs-container
   transform: rotate(5.5deg)
   padding: 160px 0
+  @media all and (max-width: 992px)
+    padding: 0
+    width: 100vw
+    margin-left: 25vw
   
     
 

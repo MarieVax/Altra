@@ -55,7 +55,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
                 $active = "";
               endif;
           ?>
-              <div class="swiper-slide <?php echo $active ?>">
+              <a href="<?php echo $secteur_link ?>" class="swiper-slide <?php echo $active ?>">
                 <img src="<?php echo $secteur_thumbnail_url ?>" alt="" class="object-cover w-full h-full swiper-secteurs-image size-full">
                 <div class="relative swiper-slide--container">
                   <div class="swiper-slide--title">
@@ -63,8 +63,9 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
                   </div>
                   <div class="swiper-slide--excerpt"><?php echo wp_trim_words($secteur_excerpt, 20, '...') ?></div>
                   <div class="swiper-button-next"></div>
+                  <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/btn-arrow.svg' ?>" alt="" class="absolute secteurs-slider-link">
                 </div>
-              </div>
+              </a>
           <?php
             endwhile;
           endif;

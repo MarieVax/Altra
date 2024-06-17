@@ -115,14 +115,17 @@ ul.c-hor-menu
     left: 23px
     top: 60px
 
-  &:hover
-    &:after
-      width: calc(100% - 46px)
-
-  &-has-children
+  
+.c-hor-menu .menu-item
+  @media all and (min-width: 992px)
     &:hover
       &:after
-        width: calc(100% - 23px)
+        width: calc(100% - 46px)
+
+    &-has-children
+      &:hover
+        &:after
+          width: calc(100% - 23px)
 
 .sub-menu
   .menu-item
@@ -139,7 +142,7 @@ ul.c-hor-menu
         transition: all 0.3s
         left: 20px
         top: 35px
-
-      &:hover
-        &:after
-          width: calc(100% - 37px)
+      @media all and (min-width: 992px)
+        &:hover
+          &:after
+            width: calc(100% - 37px)
