@@ -1,0 +1,162 @@
+.altracards
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --content-max: 1208px
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+  z-index: 100
+
+  .altra-bottom 
+    bottom: -2px
+
+  &--container
+    padding-top: 84px
+    padding-bottom: 132px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 64px
+      padding-bottom: 64px        
+
+    & .content-wrapper
+      padding-left: 18px
+      padding-right: 18px
+      font-family: 'Gill Sans'
+      font-size: 18px
+      line-height: 150%
+      display: flex
+      flex-direction: column
+      align-items: center
+      @media screen and (max-width: 768px)
+        padding-left: 12px
+        padding-right: 12px
+
+      & .description
+        margin-top: 44px
+        max-width: 804px
+        @media screen and (max-width: 768px)
+          margin-top: 32px
+
+      & .introduction
+        margin-top: 42px
+        max-width: 744px
+        font-family: 'Gill Sans Light'
+        font-size: 38px
+        line-height: 125%
+        position: relative
+        @media screen and (max-width: 768px)
+          margin-top: 36px
+          font-size: 28px
+        &::after
+          content: ''
+          width: 18.5px
+          height: 28px
+          position: absolute
+          top: calc(100% + 18px)
+          left: 50%
+          transform: translateX(-50%)
+          background-image: url('../img/red-arrow-down.svg')
+          background-size: contain
+          background-repeat: no-repeat
+
+      & .cards
+        --card-width: 487px
+        --card-gap: 32px
+        margin-top: 48px
+        column-count: 2
+        column-gap: var(--card-gap)
+        @media screen and (max-width: 768px)
+          column-count: 1
+
+        & .card
+          max-width: var(--card-width)
+          break-inside: avoid
+          position: relative
+          &::after
+            content: ''
+            display: block
+            height: var(--card-gap)
+
+          & .card-sketch,
+          & .card-list,
+          & .card-button
+            background-color: $color-dark-blue
+
+          & .card-sketch
+            margin: auto
+            width: var(--card-width)
+            height: 280px
+            padding: 18px 48px
+            @media screen and (max-width: 768px)
+              height: 210px
+              padding: 16px
+
+          & .card-list
+            display: flex
+            flex-direction: column
+            border-top: 1px solid $color-red
+
+            & .element
+              display: inline-block
+              border-bottom: 1px solid $color-red
+              transition-property: background-color, color
+              transition-duration: 0ms
+              transition-timing-function: ease-in-out
+              &:hover
+                color: $color-dark-blue
+                background-color: #FFF
+              &:hover .explanation
+                max-height: 100vh
+                //transform: scaleY(1)
+                transition-duration: 600ms
+              
+
+              & .title-wrapper
+                min-height: 83px
+                padding-left: 24px
+                padding-right: 24px
+                display: flex
+                flex-direction: column
+                justify-content: center
+
+                & .title
+                  margin: 0
+                  padding-top: 24px
+                  padding-bottom: 6px
+                  font-size: 30px
+                  line-height: 125%
+                  @media screen and (max-width: 768px)
+                    font-size: 24px
+
+              & .explanation
+                margin-top: 0
+                padding-left: 18px
+                padding-right: 18px
+                overflow: hidden
+                line-height: 125%
+                max-height: 0px
+                //transform-origin: top
+                //transform: scaleY(0)
+                transition-property: max-height, transform
+                transition-duration: 0ms
+                transition-timing-function: ease-in-out
+                &.onclick
+                  max-height: 100vh
+                  //transform: scaleY(1)
+                  transition-duration: 600ms
+
+          & .card-button
+            height: 116px
+            position: relative
+            display: block
+            @media screen and (max-width: 768px)
+              height: 96px
+            & img
+              position: absolute
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%)

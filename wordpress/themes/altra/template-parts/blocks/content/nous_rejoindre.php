@@ -33,11 +33,11 @@ endif;
       $left = get_sub_field('link');
       if (isset($left) && !empty($left)) :
 
-        $target_left = (isset($left['target']) && !empty($left['target'])) ? 'target="' . $left['target'] . '"' : '';
-        $url_left = (isset($left['url']) && !empty($left['url'])) ? 'href="' . $left['url'] . '"' : '';
+        // $target_left = (isset($left['target']) && !empty($left['target'])) ? 'target="' . $left['target'] . '"' : '';
+        // $url_left = (isset($left['url']) && !empty($left['url'])) ? 'href="' . $left['url'] . '"' : '';
         $title_left = (isset($left['title']) && !empty($left['title'])) ? $left['title'] : '';
 
-        printf('<a %s %s class="c-btn c-btn-footer-block-left c-btn-light">%s</a>', $url_left, $target_left, $title_left);
+        printf('<div class="c-btn c-btn-footer-block-left c-btn-light c-btn-nous-rejoindre">%s</div>', $title_left);
       endif;
       ?>
     </div>

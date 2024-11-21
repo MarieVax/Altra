@@ -10,7 +10,7 @@
 
   @media all and (max-width: 992px)
     .heading-h2
-      font-size: 40px
+      font-size: 44px
 
     .altra--heading-inside
       max-width: 400px
@@ -22,12 +22,12 @@
     left: -45px
     padding-top: 50px
     width: 430px
-    height: 110vh
+    height: 120vh
     background: #102237
     transform: rotate(-5.5deg)
     z-index: 99
     @media all and (max-width: 1200px)
-      width: 332px
+      width: 352px
     @media all and (max-width: 992px)
       display: none
     
@@ -213,7 +213,7 @@
           background-repeat: no-repeat
           bottom: 8px
           right: -13px
-      max-width: 580px
+      max-width: 527px
       margin: auto
       margin-bottom: 50px
 
@@ -231,7 +231,9 @@
     margin: auto
   
 .altra--main .altra--section3
-
+  @include polygon-properties
+  .altra--section-background
+    background: rgba(16, 34, 55, 0.03)
   .altra--subheading
     max-width: 616px
     margin: auto
@@ -265,10 +267,10 @@
     
     @include polygon-properties-item
 
-    &:nth-child(odd) 
+    &:nth-child(even) 
       .altra--teams-item-background
         background: #f6f7f8
-    &:nth-child(even) 
+    &:nth-child(odd) 
       .altra--teams-item-background
         background: #fff 
     

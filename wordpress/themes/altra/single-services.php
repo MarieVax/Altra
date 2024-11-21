@@ -51,4 +51,6 @@ get_header(); ?>
 	</div><!-- #primary -->
 <?php
 get_sidebar();
+// Tagada
+$cta_block = true;
 get_footer();

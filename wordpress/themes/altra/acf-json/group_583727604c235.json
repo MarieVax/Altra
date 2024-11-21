@@ -428,15 +428,15 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "Add Row",
+            "button_label": "Ajouter un élément",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_5fc79d450b995",
+                    "key": "field_663b3dd46a606",
                     "label": "Icon",
-                    "name": "icon",
+                    "name": "icone_social",
                     "aria-label": "",
-                    "type": "font-awesome",
+                    "type": "image",
                     "instructions": "",
                     "required": 1,
                     "conditional_logic": 0,
@@ -445,19 +445,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 1,
-                    "icon_sets": [
-                        "fab"
-                    ],
-                    "custom_icon_set": "",
-                    "default_label": "<i class=\"fab\"><\/i> facebook",
-                    "default_value": "fab fa-facebook",
-                    "save_format": "class",
-                    "allow_null": 0,
-                    "show_preview": 1,
-                    "enqueue_fa": 0,
-                    "fa_live_preview": "",
-                    "choices": [],
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
                     "parent_repeater": "field_5fc79d280b994"
                 },
                 {
@@ -872,5 +869,5 @@
     "active": true,
     "description": "<strong>Global settings for the website. Very useful for the data that should be available on all or multiple pages. For example: social media profiles, phone number etc.<\/strong><br>Do not remove this group.",
     "show_in_rest": 0,
-    "modified": 1711025014
+    "modified": 1719993947
 }

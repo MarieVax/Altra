@@ -157,6 +157,102 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_6661f771f9625",
+            "label": "Options",
+            "name": "options",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6661f771f9626",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None (No background)",
+                        "blue": "Blue",
+                        "gray": "Gray"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_6661f771f9627",
+                    "label": "Border Color",
+                    "name": "border_color",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None (No border)",
+                        "blue": "Blue",
+                        "red": "Red"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_66b36f5097e1d",
+                    "label": "Border Color Top",
+                    "name": "border_color_top",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None (No border)",
+                        "blue": "Blue",
+                        "red": "Red"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -177,5 +273,5 @@
     "active": true,
     "description": "Block with title, description and list of items. Can also include a pre and postface.",
     "show_in_rest": 0,
-    "modified": 1716653723
+    "modified": 1723035482
 }

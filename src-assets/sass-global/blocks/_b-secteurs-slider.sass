@@ -2,7 +2,7 @@
   padding-top: 75px
 
 .secteurs-slider
-  margin-bottom: 150px
+  padding-bottom: 10px
   background: #fff
   transform: rotate(-5.5deg)
   width: 150vw
@@ -50,7 +50,7 @@
         margin: 0 6px 
       &:nth-child(4)
         .swiper-slide--title h3
-          max-width: 80px
+          max-width: 330px
 
       @media all and (min-width: 992px)
         &.active
@@ -106,7 +106,7 @@
           display: inline-block
           position: relative
           transition: all 0.5s ease-in-out
-          max-width: 270px
+          max-width: 300px
 
           &::after
             content: ""
@@ -135,6 +135,12 @@
           padding: 7px 28px
           width: 300px
 
+  &.onload 
+    margin-top: 0 !important    
+
+#secteurs-slider  
+  &.onload 
+    margin-top: 0 !important  
 .secteurs-container
   transform: rotate(5.5deg)
   padding: 160px 0
@@ -145,6 +151,17 @@
   
     
 
+.page-nos-secteurs
+  header
+    background: $color-dark-blue
 
+  .footer-block
+    margin-top: -250px
+
+  .secteurs-slider
+    overflow: hidden
+    margin-top: 120px
+    @media all and (max-width: 768px)
+      margin-top: 20px
 
         

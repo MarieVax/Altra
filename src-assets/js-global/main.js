@@ -56,13 +56,13 @@ jQuery(document).ready(function ($) {
   // Function to handle the change in media query status
   function handleMediaQueryChange(event) {
     if (event.matches) {
-      $(window).on("beforeunload", function () {
+      if (window.location.pathname === "/") {
         $(window).scrollTop(0);
-      });
+      }
 
       window.addEventListener("resize", function () {
-        $(window).scrollTop(0);
-        location.reload();
+        // $(window).scrollTop(0);
+        // location.reload();
       });
     }
   }
@@ -248,7 +248,9 @@ jQuery(document).ready(function ($) {
   }
 
   // Fonction pour ouvrir la modal avec la tab1 active
-  $("#btn1 img, #btn1 img, .c-btn-footer-block-right").on("click", function () {
+  $(
+    "#btn1 img, #btn1 img, .c-btn-footer-block-right, .contact-button, .c-btn-nous-rejoindre"
+  ).on("click", function () {
     openModal("tab1");
   });
 
@@ -265,7 +267,12 @@ jQuery(document).ready(function ($) {
         $(event.target).hasClass("btn-fixed-elem") ||
         $(event.target).hasClass("btn-fixed-img") ||
         $(event.target).hasClass("btn-fixed-txt") ||
-        $(event.target).hasClass("c-btn-footer-block-right")
+        $(event.target).hasClass("contact-button") ||
+        $(event.target).hasClass("button-wrapper") ||
+        $(event.target).hasClass("altra-button") ||
+        $(event.target).hasClass("label") ||
+        $(event.target).hasClass("c-btn-footer-block-right") ||
+        $(event.target).hasClass("c-btn-nous-rejoindre")
       ) {
         return; // Si l'élément cliqué est un des éléments spécifiques, ne faites rien
       }
@@ -318,6 +325,12 @@ jQuery(document).ready(function ($) {
     if (!currentValue) {
       var originalPlaceholder = $(this).data("original-placeholder");
       $(this).attr("placeholder", originalPlaceholder);
+    }
+  });
+
+  $(".sticker").on("click", function () {
+    if ($(window).width() < 992) {
+      $(this).find(".dropdown").toggleClass("transform");
     }
   });
 });

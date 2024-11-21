@@ -5,6 +5,7 @@ endif;
 
 echo '<div class="altra--section3 altra-section altra--section-' . $id . '" id="' . $id . '">';
 
+echo '<div class="altra--section-background"></div>';
 
 //Heading
 if ($heading = get_sub_field('heading')) :

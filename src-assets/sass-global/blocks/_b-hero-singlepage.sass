@@ -1,0 +1,296 @@
+.hero-sp
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  &--animation
+    z-index: -5
+    width: var(--lame-width)
+    height: calc(100% + var(--half-offset))
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+
+    & .illustration-wrapper
+      position: absolute
+      top: 218px
+      left: 50%
+
+    & .icon-wrapper
+      width: 131px
+      height: 131px
+      position: absolute
+      top: 218px
+      left: 50%
+      & img
+        width: 100%
+        height: 100%
+        object-fit: contain
+
+  &--container
+    padding-top: 218px
+    padding-bottom: 64px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 192px
+      padding-bottom: 48px
+    
+    & .content-wrapper
+      width: 1900px
+      --padding-left: 116px
+      --padding-right: 24px
+      font-family: 'Gill Sans'
+      @media screen and (max-width: 1199px)
+        --padding-left: 36px
+      @media screen and (max-width: 768px)
+        --padding-left: 24px
+
+      & .heading-wrapper
+        display: inline-block
+        padding-bottom: 24px
+
+        & .heading
+          padding-left: var(--padding-left)
+          padding-right: var(--padding-right)
+          max-width: calc(620px + var(--padding-left) + var(--padding-right))
+          font-family: 'Gill Sans Light'
+          font-size: 62px
+          line-height: 110%
+          letter-spacing: 0.04em
+          transition: all 400ms ease-out
+          @media screen and (max-width: 768px)
+            font-size: 48px
+
+      & .start-point
+        max-width: 536px
+        height: 1px
+        border-bottom: 1px solid $color-red
+        -webkit-transform: scale(1)
+        transform: scale(1)
+
+      & .introduction
+        margin-top: 56px
+        padding-left: var(--padding-left)
+        padding-right: var(--padding-right)
+        max-width: calc(620px + var(--padding-left) + var(--padding-right))
+        font-size: 26px
+        font-weight: 600
+        transition: all 400ms ease-in
+        @media screen and (max-width: 768px)
+          font-size: 22px
+
+      & .content
+        padding-left: var(--padding-left)
+        padding-right: var(--padding-right)
+        max-width: calc(640px + var(--padding-left) + var(--padding-right))
+        font-size: 18px
+        transition: all 400ms ease-in
+        @media screen and (max-width: 768px)
+          font-size: 16px
+        & ul
+          list-style-image: url('../img/list-minus-marker.svg')
+          list-style-position: outside
+          padding-left: 16px
+          & li
+            padding-left: 16px
+
+      & .button-wrapper
+        margin-top: 56px
+        padding-left: var(--padding-left)
+        transition: all 400ms ease-in
+
+.altra-background-image
+  z-index: -100
+  width: var(--lame-width)
+  height: calc(100% + var(--offset))
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  clip-path: polygon(0 calc(var(--offset)), 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+  & .image
+    width: 100vw
+    height: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    & img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &.lame-hero
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+  &.lame-cta
+    clip-path: polygon(0 calc(var(--offset)), 100% 0, 100% 100%, 0 100%)
+
+.altra-background
+  z-index: -50
+  width: var(--lame-width)
+  height: calc(100% + var(--offset))
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  clip-path: polygon(0 calc(var(--offset)), 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+  &.blue
+    background-color: $color-dark-blue
+  &.blue-overlay
+    background-color: $color-dark-blue
+    opacity: 0.9
+  &.gray
+    background-color: #f6f6f7
+  &.white, &.none
+    background-color: #FFF
+  &.lame-hero
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--offset)), 0 100%)
+  &.lame-cta
+    clip-path: polygon(0 calc(var(--offset)), 100% 0, 100% 100%, 0 100%)
+
+.altra-bottom
+  width: 100%
+  position: absolute
+  bottom: 0
+  box-sizing: content-box
+  border-bottom: 10px solid
+  transform: skewY(calc(-1 * var(--angle)))
+  &.blue
+    border-bottom-color: $color-dark-blue
+  &.red
+    border-bottom-color: $color-red
+  &.lame-cta
+    transform: translateY(var(--half-offset))
+
+.altra-heading
+  --spacing: 36px
+  font-family: 'Prata'
+  font-size: 56px
+  line-height: 125%
+  letter-spacing: 0.04em
+  position: relative
+  @media screen and (max-width: 768px)
+    --spacing: 18px
+    font-size: 42px
+    fotn-family: 'Gill Sans'
+  &::before,
+  &::after 
+    content: ''
+    position: absolute
+    width: calc(var(--content-max) / 2 - 50% - var(--spacing))
+    height: 1px
+    top: 50%
+    background-color: $color-red
+  &::before
+    left: calc(100% + var(--spacing))
+  &::after
+    right: calc(100% + var(--spacing))
+
+.altra-button
+  width: 302px
+  height: 54px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  box-sizing: content-box
+  border: 1px solid
+  transition: all 350ms
+  position: relative
+  &::before
+    content: ''
+    width: 24px
+    height: 24px
+    position: absolute
+    top: 50%
+    right: 24px
+    transform: translateY(-50%)
+    background-size: contain
+    transition: all 350ms
+  &.short
+    width: 245px
+  &.blue
+    background-color: $color-dark-blue
+    border-color: $color-dark-blue
+    color: #FFF
+    &::before
+      background-image: url('../img/altra-btn-arrow-red.svg')
+    &:hover
+      background-color: $color-red
+      border-color: $color-red
+      &::before
+        background-image: url('../img/altra-btn-arrow-white.svg')
+  &.blue-red
+    background-color: $color-dark-blue
+    border-color: $color-red
+    color: #FFF
+    &::before
+      background-image: url('../img/altra-btn-arrow-red.svg')
+    &:hover
+      background-color: $color-red
+      &::before
+        background-image: url('../img/altra-btn-arrow-white.svg')
+  &.blue-lite
+    background-color: #223E5E
+    border-color: $color-dark-blue
+    color: #FFF
+    &::before
+      background-image: url('../img/altra-btn-arrow-red.svg')
+    &:hover
+      background-color: $color-red
+      border-color: $color-red
+      &::before
+        background-image: url('../img/altra-btn-arrow-white.svg')
+  &.white
+    background-color: #FFF
+    border-color: $color-dark-blue
+    color: $color-dark-blue
+    &::before
+      background-image: url('../img/altra-btn-arrow-red.svg')
+    &:hover
+      background-color: $color-dark-blue
+      color: #FFF
+  &.red          
+    background-color: $color-red
+    border-color: $color-red
+    color: #FFF
+    &::before
+      background-image: url('../img/altra-btn-arrow-white.svg')
+    &:hover
+      background-color: #CD3853
+  & .label
+    padding-top: 5px
+    padding-left: 23px
+    padding-right: 60px
+    font-family: 'Gill Sans'
+    font-size: 16px
+    line-height: normal
+    text-align: center
+
+
+.services.type-services
+  position: relative
+  z-index: 99
+
+.icon-montee-competence
+  display: none
+
+.services-formation-transfert-de-competences .icon-wrapper-4
+  width: 131px
+  height: 131px
+  
+.page-formation-transfert-de-competences  .icon-montee-competence, 
+.services-formation-transfert-de-competences  .icon-montee-competence
+  display: block
+  position: absolute
+  left: 1150px
+  top: 400px
+  background: $color-dark-blue
+  z-index: 99
+  padding: 20px

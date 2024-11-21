@@ -17,7 +17,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 ?>
 
   <div class="hero-sp">
-
+    <div class="overlay-block"></div>
     <?php // Lame configuration
     $lame_position = 'lame-hero'; // lame-hero or lame-cta
 
@@ -33,21 +33,21 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
     $contrast_class = ($background_color == 'blue' || $background_color == 'blue-overlay') ? 'text-white ' : '';
 
     // Optional bottom border
-    $border_color = get_field('border_color') ?? 'red';
-    if ($border_color != 'none') :
-      printf(
-        '<div class="altra-bottom %s %s"></div>',
-        $lame_position,
-        $border_color
-      );
-    endif;
+    // $border_color = get_field('border_color') ?? 'red';
+    // if ($border_color != 'none') :
+    //   printf(
+    //     '<div class="altra-bottom %s %s"></div>',
+    //     $lame_position,
+    //     $border_color
+    //   );
+    // endif;
     ?>
 
     <div class="hero-sp--animation">
 
       <?php // Illustration in wrapper
-      global $nb;
-      global $repo;
+      $nb = get_field('number_of_images_cards');
+      $repo = get_field('dossier_illustration');
       $expertise_repo = $repo;
       $expertise_nb = $nb;
       if ($illustration_url = (get_field('illustration')['url'])) :
@@ -66,7 +66,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
         <?php
         // Boucle for de 1 à $expertise_nb pour afficher les blocs qui serviront au traits pointillés
-        for ($i = 1; $i <= 8; $i++) {
+        for ($i = 1; $i <= 9; $i++) {
         ?>
           <div class="hero-sp--animation-div absolute hero-sp--animation-div-<?php echo $i; ?>"></div>
       <?php
@@ -74,18 +74,6 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
         echo "</div>";
 
-      endif;
-
-      // Icon in wrapper
-      if ($icon_url = (get_field('icon')['url'])) :
-        $wrapStart = '<div class="icon-wrapper">';
-        $wrapEnd = "</div>";
-        printf(
-          '%s<img src="%s" alt="">%s',
-          $wrapStart,
-          esc_url($icon_url),
-          $wrapEnd
-        );
       endif;
       ?>
     </div>
@@ -110,7 +98,35 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
         endif;
 
         // Start animation point
+        echo '<div class="relative line-dotted">';
+        // Icon in wrapper
+        if ($icon_url = (get_field('icon')['url'])) :
+
+          echo '<div class="icon-wrapper">';
+          $image_url_1 = get_stylesheet_directory_uri() . '/assets/img/roue_ADN_services.svg';
+          $image_url_2 = get_stylesheet_directory_uri() . '/assets/img/Cercle-interieur.svg';
+          $image_url_3 = get_stylesheet_directory_uri() . '/assets/img/rond-dotted.svg';
+
+          $comp = get_stylesheet_directory_uri() . '/assets/img/montee-competence.png';
+
+          echo '<img class="absolute icon-wrapper-1" src="' . $image_url_1 . '" alt="">';
+          echo '<img class="absolute icon-wrapper-2" src="' . $image_url_2 . '" alt="">';
+          echo '<img class="absolute icon-wrapper-3" src="' . $image_url_3 . '" alt="">';
+
+          printf(
+            '<img src="%s" alt="" class="icon-wrapper-4">',
+            esc_url($icon_url)
+          );
+          echo "</div>";
+          printf('<div class="absolute line-dotted-div-1"></div>');
+          printf('<div class="absolute line-dotted-div-2"></div>');
+          printf('<div class="absolute line-dotted-div-3"></div>');
+          printf('<div class="absolute line-dotted-div-4"></div>');
+          printf('<div class="icon-montee-competence"><img src="%s" alt="" class="icon-montee-competence-img"></div>', $comp);
+        endif;
         printf('<div class="start-point"></div>');
+
+        echo '</div>';
 
         // Introduction
         if ($introduction = get_field('introduction')) :

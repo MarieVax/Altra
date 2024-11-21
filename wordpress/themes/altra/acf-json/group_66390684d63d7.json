@@ -394,7 +394,8 @@
                     "choices": {
                         "none": "None (No background)",
                         "blue": "Blue",
-                        "gray": "Gray"
+                        "gray": "Gray",
+                        "white": "White"
                     },
                     "default_value": "none",
                     "return_format": "value",
@@ -477,5 +478,5 @@
     "active": true,
     "description": "Block with two columns of texts with list, and lot of options configuration.",
     "show_in_rest": 0,
-    "modified": 1716704917
+    "modified": 1719991479
 }

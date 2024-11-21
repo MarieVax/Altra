@@ -1,0 +1,193 @@
+{
+    "key": "group_6669502bb4a78",
+    "title": "Block - Altrabigstickers",
+    "fields": [
+        {
+            "key": "field_6669502bb6909",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Nos missions \r\nd’experts",
+            "maxlength": "",
+            "rows": -1,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_6669502bb6911",
+            "label": "Heading Tag",
+            "name": "heading_tag",
+            "aria-label": "",
+            "type": "header_tag",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6669502bb6909",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "h2",
+            "initial_value": "p"
+        },
+        {
+            "key": "field_6669502bb6917",
+            "label": "Stickers",
+            "name": "stickers",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "row",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6669502bb9031",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": -1,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_6669502bb6917"
+                },
+                {
+                    "key": "field_666952f8810b2",
+                    "label": "Title Tag",
+                    "name": "title_tag",
+                    "aria-label": "",
+                    "type": "header_tag",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6669502bb9031",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "h3",
+                    "initial_value": "p",
+                    "parent_repeater": "field_6669502bb6917"
+                },
+                {
+                    "key": "field_6669502bb9042",
+                    "label": "Content",
+                    "name": "content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6669502bb9031",
+                                "operator": "!=empty"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "visual",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_6669502bb6917"
+                }
+            ]
+        },
+        {
+            "key": "field_67363931426f8",
+            "label": "Border Color",
+            "name": "border_color",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None (No border)",
+                "blue": "Blue",
+                "red": "Red"
+            },
+            "default_value": "red",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/altrabigstickers"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Block for numbers on an overlayed image.",
+    "show_in_rest": 0,
+    "modified": 1731607223
+}

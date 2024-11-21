@@ -9,14 +9,14 @@
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "Nos références",
+            "default_value": "Ils nous\u2028\r\nfont confiance",
             "maxlength": "",
             "rows": 1,
             "placeholder": "",
@@ -67,51 +67,6 @@
             "new_lines": "br"
         },
         {
-            "key": "field_66433549be981",
-            "label": "Categories",
-            "name": "categories",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "row",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_66433549c28b1",
-                    "label": "Category",
-                    "name": "category",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_66433549be981"
-                }
-            ]
-        },
-        {
             "key": "field_66433693820e2",
             "label": "References",
             "name": "references",
@@ -135,29 +90,8 @@
             "sub_fields": [
                 {
                     "key": "field_664336da820e3",
-                    "label": "Identification",
-                    "name": "identification",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_66433693820e2"
-                },
-                {
-                    "key": "field_6643380e820e4",
-                    "label": "Informations",
-                    "name": "informations",
+                    "label": "Reference",
+                    "name": "reference",
                     "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
@@ -191,7 +125,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Nos projets ne s’arrêtent pas là. Vous voulez en savoir plus.",
+            "default_value": "Découvrez comment nous transformons chaque ambition en succès.",
             "maxlength": "",
             "rows": 1,
             "placeholder": "",
@@ -227,12 +161,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "page",
-                        "expertises",
-                        "secteurs",
-                        "services"
-                    ],
+                    "post_type": "",
                     "post_status": "",
                     "taxonomy": "",
                     "return_format": "object",
@@ -256,7 +185,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": "contact",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
@@ -317,9 +246,10 @@
                     "choices": {
                         "none": "None (No background)",
                         "blue": "Blue",
-                        "gray": "Gray"
+                        "gray": "Gray",
+                        "white": "White (Pure white)"
                     },
-                    "default_value": "gray",
+                    "default_value": "white",
                     "return_format": "value",
                     "allow_null": 0,
                     "other_choice": 0,
@@ -398,7 +328,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "Block with reference categories, kind of map and postface.",
+    "description": "Block with references over animated decoration, and postface.",
     "show_in_rest": 0,
-    "modified": 1716706472
+    "modified": 1719504899
 }

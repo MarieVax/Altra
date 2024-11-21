@@ -4,7 +4,7 @@
   background: $color-dark-blue
   color: #fff
   width: 150vw
-  height: 955px
+  height: 855px
   transform: rotate(-5.5deg)
   position: relative
   z-index: 0
@@ -42,6 +42,7 @@
       @media all and (min-width: 992px)
         &:hover
           background: $color-blue
+          transform: scale(1.3)
 
           .services-block-list-item-image
             img
@@ -120,7 +121,7 @@
     &-container
       animation: 800s slide infinite linear
       position: absolute
-      right: -13000px
+      left: -13000px
       top: 0
 
     &-list
@@ -185,7 +186,7 @@
     &-container
         animation: 800s slide infinite linear
         position: absolute
-        right: -13000px
+        left: -13000px
         top: 0
 
     &-list
@@ -200,12 +201,15 @@
     @media all and (min-width: 992px)
       display: none
 
+#services 
+  margin-top: -50px 
+  
 @keyframes slide
   0%
     transform: translateX(0)
 
   100%
-    transform: translateX(-100%)
+    transform: translateX(100%)
 
 
 @keyframes slide-reverse
@@ -213,6 +217,21 @@
     transform: translateX(0)
 
   100%
-    transform: translateX(100%)
+    transform: translateX(-100%)
 
-   
+.page-nos-services
+  background:  $color-dark-blue
+
+  .services-block-slider-top
+    display: none
+
+  header
+    background: $color-dark-blue
+
+  .footer-block
+    margin-top: -250px
+
+  .services-block
+    margin-top: 120px
+    @media all and (max-width: 768px)
+      margin-top: 20px

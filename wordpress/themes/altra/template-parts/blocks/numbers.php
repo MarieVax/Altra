@@ -62,10 +62,10 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
               printf('%s', $years_experience);
               echo '<span class="">ans</span>';
               echo '<div class="relative flex numbers--years_experience-img">
-          <img src="/wp-content/themes/altra/assets/img/animations/Line-light-red.svg" alt="" class="numbers--years_experience-img1">
-          <img src="/wp-content/themes/altra/assets/img/animations/Line-light-red.svg" alt="" class="numbers--years_experience-img1">
-          <img src="/wp-content/themes/altra/assets/img/animations/arrow.svg" alt="" class="absolute numbers--years_experience-img2">
-        </div>';
+                <img src="/wp-content/themes/altra/assets/img/animations/Line-light-red.svg" alt="" class="numbers--years_experience-img1">
+                <img src="/wp-content/themes/altra/assets/img/animations/Line-light-red.svg" alt="" class="numbers--years_experience-img1">
+                <img src="/wp-content/themes/altra/assets/img/animations/arrow.svg" alt="" class="absolute numbers--years_experience-img2">
+              </div>';
               echo '</div>';
             endif; ?>
 

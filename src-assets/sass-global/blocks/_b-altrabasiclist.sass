@@ -1,0 +1,46 @@
+.altrabasiclist
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --content-max: 1208px
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  .altra-bottom 
+    bottom: -2px
+
+  &--container
+    padding-top: 96px
+    padding-bottom: 144px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 72px
+      padding-bottom: 96px     
+
+    & .content-wrapper
+      max-width: var(--content-max)
+      padding-left: 16px
+      padding-right: 16px     
+      font-family: 'Gill Sans'
+      font-size: 18px
+      line-height: 150%
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      & .enumeration
+        margin-top: 48px
+        margin-bottom: 72px
+        max-width: 520px
+        list-style-image: url('../img/list-disk-marker.svg')
+        list-style-position: outside
+        text-align: left
+        @media all and (max-width: 768px)
+          margin-left: 30px
+        & .line
+          margin-top: 24px
+          padding-left: 16px

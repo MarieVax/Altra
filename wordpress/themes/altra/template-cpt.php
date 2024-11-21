@@ -46,7 +46,12 @@ $ID_page = get_the_ID();
       if ($cpt_query->have_posts()) :
         while ($cpt_query->have_posts()) : $cpt_query->the_post();
           // Afficher le contenu du CPT
-          get_template_part('template-parts/blocks/hero-singlepage');
+
+          if ($cpt == "secteurs") :
+            get_template_part('template-parts/blocks/altraheroblade');
+          else :
+            get_template_part('template-parts/blocks/hero-singlepage');
+          endif;
 
           /**
            * get_template_part( 'template-parts/content', get_post_format() );

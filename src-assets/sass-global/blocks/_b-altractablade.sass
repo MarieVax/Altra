@@ -1,0 +1,85 @@
+.altractablade
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  &--container
+    padding-top: 118px
+    padding-bottom: 96px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 72px
+      padding-bottom: 64px
+
+    & .content-wrapper
+      width: 1900px
+      padding-right: 126px
+      font-family: 'Gill Sans'
+      display: flex
+      justify-content: end
+      transition: all 400ms ease-out
+      @media screen and (max-width: 1199px)
+        padding-right: 36px
+      @media screen and (max-width: 768px)
+        padding-left: 24px
+        padding-right: 24px
+
+      & .right-content
+        max-width: 668px
+        padding: 48px 72px
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+        @media screen and (max-width: 768px)
+          padding: 48px 48px
+        &::before
+          z-index: -25
+          content: ''
+          width: 100%
+          height: 100%
+          position: absolute
+          top: 0
+          left: 0
+          background-color: #FFF
+          opacity: 0.9
+        &::after
+          --offset-line: 13px
+          z-index: -20
+          content: ''
+          width: calc(100% - 2 * var(--offset-line))
+          height: calc(100% - 2 * var(--offset-line))
+          position: absolute
+          top: var(--offset-line)
+          left: var(--offset-line)
+          border: 1px solid $color-red
+
+        & .heading
+          font-family: 'Prata'
+          font-size: 56px
+          line-height: 125%
+          letter-spacing: 0.04em
+          transition: all 400ms ease-out
+          @media screen and (max-width: 768px)
+            font-size: 42px
+
+        & .description
+          margin-top: 36px
+          font-size: 18px
+          line-height: normal
+          transition: all 400ms ease-in
+          @media screen and (max-width: 768px)
+            font-size: 16px
+
+        & .buttons
+          margin-top: 36px
+          display: flex
+          gap: 35px
+          @media screen and (max-width: 768px)
+            flex-direction: column

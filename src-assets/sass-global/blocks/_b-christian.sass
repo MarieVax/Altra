@@ -34,7 +34,7 @@
 
 .altrabasiclist--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -45,8 +45,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrabasiclist--container .content-wrapper .heading::before, .altrabasiclist--container .content-wrapper .heading::after 
+//Modif
+.altrabasiclist--container .content-wrapper .heading .heading-h2-before, .altrabasiclist--container .content-wrapper .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -54,11 +54,13 @@
   top: 50%
   background-color: #B81734
 
-.altrabasiclist--container .content-wrapper .heading::before 
+.altrabasiclist--container .content-wrapper .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altrabasiclist--container .content-wrapper .heading::after 
+.altrabasiclist--container .content-wrapper .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
+
+//Modif
 
 .altrabasiclist--container .content-wrapper .enumeration 
   margin-top: 48px
@@ -138,7 +140,7 @@
   
 
 .altrabicoltext--container .content-wrapper .heading 
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -229,7 +231,7 @@
 
 .altrabigstickers--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -240,8 +242,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrabigstickers--container .content-wrapper .heading::before, .altrabigstickers--container .content-wrapper .heading::after 
+//Modif
+.altrabigstickers--container .content-wrapper .heading .heading-h2-before, .altrabigstickers--container .content-wrapper .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -249,11 +251,12 @@
   top: 50%
   background-color: #B81734
 
-.altrabigstickers--container .content-wrapper .heading::before 
+.altrabigstickers--container .content-wrapper .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altrabigstickers--container .content-wrapper .heading::after 
+.altrabigstickers--container .content-wrapper .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
+// Modif
 
 .altrabigstickers--container .content-wrapper .stickers 
   margin-top: 128px
@@ -396,7 +399,7 @@
 
 .altrabuttons--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -407,8 +410,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrabuttons--container .content-wrapper .heading::before, .altrabuttons--container .content-wrapper .heading::after 
+// Modif
+.altrabuttons--container .content-wrapper .headin .heading-h2-before, .altrabuttons--container .content-wrapper .heading .heading-h2-after
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -416,14 +419,14 @@
   top: 50%
   background-color: #B81734
 
-.altrabuttons--container .content-wrapper .heading::before 
+.altrabuttons--container .content-wrapper .heading .heading-h2-before
   left: calc(100% + var(--spacing))
 
-.altrabuttons--container .content-wrapper .heading::after 
+.altrabuttons--container .content-wrapper .heading .heading-h2-after
   right: calc(100% + var(--spacing))
+//Modif
 
 .altrabuttons--container .content-wrapper .buttons 
-  margin-top: 96px
   max-width: 1134px
   display: flex
   justify-content: space-around
@@ -527,7 +530,10 @@
 @media screen and (max-width: 768px) 
   .altrabuttons--container .content-wrapper .buttons .big-button .button.size-l 
     width: 446px
-  
+
+@media screen and (max-width: 550px) 
+  .altrabuttons--container .content-wrapper .buttons .big-button .button.size-l, .altrabuttons--container .content-wrapper .buttons .big-button .button.size-s, .altrabuttons--container .content-wrapper .buttons .big-button .button.size-m
+    width: 320px
 
 .altrabuttons--container .content-wrapper .buttons .big-button .button .icon 
   --icon-side: 75px
@@ -593,7 +599,7 @@
 
 .altracards--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -604,8 +610,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altracards--container .content-wrapper .heading::before, .altracards--container .content-wrapper .heading::after 
+//Modif
+.altracards--container .content-wrapper .heading .heading-h2-before, .altracards--container .content-wrapper .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -613,11 +619,12 @@
   top: 50%
   background-color: #B81734
 
-.altracards--container .content-wrapper .heading::before 
+.altracards--container .content-wrapper .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altracards--container .content-wrapper .heading::after 
+.altracards--container .content-wrapper .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
+//Modif 
 
 .altracards--container .content-wrapper .description 
   margin-top: 44px
@@ -627,15 +634,6 @@
   .altracards--container .content-wrapper .description 
     margin-top: 32px
   
-
-.altracards--container .content-wrapper .introduction 
-  margin-top: 92px
-  max-width: 744px
-  font-family: "Gill Sans Light"
-  font-size: 38px
-  line-height: 125%
-  position: relative
-
 @media screen and (max-width: 768px) 
   .altracards--container .content-wrapper .introduction 
     margin-top: 36px
@@ -711,10 +709,9 @@
 .altracards--container .content-wrapper .cards .card .card-list .element:hover 
   color: #102237
   background-color: #FFF
-
-.altracards--container .content-wrapper .cards .card .card-list .element:hover > .explanation 
-  max-height: 500px
-
+//Modif
+//.altracards--container .content-wrapper .cards .card .card-list .element:hover > .explanation 
+//Modif
 .altracards--container .content-wrapper .cards .card .card-list .element .title-wrapper 
   min-height: 83px
   padding-left: 24px
@@ -734,18 +731,6 @@
   .altracards--container .content-wrapper .cards .card .card-list .element .title-wrapper .title 
     font-size: 24px
   
-
-.altracards--container .content-wrapper .cards .card .card-list .element .explanation 
-  margin-top: 0
-  max-height: 0
-  padding-left: 16px
-  padding-right: 16px
-  overflow: hidden
-  line-height: 130%
-  transition-property: max-height
-  transition-duration: 400ms
-  transition-delay: 200ms
-  transition-timing-function: ease-in-out
 
 .altracards--container .content-wrapper .cards .card .card-button 
   height: 116px
@@ -842,7 +827,7 @@
   border: 1px solid #B81734
 
 .altractablade--container .content-wrapper .right-content .heading 
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -917,7 +902,7 @@
 .altraheroblade--container .content-wrapper .heading-wrapper 
   display: inline-block
   padding-bottom: 12px
-  border-bottom: 1px solid #B81734
+  
 
 .altraheroblade--container .content-wrapper .heading-wrapper .heading 
   padding-left: var(--padding-left)
@@ -1026,7 +1011,7 @@
   padding: 0
 
 .altrajolitext--container .content-wrapper .heading 
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -1070,24 +1055,10 @@
   line-height: 140%
   position: relative
 
-.altrajolitext--container .content-wrapper .lines .line::after 
-  content: ""
-  width: 27px
-  height: 41px
-  position: absolute
-  top: 4px
-  left: 50%
-  transform: translateX(-50%)
-  background-image: url("../img/empty-arrow-down.svg")
-  background-size: contain
-  background-repeat: no-repeat
 
-.altrajolitext--container .content-wrapper .lines .line:first-child::after 
-  background-image: url("../img/full-arrow-down.svg")
-
+//Modif
 .altrajolitext--container .content-wrapper .lines .line .title 
-  font-weight: 600
-  color: #B81734
+ //Modif
 
 .altrajolitext--container .content-wrapper .lines .line .text p 
   padding-bottom: 8px
@@ -1125,7 +1096,7 @@
 
 .altrakeynumbers--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -1136,8 +1107,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrakeynumbers--container .content-wrapper .heading::before, .altrakeynumbers--container .content-wrapper .heading::after 
+//Modif
+.altrakeynumbers--container .content-wrapper .heading .heading-h2-before, .altrakeynumbers--container .content-wrapper .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -1145,11 +1116,12 @@
   top: 50%
   background-color: #B81734
 
-.altrakeynumbers--container .content-wrapper .heading::before 
+.altrakeynumbers--container .content-wrapper .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altrakeynumbers--container .content-wrapper .heading::after 
+.altrakeynumbers--container .content-wrapper .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
+//Modif
 
 .altrakeynumbers--container .content-wrapper .numbers-content 
   padding-bottom: calc(var(--block-height) * 3 / 4)
@@ -1201,7 +1173,7 @@
 
 .altrakeynumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .number, .altrakeynumbers--container .content-wrapper .numbers-content .number-block .know-more-wrapper .number 
   margin: 0
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 68px
   line-height: 125%
 
@@ -1299,7 +1271,7 @@
 
 .altranumbers--container .content-wrapper .numbers-content .number-block .number-wrapper .number 
   margin: 0
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 68px
   line-height: 125%
 
@@ -1463,7 +1435,7 @@
 
 .altraphoto--container .content-wrapper .text-content .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 48px
   line-height: 125%
   letter-spacing: 0.04em
@@ -1475,8 +1447,8 @@
     font-size: 42px
     margin-top: 28px
   
-
-.altraphoto--container .content-wrapper .text-content .heading::before, .altraphoto--container .content-wrapper .text-content .heading::after 
+//Modif
+.altraphoto--container .content-wrapper .text-content .heading .heading-h2-before, .altraphoto--container .content-wrapper .text-content .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--text-width) / 2 - 50% - var(--spacing))
@@ -1484,11 +1456,13 @@
   top: 50%
   background-color: #B81734
 
-.altraphoto--container .content-wrapper .text-content .heading::before 
+.altraphoto--container .content-wrapper .text-content .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altraphoto--container .content-wrapper .text-content .heading::after 
+.altraphoto--container .content-wrapper .text-content .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
+//Modif
+
 
 .altraphoto--container .content-wrapper .text-content .heading.new 
   color: #B81734
@@ -1594,7 +1568,7 @@
 
 .altrareferences--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -1605,8 +1579,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrareferences--container .content-wrapper .heading::before, .altrareferences--container .content-wrapper .heading::after 
+//Modif
+.altrareferences--container .content-wrapper .heading .heading-h2-before, .altrareferences--container .content-wrapper .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -1614,11 +1588,13 @@
   top: 50%
   background-color: #B81734
 
-.altrareferences--container .content-wrapper .heading::before 
+.altrareferences--container .content-wrapper .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altrareferences--container .content-wrapper .heading::after 
+.altrareferences--container .content-wrapper .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
+
+//Modif
 
 .altrareferences--container .content-wrapper .introduction 
   margin-top: 24px
@@ -1706,7 +1682,7 @@
 
 .altrashifters--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -1717,8 +1693,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrashifters--container .content-wrapper .heading::before, .altrashifters--container .content-wrapper .heading::after 
+//Modif
+.altrashifters--container .content-wrapper .heading .heading-h2-before, .altrashifters--container .content-wrapper .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -1726,12 +1702,12 @@
   top: 50%
   background-color: #B81734
 
-.altrashifters--container .content-wrapper .heading::before 
+.altrashifters--container .content-wrapper .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altrashifters--container .content-wrapper .heading::after 
+.altrashifters--container .content-wrapper .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
-
+//Modif
 .altrashifters--container .content-wrapper .introduction 
   margin-top: 32px
   max-width: calc(var(--content-max) / 2)
@@ -1843,6 +1819,7 @@
   max-width: var(--lame-width)
   margin: 0 auto
   position: relative
+  z-index: 10
 
 .altrasimpletext--container 
   padding-top: 84px
@@ -1880,7 +1857,7 @@
 
 .altrasimpletext--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -1891,20 +1868,20 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrasimpletext--container .content-wrapper .heading::before, .altrasimpletext--container .content-wrapper .heading::after 
-  content: ""
+//Modif
+.altrasimpletext--container .content-wrapper .heading .heading-h2-before, .altrasimpletext--container .content-wrapper .heading .heading-h2-after, .altrabuttons .heading-h2-before, .altrabuttons .heading-h2-after
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
   height: 1px
   top: 50%
   background-color: #B81734
 
-.altrasimpletext--container .content-wrapper .heading::before 
+.altrasimpletext--container .content-wrapper .heading .heading-h2-before, .altrabuttons .heading-h2-before
   left: calc(100% + var(--spacing))
 
-.altrasimpletext--container .content-wrapper .heading::after 
+.altrasimpletext--container .content-wrapper .heading .heading-h2-after, .altrabuttons .heading-h2-after
   right: calc(100% + var(--spacing))
+// Modif
 
 .altrasimpletext--container .content-wrapper .preface, .altrasimpletext--container .content-wrapper .postface 
   margin-top: 44px
@@ -1943,21 +1920,23 @@
   
 
 .altrasimpletext--container .content-wrapper .lines .line 
-  padding-top: 48px
+  padding-top: 52px
   font-size: 20px
   line-height: 140%
   position: relative
 
-.altrasimpletext--container .content-wrapper .lines .line::after 
-  content: ""
+// Modif
+.altrasimpletext--container .content-wrapper .lines .line .altra--services-item-icone
   width: 27px
   height: 41px
   position: absolute
-  top: 4px
+  top: 0px
   left: 50%
   transform: translateX(-50%)
-  background-image: url("../img/empty-arrow-down.svg")
-  background-size: contain
+
+  &-2, &-3 
+    opacity: 0
+// Modif
 
 .altrasimpletext--container .content-wrapper .lines .line:first-child::after 
   background-image: url("../img/full-arrow-down.svg")
@@ -2006,7 +1985,7 @@
 
 .altrasteps--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -2017,8 +1996,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrasteps--container .content-wrapper .heading::before, .altrasteps--container .content-wrapper .heading::after 
+//Modif
+.altrasteps--container .content-wrapper .heading .heading-h2-before, .altrasteps--container .content-wrapper .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -2026,11 +2005,13 @@
   top: 50%
   background-color: #B81734
 
-.altrasteps--container .content-wrapper .heading::before 
+.altrasteps--container .content-wrapper .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altrasteps--container .content-wrapper .heading::after 
+.altrasteps--container .content-wrapper .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
+//Modif
+
 
 .altrasteps--container .content-wrapper .preface, .altrasteps--container .content-wrapper .postface 
   font-family: "Gill Sans Light"
@@ -2074,7 +2055,7 @@
 
 .altrasteps--container .content-wrapper .steps-content .step-block .order 
   margin: 0
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   color: #B81734
 
@@ -2122,7 +2103,7 @@
 
 .altrastickers--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -2133,8 +2114,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrastickers--container .content-wrapper .heading::before, .altrastickers--container .content-wrapper .heading::after 
+//Modif
+.altrastickers--container .content-wrapper .heading .heading-h2-before, .altrastickers--container .content-wrapper .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -2142,18 +2123,12 @@
   top: 50%
   background-color: #B81734
 
-.altrastickers--container .content-wrapper .heading::before 
+.altrastickers--container .content-wrapper .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altrastickers--container .content-wrapper .heading::after 
+.altrastickers--container .content-wrapper .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
-
-.altrastickers--container .content-wrapper .stickers 
-  margin-top: 96px
-  display: grid
-  grid-template-columns: repeat(3, 1fr)
-  column-gap: 32px
-  row-gap: 24px
+//Modif
 
 @media screen and (max-width: 1023px) 
   .altrastickers--container .content-wrapper .stickers 
@@ -2168,15 +2143,7 @@
 .altrastickers--container .content-wrapper .stickers article:hover 
   cursor: help
 
-.altrastickers--container .content-wrapper .stickers .sticker 
-  max-width: 380px
-  min-height: 139px
-  padding-left: 27px
-  padding-right: 70px
-  background-color: #FFF
-  display: flex
-  align-items: center
-  position: relative
+
 
 .altrastickers--container .content-wrapper .stickers .sticker .title 
   margin: 0
@@ -2200,35 +2167,6 @@
 
 .altrastickers--container .content-wrapper .stickers .sticker:hover .dropdown 
   transform: scaleY(1)
-
-.altrastickers--container .content-wrapper .stickers .sticker .dropdown 
-  padding-bottom: 24px
-  position: absolute
-  top: 100%
-  left: 0
-  z-index: 50
-  font-family: "Gill Sans"
-  font-size: 18px
-  background-color: #FFF
-  transform-origin: top
-  transform: scaleY(0)
-  transition: transform 400ms ease-in-out
-
-.altrastickers--container .content-wrapper .stickers .sticker .dropdown .text 
-  padding-left: 27px
-  padding-right: 24px
-  line-height: 125%
-  letter-spacing: 0.04em
-
-.altrastickers--container .content-wrapper .stickers .sticker .dropdown .list 
-  padding-left: 44px
-  padding-right: 27px
-  list-style-image: url("../img/list-disk-marker.svg")
-  list-style-position: outside
-
-.altrastickers--container .content-wrapper .stickers .sticker .dropdown .list .item 
-  margin-top: 16px
-  padding-left: 8px
 
 .altrastickers--container .content-wrapper .postface 
   margin-top: 64px
@@ -2268,7 +2206,7 @@
 
 .altrathumbnails--container .content-wrapper .heading 
   --spacing: 36px
-  font-family: "Prata"
+  font-family: "Prata", serif
   font-size: 56px
   line-height: 125%
   letter-spacing: 0.04em
@@ -2279,8 +2217,8 @@
     --spacing: 18px
     font-size: 42px
   
-
-.altrathumbnails--container .content-wrapper .heading::before, .altrathumbnails--container .content-wrapper .heading::after 
+//Modif
+.altrathumbnails--container .content-wrapper .heading .heading-h2-before, .altrathumbnails--container .content-wrapper .heading .heading-h2-after 
   content: ""
   position: absolute
   width: calc(var(--content-max) / 2 - 50% - var(--spacing))
@@ -2288,11 +2226,13 @@
   top: 50%
   background-color: #B81734
 
-.altrathumbnails--container .content-wrapper .heading::before 
+.altrathumbnails--container .content-wrapper .heading .heading-h2-before 
   left: calc(100% + var(--spacing))
 
-.altrathumbnails--container .content-wrapper .heading::after 
+.altrathumbnails--container .content-wrapper .heading .heading-h2-after 
   right: calc(100% + var(--spacing))
+//Modif
+
 
 .altrathumbnails--container .content-wrapper .preface 
   margin-top: 32px
@@ -2320,82 +2260,6 @@
 .altrathumbnails--container .content-wrapper .thumbnails article:hover 
   cursor: help
 
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail 
-  --anim-duration: 450ms
-  background-color: #102237
-  display: flex
-  flex-direction: column
-  position: relative
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .image-wrapper 
-  height: 230px
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .image-wrapper img 
-  width: 380px
-  height: 100%
-  object-fit: cover
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .title-wrapper 
-  min-height: 139px
-  padding-left: 27px
-  padding-right: 70px
-  display: flex
-  align-items: center
-  position: relative
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .title-wrapper .title 
-  margin: 0
-  padding-top: 8px
-  font-family: "Gill Sans"
-  font-size: 30px
-  line-height: 110%
-  letter-spacing: 0.04em
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .title-wrapper .arrow 
-  width: 32px
-  height: 32px
-  position: absolute
-  top: 50%
-  right: 20px
-  transform: translateY(-50%) scaleY(1)
-  transition: transform var(--anim-duration) ease-in-out
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail:hover .arrow 
-  transform: translateY(-50%) scaleY(-1)
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail:hover .dropdown 
-  transform: scaleY(1)
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .dropdown 
-  padding-bottom: 24px
-  position: absolute
-  top: 100%
-  left: 0
-  z-index: 50
-  font-family: "Gill Sans"
-  font-size: 18px
-  background-color: #102237
-  transform-origin: top
-  transform: scaleY(0)
-  transition: transform var(--anim-duration) ease-in-out
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .dropdown .text 
-  padding-left: 27px
-  padding-right: 24px
-  line-height: 125%
-  letter-spacing: 0.04em
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .dropdown .list 
-  padding-left: 44px
-  padding-right: 27px
-  list-style-image: url("../img/list-disk-marker.svg")
-  list-style-position: outside
-
-.altrathumbnails--container .content-wrapper .thumbnails .thumbnail .dropdown .list .item 
-  margin-top: 16px
-  padding-left: 8px
-
-
 .hero-sp 
   --angle: 5.59deg
   --tan: calc(tan(var(--angle)))
@@ -2421,19 +2285,110 @@
   position: absolute
   top: 180px
   left: 52%
+
+.hero-sp .icon-wrapper 
+  width: 344px
+  height: 344px
+  position: absolute
+  top: -211px
+  left: 855px
+  display: flex
+  align-items: center
+  justify-content: center
+
+  @media all and (max-width: 1300px)
+    left: 705px
+
+  @media all and (max-width: 992px)
+    display: none
 //Modif
 
-.hero-sp--animation .icon-wrapper 
-  width: 131px
-  height: 131px
-  position: absolute
-  top: 218px
-  left: 50%
 
-.hero-sp--animation .icon-wrapper img 
-  width: 100%
-  height: 100%
-  object-fit: contain
+//Modif
+//.hero-sp--animation .icon-wrapper img 
+  //width: 100%
+  //height: 100%
+  //object-fit: contain
+.hero-sp--animation .icon-wrapper 
+  &-1
+    width: 306px
+    height: 306px
+  
+  &-2
+    width: 218px
+    height: 218px
+
+
+  &-4
+    width: 131px
+    height: 131px
+
+.hero-sp .line-dotted-div
+  &-1
+    width: 244px
+    height: 45px
+    bottom: 0px
+    left: 536px
+    border-bottom-right-radius: 20px
+    border-right: 1px dashed #B81734
+    border-bottom: 1px dashed $color-red
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    z-index: 99
+    @media all and (max-width: 1300px)
+      left: 388px
+    @media all and (max-width: 992px)
+      display: none
+
+  &-2
+    width: 75px
+    height: 22px
+    bottom: 43px
+    left: 779px
+    border-top-left-radius: 20px
+    border-left: 1px dashed #B81734
+    border-top: 1px dashed #B81734
+    z-index: 99
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    @media all and (max-width: 1300px)
+      left: 631px
+    @media all and (max-width: 992px)
+      display: none
+
+  &-3
+    width: 215px
+    height: 70px
+    top: 133px
+    left: 1020px
+    border-bottom-left-radius: 20px
+    border-left: 1px dashed #B81734
+    border-bottom: 1px dashed #B81734
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    z-index: 99
+    @media all and (max-width: 1300px)
+      left: 876px
+    @media all and (max-width: 992px)
+      display: none
+
+  &-4
+    width: 22px
+    height: 582px
+    top: 202px
+    left: 1234px
+    border-top-right-radius: 20px
+    border-right: 1px dashed #B81734
+    border-top: 1px dashed #B81734
+    z-index: 99
+    -webkit-transform: scale(1)
+    transform: scale(1)
+    @media all and (max-width: 1300px)
+      left: 1093px
+    @media all and (max-width: 992px)
+      display: none
+
+//Modif
 
 .hero-sp--container 
   padding-top: 218px
@@ -2538,6 +2493,11 @@
   transform: translate(-50%, -50%)
   clip-path: polygon(0 calc(var(--offset)), 100% 0, 100% calc(100% - var(--offset)), 0 100%)
 
+//Modif
+.altrajolitext .altra-background-image 
+  z-index: -49
+//Modif
+
 .altra-background-image .image 
   width: 100vw
   height: 100%
@@ -2611,9 +2571,30 @@
 .altra-bottom.lame-cta 
   transform: translateY(var(--half-offset))
 
+//Modif 
+.altra-top
+  width: 100%
+  position: absolute
+  top: -1px
+  box-sizing: content-box
+  border-bottom: 10px solid
+  transform: skewY(calc(-1 * var(--angle)))
+
+.altra-top.blue 
+  border-bottom-color: #102237
+
+.altra-top.red 
+  border-bottom-color: #B81734
+
+.altra-top.lame-cta 
+  transform: translateY(var(--half-offset))
+
+.page-social .hero-sp .altra-bottom, .page-tva-fctva-douanes .hero-sp .altra-bottom, .page-expertises-deleguees-aux-daf .hero-sp .altra-bottom, .page-impots-commerciaux-et-credits-dimpots .hero-sp .altra-bottom, .page-fiscalite-locale-et-environnementale .hero-sp .altra-bottom
+  display: none
+//Modif 
 
 .altra-button 
-  width: 302px
+  width: auto
   height: 54px
   display: flex
   flex-direction: column

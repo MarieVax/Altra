@@ -25,9 +25,13 @@
 .c-title--xxlarge
   +fluid-type(40, 70)
 
+.heading, h2
+  @media all and (max-width: 768px)
+    font-family: 'Gill Sans' !important
+    font-size: 46px !important
 
 .heading-h2
-  font-family: "Prata"
+  font-family: "Prata", serif
   width: 100%
   text-align: center
   font-size: 56px
@@ -40,7 +44,8 @@
   align-items: center
   justify-content: center
   @media all and (max-width: 768px)
-    font-size: 40px
+    font-family: 'Gill Sans' !important
+    font-size: 46px
    
   
   &-before, &-after
@@ -67,3 +72,7 @@
   margin-bottom: 75px
   margin-top: 30px
   padding: 0 10px
+
+@media all and (max-width: 768px)
+  .heading-h2-before, .heading-h2-after
+    display: none !important

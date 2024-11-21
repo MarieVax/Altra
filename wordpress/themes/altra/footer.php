@@ -66,7 +66,7 @@
 <footer class="footer">
   <div class="flex footer-top">
     <div class="footer-top-col footer-top-col1">
-      <img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-altra-consulting.svg' ?>" alt="" class="footer-top-col-logo">
+      <a href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php esc_html_e('Go to homepage', 'altra'); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/logo-altra-consulting.svg' ?>" alt="" class="footer-top-col-logo"></a>
       <div class="footer-top-col-address">
         <?php
         if ($address_paris = get_field('address_paris', 'option')) :
@@ -94,7 +94,7 @@
         ?> </div>
       <div class="footer-top-col-social">
         <?php
-        if (have_rows('social_media_profiles', 'option') && get_field('social_media_enabled', 'option')) : ?>
+        if (have_rows('social_media_profiles', 'option')) : ?>
           <ul class="flex">
             <?php while (have_rows('social_media_profiles', 'option')) : the_row(); ?>
               <li class="">

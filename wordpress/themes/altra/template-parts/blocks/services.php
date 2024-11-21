@@ -51,7 +51,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
       <?php
       if (have_rows('services')) :
-        echo '<div class="flex services-block-list services-block-list-desktop">';
+        echo '<div class="flex services-block-list services-list services-block-list-desktop services-list-desktop">';
         while (have_rows('services')) :
           the_row();
           $service = get_sub_field('service');
@@ -64,9 +64,9 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
             $service_link = get_the_permalink($service_ID);
             $service_excerpt = get_the_excerpt($service_ID); ?>
             <a href="<?php echo $service_link ?>" class="flex-1 services-block-list-item">
-              <div class="services-block-list-item-image"><img src="<?php echo $service_thumbnail_url ?>" alt=""></div>
-              <h3 class="services-block-list-item-heading"><?php echo $service_title ?></h3>
-              <div class="services-block-list-item-excerpt"><?php echo $service_excerpt ?></div>
+              <div class="services-block-list-item-image services-list-item-image"><img src="<?php echo $service_thumbnail_url ?>" alt=""></div>
+              <h3 class="services-block-list-item-heading services-list-item-heading"><?php echo $service_title ?></h3>
+              <div class="services-block-list-item-excerpt services-list-item-excerpt"><?php echo $service_excerpt ?></div>
             </a>
       <?php endif;
 
@@ -78,7 +78,7 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
       <?php
       if (have_rows('services')) :
-        echo '<div class="swiper-services-block"><div class="swiper-wrapper services-block-list">';
+        echo '<div class="swiper-services-block swiper-services"><div class="swiper-wrapper services-block-list services-list">';
         while (have_rows('services')) :
           the_row();
           $service = get_sub_field('service');
@@ -90,10 +90,10 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
             $service_thumbnail_url = get_the_post_thumbnail_url($service_ID, 'medium_large');
             $service_link = get_the_permalink($service_ID);
             $service_excerpt = get_the_excerpt($service_ID); ?>
-            <a href="<?php echo $service_link ?>" class="flex-1 services-block-list-item swiper-slide">
-              <div class="services-block-list-item-image"><img src="<?php echo $service_thumbnail_url ?>" alt=""></div>
-              <h3 class="services-block-list-item-heading"><?php echo $service_title ?></h3>
-              <div class="services-block-list-item-excerpt"><?php echo $service_excerpt ?></div>
+            <a href="<?php echo $service_link ?>" class="flex-1 services-block-list-item services-list-item swiper-slide">
+              <div class="services-block-list-item-image services-list-item-image"><img src="<?php echo $service_thumbnail_url ?>" alt=""></div>
+              <h3 class="services-block-list-item-heading services-list-item-heading"><?php echo $service_title ?></h3>
+              <div class="services-block-list-item-excerpt services-list-item-excerpt"><?php echo $service_excerpt ?></div>
             </a>
       <?php endif;
 
@@ -109,15 +109,15 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
 
   </div>
   <?php if (have_rows('slider_bottom')) :
-    echo '<div class="flex services-block-slider-bottom">';
+    echo '<div class="flex services-block-slider-bottom services-slider-bottom">';
 
-    echo '<div class="flex services-block-slider-bottom-container">';
+    echo '<div class="flex services-block-slider-bottom-container services-slider-bottom-container">';
     for ($i = 0; $i < 10; $i++) {
-      echo '<div class="services-block-slider-bottom-list">';
+      echo '<div class="services-block-slider-bottom-list services-slider-bottom-list">';
       while (have_rows('slider_bottom')) :
         the_row();
         $text = get_sub_field('text');
-        printf('<div class="services-block-slider-bottom-list-item">%s</div>', $text);
+        printf('<div class="services-block-slider-bottom-list-item services-slider-bottom-list-item">%s</div>', $text);
       endwhile;
       echo '</div>';
     }

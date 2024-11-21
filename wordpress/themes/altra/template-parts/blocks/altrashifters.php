@@ -16,132 +16,152 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
   if (!empty($block['data']['block_preview_img'])) echo '<img src="' . get_template_directory_uri() . '/assets/img/block-preview/' . $block['data']['block_preview_img'] . '" alt="">';
 ?>
 
-<section class="altrashifters">
-  
-  <?php // Optional background
-  $background_color = get_field('options')['background_color'] ?? 'none';
-  if ($background_color != 'none') :
-    printf('<div class="altra-background %s"></div>', $background_color);
-  endif;
-  $contrast_class = $background_color == 'blue' ? 'text-white ' : '';
+  <section class="altrashifters">
+    <div class="overlay-block"></div>
+    <?php // Optional background
+    $background_color = get_field('options')['background_color'] ?? 'white';
+    if ($background_color != 'none') :
+      printf('<div class="altra-background %s"></div>', $background_color);
+    endif;
+    $contrast_class = $background_color == 'blue' ? 'text-white ' : '';
 
-  // Optional bottom border
-  $border_color = get_field('options')['border_color'] ?? 'none';
-  if ($border_color != 'none') :
-    printf('<div class="altra-bottom %s"></div>', $border_color);
-  endif;
-  ?>
+    // Optional bottom border
+    $border_color = get_field('options')['border_color'] ?? 'none';
+    if ($border_color != 'none') :
+      printf('<div class="altra-bottom %s"></div>', $border_color);
+    endif;
+    ?>
 
-  <div class="font-normal text-center <?php echo $contrast_class; ?>altrashifters--container">
+    <div class="font-normal text-center <?php echo $contrast_class; ?>altrashifters--container">
 
-    <div class="content-wrapper">
+      <div class="content-wrapper">
 
-      <?php // Heading
-      if ($heading = get_field('heading')) :
-        $headingTag = get_field('heading_tag') ?? 'h2';
-        printf('<%s class="heading">%s</%s>',
-          $headingTag, wp_kses_post($heading), $headingTag
-        );
-      endif;
-      
-      // Introduction
-      if ($intro = get_field('introduction')) :
-        $introTag = 'p';
-        printf('<%s class="introduction">%s</%s>',
-          $introTag, wp_kses_post($intro), $introTag
-        );
-      endif;
+        <?php // Heading
+        if ($heading = get_field('heading')) :
+          $headingTag = get_field('heading_tag') ?? 'h2';
+          printf(
+            '<%s class="heading"><div class="heading-h2-before"></div>%s<div class="heading-h2-after"></div></%s>',
 
-      // The cards
-      if (have_rows('cards')) :
+            $headingTag,
+            wp_kses_post($heading),
+            $headingTag
+          );
+        endif;
+
+        // Introduction
+        if ($intro = get_field('introduction')) :
+          $introTag = 'p';
+          printf(
+            '<%s class="introduction">%s</%s>',
+            $introTag,
+            wp_kses_post($intro),
+            $introTag
+          );
+        endif;
+
+        // The cards
+        if (have_rows('cards')) :
         ?>
-        <div class="text-left text-white cards">
-  
-          <?php // Review all the cards
-          while (have_rows('cards')) :
-            the_row();
+          <div class="text-left text-white cards">
+
+            <?php // Review all the cards
+            while (have_rows('cards')) :
+              the_row();
             ?>
-            <article class="card">
-            
-              <?php // Cover image block wrapper
-              if ($image_ID = get_sub_field('image')) :
-                $wrapStart = '<div class="image-content">';
-                $wrapEnd = "</div>";
-                printf('%s%s%s',
-                  $wrapStart, 
-                  wp_get_attachment_image($image_ID, 'medium'), 
-                  $wrapEnd
-                );
-              endif;
-              ?>
+              <article class="card">
 
-              <div class="problem-content">
-
-                <?php // Title
-                if ($title = get_sub_field('title')) :
-                  $titleTag = 'p';
-                  printf('<%s class="title">%s</%s>',
-                    $titleTag, wp_kses_post($title), $titleTag
-                  );
-                endif;
-
-                // Red line
-                printf('<div class="red-line"></div>');
-        
-                // Preface
-                if ($preface = get_sub_field('preface')) :
-                  $prefaceTag = 'p';
-                  printf('<%s class="preface">%s</%s>',
-                    $prefaceTag, wp_kses_post($preface), $prefaceTag
+                <?php // Cover image block wrapper
+                if ($image_ID = get_sub_field('image')) :
+                  $wrapStart = '<div class="image-content">';
+                  $wrapEnd = "</div>";
+                  printf(
+                    '%s%s%s',
+                    $wrapStart,
+                    wp_get_attachment_image($image_ID, 'medium-large'),
+                    $wrapEnd
                   );
                 endif;
                 ?>
-              </div>
 
-              <div class="solution-content">
+                <div class="problem-content">
 
-                <?php // Enum ntroduction
-                if ($enum_intro = get_sub_field('intro')) :
-                  $enum_introTag = 'p';
-                  printf('<%s class="intro">%s</%s>',
-                    $enum_introTag, wp_kses_post($enum_intro), $enum_introTag
-                  );
-                endif;
-    
-                // Enum lines
-                if (have_rows('enum')) :
-                ?>
-                  <ul class="lines">
-    
-                  <?php // Review all the enum lines
-                  while(have_rows('enum')) :
-                    the_row();
+                  <?php // Title
+                  if ($title = get_sub_field('title')) :
+                    $titleTag = 'p';
+                    printf(
+                      '<%s class="title">%s</%s>',
+                      $titleTag,
+                      wp_kses_post($title),
+                      $titleTag
+                    );
+                  endif;
 
-                    // Enum Line
-                    if ($enum_line = get_sub_field('line')) :
-                      $lineTag = 'li';
-                      printf('<%s class="line">%s</%s>',
-                        $lineTag, wp_kses_post($enum_line), $lineTag
-                      ); 
-                    endif;
-                  endwhile; // for each enum line
+                  // Red line
+                  printf('<div class="red-line"></div>');
+
+                  // Preface
+                  if ($preface = get_sub_field('preface')) :
+                    $prefaceTag = 'p';
+                    printf(
+                      '<%s class="preface">%s</%s>',
+                      $prefaceTag,
+                      wp_kses_post($preface),
+                      $prefaceTag
+                    );
+                  endif;
                   ?>
-                  </ul>
-                <?php
-                endif; // have enum lines
-                ?>
-              </div>
-            </article>
+                </div>
+
+                <div class="solution-content">
+
+                  <?php // Enum ntroduction
+                  if ($enum_intro = get_sub_field('intro')) :
+                    $enum_introTag = 'p';
+                    printf(
+                      '<%s class="intro">%s</%s>',
+                      $enum_introTag,
+                      wp_kses_post($enum_intro),
+                      $enum_introTag
+                    );
+                  endif;
+
+                  // Enum lines
+                  if (have_rows('enum')) :
+                  ?>
+                    <ul class="lines">
+
+                      <?php // Review all the enum lines
+                      while (have_rows('enum')) :
+                        the_row();
+
+                        // Enum Line
+                        if ($enum_line = get_sub_field('line')) :
+                          $lineTag = 'li';
+                          printf(
+                            '<%s class="line">%s</%s>',
+                            $lineTag,
+                            wp_kses_post($enum_line),
+                            $lineTag
+                          );
+                        endif;
+                      endwhile; // for each enum line
+                      ?>
+                    </ul>
+                  <?php
+                  endif; // have enum lines
+                  ?>
+                </div>
+              </article>
             <?php
-          endwhile; // for each card
-          ?>
-        </div>
+            endwhile; // for each card
+            ?>
+          </div>
         <?php
         endif; // have cards
         ?>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <?php
 endif;

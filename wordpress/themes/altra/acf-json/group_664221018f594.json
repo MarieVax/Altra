@@ -103,12 +103,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "post_type": [
-                        "page",
-                        "expertises",
-                        "services",
-                        "secteurs"
-                    ],
+                    "post_type": "",
                     "post_status": "",
                     "taxonomy": "",
                     "return_format": "object",
@@ -141,6 +136,27 @@
                     "parent_repeater": "field_6642210191add"
                 },
                 {
+                    "key": "field_6662b5c2e1204",
+                    "label": "Text",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_6642210191add"
+                },
+                {
                     "key": "field_66422101951e3",
                     "label": "Enum",
                     "name": "enum",
@@ -160,6 +176,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_6642210191add",
                     "sub_fields": [
                         {
                             "key": "field_66422101990af",
@@ -182,8 +199,7 @@
                             "append": "",
                             "parent_repeater": "field_66422101951e3"
                         }
-                    ],
-                    "parent_repeater": "field_6642210191add"
+                    ]
                 }
             ]
         },
@@ -238,7 +254,8 @@
                         "id": ""
                     },
                     "post_type": [
-                        "page"
+                        "page",
+                        "services"
                     ],
                     "post_status": "",
                     "taxonomy": "",
@@ -290,11 +307,109 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "Découvrez nos expertises",
+                    "default_value": "Découvrez",
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
                     "append": ""
+                }
+            ]
+        },
+        {
+            "key": "field_667408094b5b6",
+            "label": "Options",
+            "name": "options",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_667408094b5b7",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None (No background)",
+                        "blue": "Blue",
+                        "gray": "Gray",
+                        "white": "White"
+                    },
+                    "default_value": "none",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_667408094b5b8",
+                    "label": "Border Color",
+                    "name": "border_color",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None (No border)",
+                        "blue": "Blue",
+                        "red": "Red"
+                    },
+                    "default_value": "blue",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_667408094b5b9",
+                    "label": "Button Color",
+                    "name": "button_color",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "blue": "Blue",
+                        "blue-red": "Blue (Red border)",
+                        "white": "White",
+                        "red": "Red"
+                    },
+                    "default_value": "blue",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0
                 }
             ]
         }
@@ -317,5 +432,5 @@
     "active": true,
     "description": "Block with white animated stickers.",
     "show_in_rest": 0,
-    "modified": 1716707070
+    "modified": 1719991023
 }

@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Nos missions \r\nd’experts",
+            "default_value": "",
             "maxlength": "",
             "rows": 2,
             "placeholder": "",
@@ -139,7 +139,7 @@
                     "return_format": "value",
                     "allow_null": 0,
                     "other_choice": 0,
-                    "layout": "horizontal",
+                    "layout": "vertical",
                     "save_other_choice": 0,
                     "parent_repeater": "field_662dd1b9a34af"
                 }
@@ -164,5 +164,5 @@
     "active": true,
     "description": "Block with title and list of various sized navigation buttons.",
     "show_in_rest": 0,
-    "modified": 1716705097
+    "modified": 1720009344
 }

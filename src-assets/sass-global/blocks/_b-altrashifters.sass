@@ -1,0 +1,111 @@
+.altrashifters
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --content-max: 1208px
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  &--container
+    padding-top: 128px
+    padding-bottom: 144px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 64px
+      padding-bottom: 72px     
+
+    & .content-wrapper
+      padding-left: 16px
+      padding-right: 16px
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      & .introduction
+        margin-top: 32px
+        max-width: calc(var(--content-max) / 2)
+        font-family: 'Gill Sans Light'
+        font-size: 38px
+        line-height: 125%
+        @media screen and (max-width: 768px)
+          font-size: 28px
+
+      & .cards
+        margin-top: 24px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 32px
+        @media screen and (max-width: 1199px)
+          grid-template-columns: repeat(2, 1fr)
+        @media screen and (max-width: 768px)
+          grid-template-columns: 1fr
+        & article:hover
+          cursor: help
+
+        & .card
+          --anim-duration: 400ms
+          max-width: 380px
+          background-color: $color-dark-blue
+          font-family: 'Gill Sans'
+          font-size: 18px
+          display: flex
+          flex-direction: column
+          &:hover > .image-content
+            height: 0
+          &:hover > .solution-content
+            height: 230px
+            transform: scaleY(1)
+
+          & .image-content
+            height: 230px
+            transition-property: height
+            transition-duration: var(--anim-duration)
+            & img
+              width: 100%
+              height: 100%
+              object-fit: cover
+          
+          & .problem-content
+            padding-left: 40px
+            padding-right: 32px
+            & .title
+              margin-top: 36px
+              margin-bottom: 24px
+              font-size: 30px
+              line-height: 130%
+              letter-spacing: 0.04em
+            & .red-line
+              width: 100%
+              height: 1px
+              background-color: $color-red
+            & .preface
+              margin-top: 36px
+              margin-bottom: 48px
+              font-family: 'Gill Sans Light'
+              font-style: italic
+          
+          & .solution-content
+            padding-left: 40px
+            padding-right: 32px
+            overflow: hidden
+            height: 0
+            transform-origin: top
+            transform: scaleY(0)
+            transition-property: height, transform
+            transition-duration: var(--anim-duration)
+            & .intro
+              margin-top: 0
+              font-size: 20px
+              font-weight: 600
+            & .lines
+              padding-left: 16px
+              padding-right: 27px
+              list-style-image: url('../img/list-disk-marker.svg')
+              list-style-position: outside
+              & .line
+                margin-top: 16px
+                padding-left: 8px

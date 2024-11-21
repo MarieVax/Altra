@@ -1,0 +1,120 @@
+.altrakeynumbers
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --content-max: 1208px
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  &--container
+    padding-top: 128px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 64px
+    
+    & .content-wrapper
+      --block-width: 440px
+      --block-height: 270px
+      font-family: 'Gill Sans'
+      font-size: 18px
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      & .numbers-content
+        padding-bottom: calc(var(--block-height) * 3 / 4)
+        display: grid
+        grid-template-columns: repeat(3, minmax(auto, var(--block-width)))
+        grid-auto-flow: row dense
+        grid-template-rows: var(--block-height)
+        @media screen and (max-width: 1023px)
+          display: flex
+          flex-direction: column
+
+        & .number-block
+          height: var(--block-height)
+          position: relative
+          &.left
+            grid-column: 1
+          &.center
+            grid-column: 2
+          &.right
+            grid-column: 3
+
+          & .number-wrapper,
+          & .know-more-wrapper
+            width: 100%
+            position: absolute
+            &.left
+              top: 75%
+            &.center
+              top: 50%
+            &.right
+              top: 25%
+            @media screen and (max-width: 1023px)
+              width: var(--block-width)
+              position: relative
+              &.left, &.center, &.right
+                top: 50%
+
+            & .number
+              margin: 0
+              font-family: 'Prata'
+              @media all and (max-width: 768px)
+                font-family: 'Gill Sans'
+              font-size: 68px
+              line-height: 125%
+              & em
+                font-family: 'Gill Sans Light'
+                font-style: normal
+            & .details
+              margin-top: 12px
+              font-size: 28px
+              line-height: 150%
+              & em
+                font-family: 'Gill Sans Light'
+                font-size: 52px
+                font-style: normal
+
+          & .know-more-wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            & .introduction
+              font-size: 28px
+              font-weight: 600
+            
+
+  .numbers--years_experience-img
+    display: none
+    max-width: 276px
+    height: 20px
+    margin: auto
+    overflow: hidden
+
+    .numbers--years_experience-img2
+      top: 3px
+
+  .numbers--money_retrieved
+    display: none
+    color: #fff
+    font-family: "Prata", serif
+    font-size: 68px
+    line-height: 125%
+
+    &-100
+      color: rgba(8, 32, 63, 0.05)
+      left: 50px
+
+    &-200
+      color: rgba(8, 32, 63, 0.20)      
+      left: 80px
+
+.secteurs-services-et-industries
+  .numbers--money_retrieved
+    display: block

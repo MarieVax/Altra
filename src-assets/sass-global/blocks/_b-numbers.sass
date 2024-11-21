@@ -1,3 +1,6 @@
+#numbers-block
+  min-height: 900px
+
 .numbers 
   @media all and (max-width: 992px)
     flex-direction: column
@@ -7,7 +10,8 @@
     margin-left: -25vw
     background: #fff
     @media all and (min-width: 992px)
-      padding: 160px 0 360px 0
+      //padding: 160px 0 360px 0
+      padding: 220px 0 360px 0
     position: relative
     
   &-container
@@ -37,6 +41,8 @@
         display: inline-block
       &--heading
         font-family: Prata
+        @media all and (max-width: 768px)
+          font-family: 'Gill Sans'
         font-size: 68px
         font-style: normal
         font-weight: 300
@@ -195,7 +201,12 @@
       &2
         animation: rotate-dot 20s linear infinite
 
-
+  &.onload 
+    margin-top: 0 !important  
+      
+#numbers-block
+  &.onload 
+    margin-top: 0 !important   
 @keyframes rotate-dot
   from 
     transform: rotate(0deg)
@@ -214,3 +225,19 @@
   100% 
     transform: translateX(200%)
   
+.altra-primary #numbers-block 
+  padding-top: 100px
+  padding-bottom: 50px
+  @media all and (min-width: 992px)
+    padding-left: 400px
+    padding-right: 80px
+
+
+  .numbers-container 
+    max-width: 1100px
+
+  .numbers-col1 .numbers-col-item:first-child, .numbers-col2 .numbers-col-item:first-child
+    margin-bottom: 150px
+
+  .numbers-col3-item1, .numbers-col3-item2
+    margin-top: 150px

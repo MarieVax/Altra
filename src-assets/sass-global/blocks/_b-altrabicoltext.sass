@@ -1,0 +1,97 @@
+.altrabicoltext
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --content-max: 1208px
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  .altra-bottom
+    bottom: -2px
+
+  &--container
+    padding-top: 84px
+    padding-bottom: 96px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 72px
+      padding-bottom: 84px
+
+    & .content-wrapper
+      font-family: 'Gill Sans'
+      font-size: 18px
+      line-height: 150%
+      display: grid
+      grid-template-columns: repeat(2, minmax(50%, calc(var(--content-max) / 2)))
+      @media screen and (max-width: 768px)
+        display: flex
+        flex-direction: column
+        row-gap: 64px
+
+      & .left-content,
+      & .right-content
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        & .text-block
+          max-width: 520px
+          padding-right: 16px
+          padding-left: 16px
+      & .left-content
+        padding-top: 3vw
+        @media screen and (max-width: 768px)
+          padding-top: 0
+      & .right-content
+        padding-bottom: 3vw
+        @media screen and (max-width: 768px)
+          padding-bottom: 0
+
+      & .heading
+        font-family: 'Prata'
+        font-size: 56px
+        line-height: 125%
+        letter-spacing: 0.04em
+        @media screen and (max-width: 768px)
+          font-size: 42px
+
+      & .preface-wrapper
+        margin-top: 34px
+        border-top: 1px solid $color-red
+        border-bottom: 1px solid $color-red
+        & .preface
+          font-family: 'Gill Sans Light'
+          font-size: 24px
+          font-style: italic
+          line-height: 150%
+          color: $color-red
+
+      & .introduction
+        margin-top: 42px
+        font-weight: 600
+        text-align: left
+
+      & .enumeration
+        margin-top: 34px
+        padding-left: 18px
+        list-style-image: url('../img/list-disk-marker.svg')
+        list-style-position: outside
+        text-align: left
+        & .line
+          margin-top: 24px
+          padding-left: 16px
+
+      & .post-content
+        margin-top: 24px
+        grid-column: 1 / 3
+        display: flex
+        flex-direction: column
+        align-items: center
+        & .postface
+          max-width: 496px
+          padding-right: 16px
+          padding-left: 16px

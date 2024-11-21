@@ -197,6 +197,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_6641cd2071e66",
                     "sub_fields": [
                         {
                             "key": "field_6641d026d2242",
@@ -219,8 +220,7 @@
                             "append": "",
                             "parent_repeater": "field_6641cf87c02c6"
                         }
-                    ],
-                    "parent_repeater": "field_6641cd2071e66"
+                    ]
                 }
             ]
         }
@@ -243,5 +243,5 @@
     "active": true,
     "description": "Block with cards animated with shifting effect.",
     "show_in_rest": 0,
-    "modified": 1715705069
+    "modified": 1719504899
 }

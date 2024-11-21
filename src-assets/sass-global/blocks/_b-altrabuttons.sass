@@ -1,0 +1,135 @@
+.altrabuttons
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --content-max: 1208px
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  .altra-bottom
+    bottom: -2px
+
+  &--container
+    padding-top: 96px
+    padding-bottom: 164px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 48px
+      padding-bottom: 96px        
+    
+    & .content-wrapper
+      max-width: var(--content-max)
+      padding-left: 16px
+      padding-right: 16px
+      font-family: 'Gill Sans'
+      font-size: 18px
+      line-height: 125%
+      display: flex
+      flex-direction: column
+      align-items: center
+      @media screen and (max-width: 768px)
+        padding-left: 24px
+        padding-right: 24px
+
+      @media all and (max-width: 768px)
+        .heading
+          margin-top: 36px
+
+      & .buttons
+        margin-top: 96px
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        column-gap: 32px
+        row-gap: 24px
+        @media screen and (max-width: 1023px)
+          column-gap: 16px
+        @media screen and (max-width: 768px)
+          display: flex
+          flex-direction: column
+          align-items: center
+          margin-top: 26px
+
+        & .big-button
+          --button-color: #223E5E
+          --animation-duration: 450ms
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          border: 1px solid var(--button-color)
+          @media screen and (max-width: 768px)
+            width: 100%
+          &.size-s
+            grid-column-end: span 2
+          &.size-m
+            grid-column-end: span 3
+          &.size-l
+            grid-column-end: span 4
+          &:hover > .description
+            background-color: rgba(34, 62, 94, 0.2)
+          &:hover > .button
+            background-color: #FFF
+            & > .icon > .icon-blue
+              opacity: 0
+            & > .icon > .icon-white
+              opacity: 1
+            & > .label
+              color: $color-dark-blue
+
+          & .description
+            min-height: 172px
+            font-size: 30px
+            line-height: 115%
+            transition-property: background-color
+            transition-duration: var(--animation-duration)
+            display: flex
+            flex-direction: column
+            justify-content: center
+            @media screen and (max-width: 1023px)
+              font-size: 24px
+            & p
+              margin: 0
+              padding-top: 6px
+              & em
+                font-size: 22px
+                font-style: normal
+                @media screen and (max-width: 1023px)
+                  font-size: 18px
+
+          & .button
+            width: 100%
+            height: 96px
+            padding-right: 18px
+            background-color: var(--button-color)
+            transition-property: background-color
+            transition-duration: var(--animation-duration)
+            display: flex
+            justify-content: center
+            align-items: center
+            column-gap: 12px
+
+            & .icon
+              --icon-side: 75px
+              width: var(--icon-side)
+              height: var(--icon-side)
+              position: relative
+              & .icon-white,
+              & .icon-blue
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                transition-property: opacity
+                transition-duration: var(--animation-duration)
+              & .icon-white
+                opacity: 0
+
+            & .label
+              width: 161px
+              padding-top: 3px
+              font-weight: 600
+              transition-property: color
+              transition-duration: var(--animation-duration)

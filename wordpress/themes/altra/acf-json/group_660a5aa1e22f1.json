@@ -176,6 +176,7 @@
                     "collapsed": "",
                     "button_label": "Add Row",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_660a5aa1e41c9",
                     "sub_fields": [
                         {
                             "key": "field_663e79a779ed2",
@@ -240,8 +241,7 @@
                             "new_lines": "br",
                             "parent_repeater": "field_66180a2416892"
                         }
-                    ],
-                    "parent_repeater": "field_660a5aa1e41c9"
+                    ]
                 }
             ]
         }
@@ -264,5 +264,5 @@
     "active": true,
     "description": "Block with title, description and two columns cards with one link.",
     "show_in_rest": 0,
-    "modified": 1716456474
+    "modified": 1719504899
 }

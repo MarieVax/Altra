@@ -20,12 +20,15 @@ ul.c-hor-menu
           content: ''
           position: absolute
           width: 150vw
-          background: $color-dark-blue
+          border-bottom: 1px solid $color-dark-blue
           opacity: 0.9
           height: 100%
-          left: -25vw
+          left: -45vw
           top: 0
           z-index: 90
+          -webkit-transform: scale(1)
+          transform: scale(1)
+          background: $color-dark-blue
       & > a:before
         width: 100%
     & > a
@@ -138,10 +141,12 @@ ul.c-hor-menu
         position: absolute
         height: 1px
         width: 0
-        background: $color-light-blue
+        border-bottom: 1px solid $color-light-blue
         transition: all 0.3s
         left: 20px
         top: 35px
+        -webkit-transform: scale(1)
+        transform: scale(1)
       @media all and (min-width: 992px)
         &:hover
           &:after

@@ -97,6 +97,26 @@
             "initial_value": "p"
         },
         {
+            "key": "field_6661692db50d9",
+            "label": "New",
+            "name": "new",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_661d414207ec0",
             "label": "Description",
             "name": "description",
@@ -333,6 +353,35 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_661d414207ec7"
+                },
+                {
+                    "key": "field_66759bf2d6c1f",
+                    "label": "Color",
+                    "name": "color",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "blue": "Blue",
+                        "blue-red": "Blue (Red border)",
+                        "blue-lite": "Blue (Lite background)",
+                        "white": "White",
+                        "red": "Red"
+                    },
+                    "default_value": "blue",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_661d414207ec7"
                 }
             ]
         },
@@ -364,14 +413,7 @@
             "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6640985467b60",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -473,5 +515,5 @@
     "active": true,
     "description": "Block with image, texts, navigation buttons and links.",
     "show_in_rest": 0,
-    "modified": 1716706120
+    "modified": 1719504899
 }

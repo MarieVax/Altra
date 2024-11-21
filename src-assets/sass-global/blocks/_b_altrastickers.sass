@@ -1,0 +1,122 @@
+.altrastickers
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --content-max: 1208px
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+  z-index: 99
+
+  &--container
+    padding-top: 96px
+    padding-bottom: 144px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 84px
+      padding-bottom: 84px     
+
+    & .content-wrapper
+      padding-left: 16px
+      padding-right: 16px
+      font-family: 'Gill Sans'
+      font-size: 18px
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      & .stickers
+        margin-top: 96px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 32px
+        max-width: 1204px
+        row-gap: 24px
+        @media screen and (max-width: 1023px)
+          grid-template-columns: repeat(2, 1fr)
+        @media screen and (max-width: 768px)
+          grid-template-columns: 1fr
+        & article:hover
+          cursor: help
+
+        & .stickers-title
+          max-width: 380px
+          min-height: 139px
+          display: flex
+          align-items: center
+          position: relative
+          padding: 0
+          padding-left: 27px
+          padding-right: 70px
+        & .sticker
+          .stickers-title
+            background-color: #FFF
+          &.bkg-blue
+            background-color: #102237
+            .stickers-title
+              background-color: #223E5E
+          & .title
+            margin: 0
+            padding-top: 8px
+            font-size: 30px
+            line-height: 110%
+            letter-spacing: 0.04em
+          & .arrow
+            width: 32px
+            height: 32px
+            position: absolute
+            top: 50%
+            right: 20px
+            transform: translateY(-50%) scaleY(1)
+            transition: transform 400ms ease-in-out
+          &:hover .arrow
+            transform: translateY(-50%) scaleY(-1)
+          &:hover .dropdown
+            transform: scaleY(1)
+            max-height: 9999px
+
+          & .dropdown
+            max-height: 0
+            top: 100%
+            left: 0
+            z-index: 50
+            background-color: #FFF
+            transform-origin: top
+            transform: scaleY(0)
+            transition: transform 400ms ease-in-out, max-height 400ms ease-in-out, margin-bottom 400ms ease-in-out
+            .text
+              margin-top: 0
+              padding-top: 1em
+              padding-bottom: 1em
+              margin-bottom: 0
+              background-color: #fff
+            &.transform 
+              transform: scaleY(1)
+              max-height: 9999px
+  
+            &.bkg-blue
+              background-color: $color-dark-blue
+              border: 1px solid #223E5E
+              .text
+                background-color: $color-dark-blue
+            & .text
+              padding-left: 27px
+              padding-right: 24px
+              line-height: 125%
+              letter-spacing: 0.04em
+            & .list
+              padding-left: 44px
+              padding-right: 27px
+              list-style-image: url('../img/list-disk-marker.svg')
+              list-style-position: outside
+              & .item
+                margin-top: 16px
+                padding-left: 8px
+
+      & .postface
+        margin-top: 64px
+        margin-bottom: 32px
+        max-width: calc(var(--content-max) * 3 / 4)

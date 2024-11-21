@@ -1,0 +1,107 @@
+.altrabigstickers
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --content-max: 1208px
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  .altra-bottom
+    bottom: -2px
+
+  &--container
+    padding-top: 96px
+    padding-bottom: 164px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 48px
+      padding-bottom: 96px
+    
+    & .content-wrapper
+      --block-width: 861px
+      --button-height: 139px
+      padding-left: 18px
+      padding-right: 18px
+      font-family: 'Gill Sans'
+      font-size: 18px
+      line-height: 125%
+      display: flex
+      flex-direction: column
+      align-items: center
+      @media screen and (max-width: 768px)
+        padding-left: 12px
+        padding-right: 12px
+
+      & .stickers
+        margin-top: 128px
+        & article:hover
+          cursor: help
+
+        & .sticker
+          --button-color: #223E5E
+          margin-top: 24px
+          max-width: var(--block-width)
+          max-height: var(--button-height)
+          transition: max-height 600ms ease-in-out
+          &:hover
+            max-height: 100vh    
+          &:hover .button .arrow
+            transform: translateY(-50%) scaleY(-1)
+          &:hover .dropdown
+            transform: scaleY(1)
+
+          & .button
+            min-height: var(--button-height)
+            padding-left: 35px
+            padding-right: 166px
+            display: flex
+            align-items: center
+            background-color: var(--button-color)
+            position: relative
+            @media screen and (max-width: 768px)
+              padding-left: 18px
+              padding-right: 96px
+            & .title
+              margin: 0
+              padding-top: 8px
+              font-size: 30px
+              line-height: 125%
+              letter-spacing: 0.04em
+              @media screen and (max-width: 768px)
+                font-size: 24px
+            & .arrow
+              width: 32px
+              height: 32px
+              position: absolute
+              top: 50%
+              right: 32px
+              transform: translateY(-50%) scaleY(1)
+              transition: transform 600ms linear
+
+          & .dropdown
+            padding: 32px 56px 32px 36px
+            letter-spacing: 0.04em
+            border: 1px solid var(--button-color)
+            transform-origin: top
+            transform: scaleY(0)
+            transition: transform 600ms ease-in-out
+            @media screen and (max-width: 768px)
+              padding: 32px 18px 36px 18px
+            & .content
+              & p
+                margin-top: 0
+              & strong
+                font-weight: 700
+              & ol
+                padding-left: 12px
+                list-style: none
+                counter-reset: num
+                & li
+                  padding-top: 4px
+                  counter-increment: num
+                  &::before
+                    content: counter(num) "° "

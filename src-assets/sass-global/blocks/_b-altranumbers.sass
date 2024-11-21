@@ -1,0 +1,160 @@
+.altranumbers
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  &--container
+    padding-top: 32px
+    padding-bottom: 128px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 16px
+      padding-bottom: 48px
+    
+    & .content-wrapper
+      --block-width: 440px
+      --block-height: 270px
+      padding-left: 18px
+      padding-right: 18px
+      font-family: 'Gill Sans'
+      font-size: 18px
+      display: flex
+      flex-direction: column
+      align-items: center
+      @media screen and (max-width: 768px)
+        --block-width: 300px
+        --block-height: 200px
+        padding-left: 12px
+        padding-right: 12px
+
+      & .numbers-content
+        padding-bottom: calc(var(--block-height) * 3 / 4)
+        display: grid
+        grid-template-columns: repeat(2, minmax(auto, var(--block-width)))
+        grid-auto-flow: row dense
+        grid-template-rows: var(--block-height)
+
+        & .number-block
+          height: var(--block-height)
+          position: relative
+          &.left
+            grid-column: 1
+          &.right
+            grid-column: 2
+
+          & .number-wrapper
+            width: 100%
+            position: absolute
+            &.left
+              top: 66%
+            &.right
+              top: 33%
+
+            & .number
+              margin: 0
+              font-family: 'Prata'
+              @media all and (max-width: 768px)
+                font-family: 'Gill Sans'
+              font-size: 68px
+              line-height: 125%
+              @media screen and (max-width: 768px)
+                font-size: 42px
+              & em
+                font-family: 'Gill Sans Light'
+                font-style: normal
+            & .details
+              margin-top: 12px
+              font-size: 28px
+              line-height: 150%
+              @media screen and (max-width: 768px)
+                font-size: 18px
+              & em
+                font-family: 'Gill Sans Light'
+                font-size: 52px
+                font-style: normal
+                @media screen and (max-width: 768px)
+                  font-size: 32px
+
+      & .customers-content
+        max-width: 743px
+        &.short-spacing
+          margin-top: calc(var(--block-height) * -1 / 2)
+
+        & .customers
+          & .customer
+            margin-top: 8px
+            padding-top: 15px
+            position: relative
+            &::after
+              content: ''
+              width: 11px
+              height: 3px
+              position: absolute
+              top: 0
+              left: 50%
+              transform: translateX(-50%)
+              background-image: url('../img/list-big-minus-marker.svg')
+              background-size: contain
+
+  .numbers--years_experience-img
+    display: none
+    max-width: 276px
+    height: 20px
+    margin: auto
+    overflow: hidden
+
+    .numbers--years_experience-img2
+      top: 3px
+  .numbers--money_retrieved
+    display: none
+    color: #fff
+    font-family: "Prata", serif
+    font-size: 68px
+    line-height: 125%
+
+    &-100
+      color: rgba(255, 255, 255, 0.05)
+      left: 50px
+
+    &-200
+      color: rgba(255, 255, 255, 0.20)
+      left: 80px
+
+
+.page-collectivites-satellites-et-osbl,  .secteurs-collectivites-et-satellites
+  .altranumbers  
+    .number-block:nth-child(2)
+      .numbers--years_experience-img
+        display: flex
+
+.page-enseignement-et-recherche, .secteurs-enseignement-et-recherche
+  .altranumbers  
+    .number-block:nth-child(2)
+      .numbers--years_experience-img
+        display: flex
+
+.page-habitat-social, .secteurs-habitat-social
+  .altranumbers  
+    .number-block:nth-child(1)
+      .numbers--years_experience-img
+        display: flex
+  .numbers--money_retrieved
+    display: block
+
+.page-sante-et-medico-social, .secteurs-sante-et-medico-social
+  .altranumbers  
+    .number-block:nth-child(2)
+      .numbers--years_experience-img
+        display: flex
+
+.page-services-et-industries, .secteurs-services-et-industries
+  .altrakeynumbers  
+    .number-block:nth-child(1)
+      .numbers--years_experience-img
+        display: flex

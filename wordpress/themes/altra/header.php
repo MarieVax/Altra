@@ -19,6 +19,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title><?php wp_title(); ?></title>
   <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
   <?php the_field('code_in_header_area', 'option'); ?>
   <?php wp_head(); ?>
   <script>

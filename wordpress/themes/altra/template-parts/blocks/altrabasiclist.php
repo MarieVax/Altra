@@ -16,87 +16,97 @@ if (!$block_disabled && empty($block['data']['block_preview_img'])) :
   if (!empty($block['data']['block_preview_img'])) echo '<img src="' . get_template_directory_uri() . '/assets/img/block-preview/' . $block['data']['block_preview_img'] . '" alt="">';
 ?>
 
-<section class="altrabasiclist">
+  <section class="altrabasiclist">
 
-  <?php // Optional background
-  $background_color = get_field('options')['background_color'] ?? 'none';
-  if ($background_color != 'none') :
-    printf('<div class="altra-background %s"></div>', $background_color);
-  endif;
-  $contrast_class = $background_color == 'blue' ? 'text-white ' : '';
+    <?php // Optional background
+    $background_color = get_field('options')['background_color'] ?? 'white';
+    if ($background_color != 'none') :
+      printf('<div class="altra-background %s"></div>', $background_color);
+    endif;
+    $contrast_class = $background_color == 'blue' ? 'text-white ' : '';
 
-  // Optional bottom border
-  $border_color = get_field('options')['border_color'] ?? 'blue';
-  if ($border_color != 'none') :
-    printf('<div class="altra-bottom %s"></div>', $border_color);
-  endif;
-  ?>
+    // Optional bottom border
+    $border_color = get_field('options')['border_color'] ?? 'red';
+    if ($border_color != 'none') :
+      printf('<div class="altra-bottom %s"></div>', $border_color);
+    endif;
+    ?>
 
-  <div class="font-normal text-center <?php echo $contrast_class; ?>altrabasiclist--container">
+    <div class="font-normal text-center <?php echo $contrast_class; ?>altrabasiclist--container">
 
-    <div class="content-wrapper">
+      <div class="content-wrapper">
 
-      <?php // Heading
-      if ($heading = get_field('heading')) :
-        $headingTag = get_field('heading_tag') ?? 'h2';
-        printf('<%s class="heading">%s</%s>',
-          $headingTag, wp_kses_post($heading), $headingTag
-        );
-      endif;
+        <?php // Heading
+        if ($heading = get_field('heading')) :
+          $headingTag = get_field('heading_tag') ?? 'h2';
+          printf(
+            '<%s class="heading"><div class="heading-h2-before"></div>%s<div class="heading-h2-after"></div></%s>',
 
-      // Enumeration
-      if (have_rows('enumeration')) :
-      ?>
-        <ul class="enumeration">
+            $headingTag,
+            wp_kses_post($heading),
+            $headingTag
+          );
+        endif;
 
-          <?php // Review all the lines
-          while (have_rows('enumeration')) :
-            the_row();
+        // Enumeration
+        if (have_rows('enumeration')) :
+        ?>
+          <ul class="enumeration">
 
-            if ($line = get_sub_field('line')) :
-              $lineTag = 'li';
-              printf('<%s class="line">%s</%s>',
-              $lineTag, wp_kses_post($line), $lineTag
-            );
+            <?php // Review all the lines
+            while (have_rows('enumeration')) :
+              the_row();
+
+              if ($line = get_sub_field('line')) :
+                $lineTag = 'li';
+                printf(
+                  '<%s class="line">%s</%s>',
+                  $lineTag,
+                  wp_kses_post($line),
+                  $lineTag
+                );
+              endif;
+            endwhile;
+            ?>
+          </ul>
+          <?php
+        endif; // enumeration
+
+        // Button
+        if ($domain = get_field('button')['domain']) :
+          if ($link = get_the_permalink($domain->ID)) :
+
+            // ID inside domain
+            if ($target_ID = get_field('button')['target_id']) :
+              $link .= '#' . $target_ID;
             endif;
-          endwhile;
+
+            // Altra button
+            $color = get_field('button')['button_color'] ?? 'blue';
           ?>
-        </ul>
-      <?php
-      endif; // enumeration
+            <a href="<?php echo $link; ?>">
 
-      // Button
-      if ($domain = get_field('button')['domain']) :
-        if ($link = get_the_permalink($domain->ID)) :
+              <div class="altra-button <?php echo $color; ?>">
 
-          // ID inside domain
-          if ($target_ID = get_field('button')['target_id']) :
-            $link .= '#' . $target_ID;
-          endif;
-
-          // Altra button
-          $color = get_field('button')['button_color'] ?? 'blue';
-          ?>
-          <a href="<?php echo $link; ?>">
-
-            <div class="altra-button <?php echo $color; ?>">
-
-              <?php // Label
-              $label = get_field('button')['label'] ?? __('Découvrir', 'altra');
-              $labelTag = 'span';
-              printf('<%s class="label">%s</%s>', 
-                $labelTag, wp_kses_post($label), $labelTag
-              ); 
-              ?>
-            </div>
-          </a>
+                <?php // Label
+                $label = get_field('button')['label'] ?? __('Découvrir', 'altra');
+                $labelTag = 'span';
+                printf(
+                  '<%s class="label">%s</%s>',
+                  $labelTag,
+                  wp_kses_post($label),
+                  $labelTag
+                );
+                ?>
+              </div>
+            </a>
         <?php
-        endif; // have permalink
-      endif; // have button domain
-      ?>
+          endif; // have permalink
+        endif; // have button domain
+        ?>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 <?php
 endif;

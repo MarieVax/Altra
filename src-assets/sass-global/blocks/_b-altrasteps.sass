@@ -1,0 +1,76 @@
+.altrasteps
+  --angle: 5.59deg
+  --tan: calc(tan(var(--angle)))
+  --lame-width: 3840px
+  --offset: calc(var(--tan) * var(--lame-width))
+  --half-offset: calc(var(--offset) / 2)
+  --content-max: 1208px
+  max-width: var(--lame-width)
+  margin: 0 auto
+  position: relative
+
+  &--container
+    padding-top: 128px
+    padding-bottom: 96px
+    display: flex
+    justify-content: center
+    @media screen and (max-width: 768px)
+      padding-top: 64px
+      padding-bottom: 48px
+    
+    & .content-wrapper
+      padding-left: 24px
+      padding-right: 24px
+      font-family: 'Gill Sans'
+      font-size: 18px
+      display: flex
+      flex-direction: column
+      align-items: center
+      @media screen and (max-width: 768px)
+        padding-left: 16px
+        padding-right: 16px
+
+      & .preface,
+      & .postface
+        font-family: 'Gill Sans Light'
+        font-size: 24px
+        line-height: 150%
+        @media screen and (max-width: 768px)
+          margin-top: 32px
+      & .preface
+        margin-top: 56px
+        max-width: 792px
+      & .postface
+        margin-top: 84px
+        max-width: 626px
+
+      & .steps-content
+        margin-top: 48px
+        display: grid
+        grid-template-columns: repeat(2, minmax(auto, 484px))
+        gap: 32px
+        @media screen and (max-width: 768px)
+          grid-template-columns: 1fr
+
+        & .step-block
+          min-height: 192px
+          display: flex
+          flex-direction: column
+          align-items: center
+          @media screen and (max-width: 768px)
+            min-height: auto
+
+          & .order
+            margin: 0
+            font-family: 'Prata'
+            font-size: 56px
+            color: $color-red
+
+          & .content
+            max-width: 384px
+            line-height: 130%
+            & p
+              margin: 8px auto
+              & em
+                font-size: 14px
+                font-style: normal
